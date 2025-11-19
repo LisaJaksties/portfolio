@@ -1,4 +1,4 @@
-This project is a personalised portfolio page with project pages, about section and contact.
+This project is a personalised portfolio website with project pages, about section and contact.
 The webapplication is programmed using typescript, tailwind css, and Framer Motion for subtle animations.
 
 
