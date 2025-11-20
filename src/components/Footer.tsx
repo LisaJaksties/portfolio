@@ -6,9 +6,9 @@ import FadeIn from "@/components/FadeIn";
 
 export default function Footer() {
     return (
-        <section className="pb-8 mb-2 text-center flex flex-col items-center gap-4">
+        <section className="pt-20 pb-8 mb-2 text-center flex flex-col items-center gap-4">
             <FadeIn>
-                <Link href="mailto:huinya.illust@gmail.com" className="text-lg underline font-light text-gray-500">
+                <Link href="mailto:huinya.illust@gmail.com" className="text-lg underline font-light text-gray-500 tracking-wide">
                     huinya.illust@gmail.com
                 </Link>
             </FadeIn>

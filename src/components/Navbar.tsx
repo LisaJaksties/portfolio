@@ -2,12 +2,19 @@
 import Link from "next/link";
 import {useEffect, useRef, useState} from "react";
 import { Menu } from "lucide-react";
+import {usePathname} from "next/navigation";
 
 export default function Navbar() {
 
     const [open, setOpen] = useState(false);
     const menuRef = useRef<HTMLDivElement>(null);
     const buttonRef = useRef<HTMLButtonElement>(null);
+    const pathname= usePathname();
+
+    const linkClass = (path: string) =>
+        pathname === path
+            ? "underline underline-offset-6 font-light text-blue-300"
+            : "";
 
     // Close menu on outside click
     useEffect(() => {
@@ -37,15 +44,40 @@ export default function Navbar() {
 
     return (
         <nav className="flex justify-between items-center p-4">
-            <div className="text-lg md:text-3xl">
+            <div className="text-lg md:text-3xl tracking-wide">
                 <Link href="/"> huinya <span className="text-sm">design</span> </Link>
+            </div>
+
+            <div className="md:flex gap-4 hidden tracking-wide">
+                <Link
+                    href="/about"
+                    className={`m-3 hover:text-blue-300 transition ${linkClass('/about')}`}
+                    onClick={() => setOpen(false)}
+                >
+                    About me
+                </Link>
+                <Link
+                    href="/projects"
+                    className={`m-3 hover:text-blue-300 transition ${linkClass('/projects')}`}
+                    onClick={() => setOpen(false)}
+                >
+                    Projects
+                </Link>
+                <Link
+                    href="/contact"
+                    className={`m-3 hover:text-blue-300 transition ${linkClass('/contact')}`}
+                    onClick={() => setOpen(false)}
+                >
+                    Contact
+                </Link>
+
             </div>
 
             {/* Menu Button */}
             <button
                 ref={buttonRef}
                 onClick={() => setOpen(!open)}
-                className="p-2 md:p-4 border rounded-full border-gray-500 hover:bg-gray-200 transition"
+                className="block md:hidden p-2 md:p-4 border rounded-full border-gray-500 hover:bg-gray-200 transition"
             >
                 <Menu />
             </button>
@@ -68,11 +100,11 @@ export default function Navbar() {
                         Projects
                     </Link>
                     <Link
-                        href="/blog"
+                        href="/contact"
                         className="m-3 hover:text-blue-300 transition"
                         onClick={() => setOpen(false)}
                     >
-                        Blog
+                        Contact
                     </Link>
                 </div>
             )}

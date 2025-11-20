@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Oooh_Baby } from "next/font/google";
+import FadeIn from "../components/FadeIn";
 
 const ooohBaby = Oooh_Baby({
     subsets: ["latin"],
@@ -12,6 +13,7 @@ export default function Hero() {
     return (
         <section className="relative md:max-w-6xl mx-auto md:px-18 py-22">
             {/* Bild rechts */}
+            <FadeIn amount={0.4} delay={0.5} duration={2.5}>
             <div className="relative w-full flex justify-center md:justify-end">
                 <Image
                     src="/clover.jpg"
@@ -22,7 +24,9 @@ export default function Hero() {
                     priority
                 />
             </div>
+            </FadeIn>
 
+            <FadeIn amount={0.4}>
             {/* Grosse screens: textblock, der auf dem Bild liegt */}
             <div className=" absolute hidden md:block top-[60%] left-48 -translate-y-1/2 z-20">
 
@@ -37,7 +41,9 @@ export default function Hero() {
                 </div>
 
             </div>
+            </FadeIn>
 
+            <FadeIn amount={0.4} >
             {/* mobile screen: text */}
             <div className=" absolute md:hidden top-[80%] left-5 -translate-y-1/2 z-20">
 
@@ -52,6 +58,8 @@ export default function Hero() {
                 </div>
 
             </div>
+            </FadeIn>
+
         </section>
 
 
