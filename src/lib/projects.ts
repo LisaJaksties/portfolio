@@ -4,6 +4,12 @@ export type Project = {
     description: string;
     image: string;
     date: string;
+    address: string;
+    problem_description: string;
+    solution_description: string;
+    type: string;
+    tasks: string[];
+    tools: string[];
 };
 
 export const projects: Project[] = [
@@ -13,6 +19,12 @@ export const projects: Project[] = [
         description: "Ein modernes Redesign meiner Portfolioseite mit Tailwind & Next.js.",
         image: "/clover.jpg",
         date: "2025-08-10",
+        address:"/",
+        problem_description:"Die Problembeschreibung wird hier stehen.",
+        solution_description:"Die Lösungsbeschreibung wird hier stehen.",
+        type:"UX Design and Website Development",
+        tasks: ["UI Design", "Prototyping", "Frontend Development"],
+        tools: ["Adobe Photoshop", "Next.js", "TailwindCSS"]
     },
     {
         slug: "stay-a",
@@ -20,6 +32,12 @@ export const projects: Project[] = [
         description: "Ein Projekt zur Untersuchung der User Experience im internationalen Kontext.",
         image: "/clover.jpg",
         date: "2025-06-02",
+        address:"https://stay-awind.vercel.app/en",
+        problem_description:"Die Problembeschreibung wird hier stehen.",
+        solution_description:"Die Lösungsbeschreibung wird hier stehen.",
+        type:"UX Design and Website Development",
+        tasks: ["Cross Cultural UX Research", "Usability Testing", "Database", "Front- and Backend Development"],
+        tools: ["Adobe Photoshop", "Next.js", "TailwindCSS", "MongoDB"]
     },
 ];
 
