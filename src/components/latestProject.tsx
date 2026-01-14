@@ -5,14 +5,14 @@ import FadeIn from "@/components/FadeIn";
 
 export default function LatestProject({ project }: { project: Project }){
     return (
-        <section className="relative py-32 md:py-48 max-w-5xl mx-auto">
+        <section className="relative py-32 md:py-48 max-w-4xl mx-auto">
 
             <FadeIn amount={0.4}>
             {/* Scrapbook-Bildercontainer */}
             <div className="relative w-full md:w-[910px] md:h-[520px]">
                 <Link href={`/projects/${project.slug}`}>
                     {/* Erstes (linkes, kleineres) Bild */}
-                    <div className="hidden md:block md:absolute -top-10 left-44 w-20 h-20 bg-neutral-300/70 rounded-full z-20"/>
+                    <div className="hidden md:block md:absolute -top-10 left-50 w-20 h-20 bg-neutral-300/70 rounded-full z-20"/>
 
                     <Image
                         src="/light.jpg"

@@ -28,7 +28,7 @@ export default function Hero() {
 
             <FadeIn amount={0.4}>
             {/* Grosse screens: textblock, der auf dem Bild liegt */}
-            <div className=" absolute hidden md:block top-[60%] left-48 -translate-y-1/2 z-20">
+            <div className=" absolute hidden md:block top-[60%] left-30 -translate-y-1/2 z-20">
 
                 <h1 className={`${ooohBaby.className} text-7xl md:text-9xl leading-none`}>
                     huinya

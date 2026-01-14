@@ -3,6 +3,7 @@ import Link from "next/link";
 import {useEffect, useRef, useState} from "react";
 import { Menu } from "lucide-react";
 import {usePathname} from "next/navigation";
+import Image from "next/image";
 
 export default function Navbar() {
 
@@ -45,7 +46,17 @@ export default function Navbar() {
     return (
         <nav className="flex justify-between items-center p-4">
             <div className="text-lg md:text-3xl tracking-wide">
-                <Link href="/"> huinya <span className="text-sm">design</span> </Link>
+                <Link href="/">
+                    <Image
+                        src="/huinya logo.png"
+                        alt="logo"
+                        width={140}
+                        height={40}
+                        className=""
+                        style={{zIndex: 10}}
+                    />
+
+                </Link>
             </div>
 
             <div className="md:flex gap-4 hidden tracking-wide">
