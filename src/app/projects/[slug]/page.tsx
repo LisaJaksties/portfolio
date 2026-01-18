@@ -5,6 +5,7 @@ import Link from "next/link";
 import Herosection from "@/sections/Herosection"
 import Descriptionsection from "@/sections/Descriptionsection";
 import Problemsection from "@/sections/Problemsection";
+import {SectionRenderer} from "@/sections/Sectionrenderer";
 
 export default async function ProjectPage({ params }: {params: Promise <{slug: string}> }) {
 
@@ -23,8 +24,13 @@ export default async function ProjectPage({ params }: {params: Promise <{slug: s
 
             <Problemsection problem_description={project.description} solution_description={project.solution_description} type={project.type} tasks={project.tasks} tools={project.tools}/>
 
-
+            {/*line*/}
             <hr className="border-t border-gray-400 max-w-4xl mx-auto my-12"/>
+
+            {/*sections rendered depending on the definded sections in each projectfile*/}
+            {project.sections?.map((section, index) => (
+                <SectionRenderer key={index} section={section} />
+            ))}
 
         </main>
     );

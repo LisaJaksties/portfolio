@@ -1,3 +1,5 @@
+import {Section} from "@/types/section";
+
 export type Project = {
     slug: string;
     title: string;
@@ -10,6 +12,7 @@ export type Project = {
     type: string;
     tasks: string[];
     tools: string[];
+    sections?: Section[];
 };
 
 export const projects: Project[] = [
@@ -24,7 +27,22 @@ export const projects: Project[] = [
         solution_description:"Die Lösungsbeschreibung wird hier stehen.",
         type:"UX Design and Website Development",
         tasks: ["UI Design", "Prototyping", "Frontend Development"],
-        tools: ["Adobe Photoshop", "Next.js", "TailwindCSS"]
+        tools: ["Adobe Photoshop", "Next.js", "TailwindCSS"],
+
+        sections: [
+            {
+                type: "design-system",
+                designsystemname: "Double Diamond",
+                designsystemdescription:"Das Double Diamond Design System ist Userorientiert.",
+                image: "/clover.jpg"
+            },
+            {
+                type:"research",
+                researchtitel: "Research",
+                content: "blabla"
+            }
+        ]
+
     },
     {
         slug: "stay-a",
