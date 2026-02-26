@@ -2,62 +2,43 @@ import { Project } from "@/lib/projects";
 import Link from "next/link";
 import Image from "next/image";
 import FadeIn from "@/components/FadeIn";
+import {soligant} from "@/fonts/soligant";
 
 export default function LatestProject({ project }: { project: Project }){
     return (
-        <section className="relative py-32 md:py-48 max-w-4xl mx-auto">
+        <section className="py-10 md:py-30 max-w-full">
 
+            <div className="flex flex-col items-center">
             <FadeIn amount={0.4}>
-            {/* Scrapbook-Bildercontainer */}
-            <div className="relative w-full md:w-[910px] md:h-[520px]">
                 <Link href={`/projects/${project.slug}`}>
-                    {/* Erstes (linkes, kleineres) Bild */}
-                    <div className="hidden md:block md:absolute -top-10 left-50 w-20 h-20 bg-neutral-300/70 rounded-full z-20"/>
 
-                    <Image
-                        src="/light.jpg"
-                        alt="Portfolio preview"
-                        width={300}
-                        height={100}
-                        className="hidden md:block absolute top-0 left-0 h-72 w-[350px] md:w-[450px] shadow-md object-cover transform"
-                        style={{zIndex: 10}}
-                    />
-
-                    {/* washi tape otpik on mobile only */}
-                    <div className="absolute md:hidden -top-4 left-28 w-24 h-10 bg-gray-300/70 rotate-3"></div>
-
-                    {/* Zweites (rechtes, größeres) Bild */}
                     <Image
                         src={project.image}
                         alt={project.title}
-                        width={600}
-                        height={350}
-                        className="block md:absolute mx-auto h-60 w-[80%] object-cover
-                                    md:bottom-0 md:-right-10 md:w-[550px] md:h-[420px]"
-                        style={{zIndex: 5}}
+                        width={800}
+                        height={300}
+                        className="h-[500px] w-80 md:h-[450px] md:w-5xl p-2 md:p-6 border border-2 rounded-4xl inset-2
+                        border-secondaryverydark
+                         transition ease-in-out delay-150 duration-300 hover:-translate-y-1 hover:scale-104
+                         md:hover:scale-105 object-cover hover:border-background"
+                        style={{zIndex: 10}}
                     />
 
-                    {/* Desktop Screen size only: Textblock unten links */}
-                    <div
-                        className="hidden md:block absolute bottom-6 left-0 p-4 max-w-[35%]">
-                        <h2 className="text-xl md:text-2xl font-semibold">{project.title}</h2>
-                        <p className="text-sm text-gray-600">{project.description}</p>
-                        <p className="text-xs text-gray-500 mt-1">{project.date}</p>
+                </Link>
+
+            </FadeIn>
+
+                <FadeIn>
+                    <div className="text-center md:text-end w-80 md:w-5xl">
+                        <Link href={`/projects/${project.slug}`}>
+                            <p className="text-md text-text mt-5">{project.date}</p>
+                            <h2 className="pt-6 pb-2 text-3xl md:text-6xl text-text font-semibold hover:text-accent transition ease-in">{project.title}</h2>
+                            <p className="text-lg text-text/50">{project.description}</p>
+
+                        </Link>
                     </div>
-
-                </Link>
+                </FadeIn>
             </div>
-            </FadeIn>
-
-            <FadeIn>
-            <div className="md:hidden p-4 max-w-fit">
-                <Link href={`/projects/${project.slug}`}>
-                <h2 className="text-xl md:text-2xl font-semibold">{project.title}</h2>
-                <p className="text-sm text-gray-600">{project.description}</p>
-                <p className="text-xs text-gray-500 mt-1">{project.date}</p>
-                </Link>
-            </div>
-            </FadeIn>
 
         </section>
 

@@ -1,124 +1,126 @@
 "use client";
 import Link from "next/link";
 import {useEffect, useRef, useState} from "react";
-import { Menu } from "lucide-react";
+import {Github, Instagram, Menu, X} from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import {usePathname} from "next/navigation";
 import Image from "next/image";
 
 export default function Navbar() {
 
     const [open, setOpen] = useState(false);
-    const menuRef = useRef<HTMLDivElement>(null);
-    const buttonRef = useRef<HTMLButtonElement>(null);
-    const pathname= usePathname();
+    const pathname = usePathname();
 
     const linkClass = (path: string) =>
         pathname === path
-            ? "underline underline-offset-6 font-light text-blue-300"
+            ? " text-primary"
             : "";
 
-    // Close menu on outside click
+    // Prevent background scroll when menu is open
     useEffect(() => {
-        const handleClickOutside = (event: MouseEvent) => {
-            const target = event.target as HTMLElement;
-
-            // If clicked outisde of menu AND button
-            if (
-                menuRef.current &&
-                !menuRef.current.contains(target) &&
-                buttonRef.current &&
-                !buttonRef.current.contains(target)
-            ) {
-                setOpen(false);
-            }
-        };
-
-        if (open) {
-            document.addEventListener("mousedown", handleClickOutside);
-        }
-
+        document.body.style.overflow = open ? "hidden" : "";
         return () => {
-            document.removeEventListener("mousedown", handleClickOutside);
+            document.body.style.overflow = "";
         };
     }, [open]);
 
 
+
     return (
-        <nav className="flex justify-between items-center p-4">
-            <div className="text-lg md:text-3xl tracking-wide">
+        <>
+            {/* NAVBAR */}
+            <nav className="flex justify-between items-center p-6 relative z-50">
+                {/* Socials */}
+                <div className="flex gap-4 pl-4 md:gap-8 text-text">
+                    <Link href="https://instagram.com/huinya.illust" target="_blank">
+                        <Instagram className="w-5 h-5 md:w-7 md:h-7 hover:text-accent transition"/>
+                    </Link>
+                    <Link href="https://github.com/LisaJaksties" target="_blank">
+                        <Github className="w-5 h-5 md:w-7 md:h-7 hover:text-accent transition"/>
+                    </Link>
+                </div>
+
+                {/* Logo */}
                 <Link href="/">
                     <Image
-                        src="/huinya logo.png"
+                        src="/lisachoilogo.svg"
                         alt="logo"
                         width={140}
                         height={40}
-                        className=""
-                        style={{zIndex: 10}}
+                        className="relative translate-y-7 md:translate-y-4 w-24 md:w-34"
                     />
-
                 </Link>
-            </div>
 
-            <div className="md:flex gap-4 hidden tracking-wide">
-                <Link
-                    href="/about"
-                    className={`m-3 hover:text-blue-300 transition ${linkClass('/about')}`}
-                    onClick={() => setOpen(false)}
+                {/* Menu Button */}
+                <button
+                    onClick={() => setOpen(!open)}
+                    className="relative z-50 p-4  rounded-full transition"
+                    aria-label="Toggle menu"
                 >
-                    About me
-                </Link>
-                <Link
-                    href="/projects"
-                    className={`m-3 hover:text-blue-300 transition ${linkClass('/projects')}`}
-                    onClick={() => setOpen(false)}
-                >
-                    Projects
-                </Link>
-                <Link
-                    href="/contact"
-                    className={`m-3 hover:text-blue-300 transition ${linkClass('/contact')}`}
-                    onClick={() => setOpen(false)}
-                >
-                    Contact
-                </Link>
+                    <AnimatePresence mode="wait">
+                        {!open ? (
+                            <motion.div
+                                key="menu"
+                                initial={{rotate: -120, opacity: 0}}
+                                animate={{rotate: 0, opacity: 1}}
+                                exit={{rotate: 120, opacity: 0}}
+                                transition={{duration: 0.8, ease: "easeOut"}}
+                            >
+                                <Menu className="w-6 h-6 md:w-8 md:h-8 text-text hover:text-accent transition"/>
+                            </motion.div>
+                        ) : (
+                            <motion.div
+                                key="close"
+                                initial={{rotate: 120, opacity: 0}}
+                                animate={{rotate: 0, opacity: 1}}
+                                exit={{rotate: -120, opacity: 0}}
+                                transition={{duration: 0.8, ease: "easeOut"}}
+                            >
+                                <X className="w-6 h-6 md:w-9 md:h-9 text-primary"/>
+                            </motion.div>
+                        )}
+                    </AnimatePresence>
+                </button>
+            </nav>
 
-            </div>
+            {/* Menu full window */}
+            <AnimatePresence>
+                {open && (
+                    <motion.div
+                        initial={{ opacity: 0, y:20 }}
+                        animate={{ opacity: 1, y:0 }}
+                        exit={{ opacity: 0, y:20 }}
+                        transition={{ duration: 1, delay:0.2, ease: "easeOut" }}
+                        className="fixed top-25 left-0 right-0 bottom-0 bg-background z-40"
+                    >
+                        <div className="flex flex-col justify-center items-center h-full gap-16 text-5xl md:text-7xl text-text font-light">
+                            <Link
+                                href="/about"
+                                onClick={() => setOpen(false)}
+                                className={`hover:text-accent transition ${linkClass("/about")}`}
+                            >
+                                About me
+                            </Link>
 
-            {/* Menu Button */}
-            <button
-                ref={buttonRef}
-                onClick={() => setOpen(!open)}
-                className="block md:hidden p-2 md:p-4 border rounded-full border-gray-500 hover:bg-gray-200 transition"
-            >
-                <Menu />
-            </button>
+                            <Link
+                                href="/projects"
+                                onClick={() => setOpen(false)}
+                                className={`hover:text-accent  transition ${linkClass("/projects")}`}
+                            >
+                                Projects
+                            </Link>
 
-            {open && (
-                <div ref={menuRef}
-                    className="absolute top-16 right-4 bg-white shadow-xl p-4 pr-18 flex flex-col gap-5 z-30 ">
-                    <Link
-                        href="/about"
-                        className="m-3 hover:text-blue-300 transition"
-                        onClick={() => setOpen(false)}
-                    >
-                        About me
-                    </Link>
-                    <Link
-                        href="/projects"
-                        className="m-3 hover:text-blue-300 transition"
-                        onClick={() => setOpen(false)}
-                    >
-                        Projects
-                    </Link>
-                    <Link
-                        href="/contact"
-                        className="m-3 hover:text-blue-300 transition"
-                        onClick={() => setOpen(false)}
-                    >
-                        Contact
-                    </Link>
-                </div>
-            )}
-        </nav>
+                            <Link
+                                href="/contact"
+                                onClick={() => setOpen(false)}
+                                className={`hover:text-accent  transition ${linkClass("/contact")}`}
+                            >
+                                Contact
+                            </Link>
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </>
     );
 }

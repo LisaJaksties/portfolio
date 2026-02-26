@@ -20,7 +20,7 @@ export const projects: Project[] = [
         slug: "portfolio-redesign",
         title: "Portfolio Redesign",
         description: "Ein modernes Redesign meiner Portfolioseite mit Tailwind & Next.js.",
-        image: "/clover.jpg",
+        image: "/example.jpg",
         date: "2025-08-10",
         address:"/",
         problem_description:"Die Problembeschreibung wird hier stehen.",
@@ -32,7 +32,7 @@ export const projects: Project[] = [
         sections: [
             {
                 type: "design-system",
-                designsystemname: "Double Diamond",
+                designsystemname: "Design Process: Double Diamond",
                 designsystemdescription:"Das Double Diamond Design System ist Userorientiert.",
                 image: "/clover.jpg"
             },
@@ -40,6 +40,37 @@ export const projects: Project[] = [
                 type:"research",
                 researchtitel: "Research",
                 content: "blabla"
+            },
+            {
+                type: "inspiration",
+                inspirationtitel: "Inspiration",
+                content: "blabla",
+                images: [
+                    {
+                        src: "/clover.jpg",
+                        alt: "Clover illustration"
+                    },
+                    {
+                        src: "/clover.jpg",
+                        alt: "Second clover sketch"
+                    }
+                ]
+            },
+
+            {
+                type: "ideate",
+                ideatetitel: "Ideate",
+                content: "blabla",
+                images: [
+                    {
+                        src: "/clover.jpg",
+                        alt: "Clover illustration"
+                    },
+                    {
+                        src: "/clover.jpg",
+                        alt: "Second clover sketch"
+                    }
+                ]
             }
         ]
 

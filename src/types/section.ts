@@ -24,6 +24,7 @@ export type ResearchSection = {
 
 export type InspirationSection = {
     type: "inspiration";
+    inspirationtitel: string;
     content: string;
     images?: {
         src: string;
@@ -33,6 +34,7 @@ export type InspirationSection = {
 
 export type IdeateSection = {
     type: "ideate";
+    ideatetitel: string;
     content: string;
     images: {
         src: string;
