@@ -5,6 +5,7 @@ import { getLatestProject } from "@/lib/projects";
 import Catchphrase from "@/components/Catchphrase";
 import {soligant} from "@/fonts/soligant";
 import ContactMe from "@/components/ContactMe";
+import MyArt from "@/components/MyArt";
 
 export default function Home() {
     const latest = getLatestProject();
@@ -24,6 +25,8 @@ export default function Home() {
           {latest.map((project) => (
               <LatestProject key={project.slug} project={project}/>
           ))}
+
+          <MyArt/>
 
           <ContactMe/>
       </main>

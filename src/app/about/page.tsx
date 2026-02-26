@@ -2,6 +2,7 @@ import { Oooh_Baby } from "next/font/google";
 import Image from "next/image";
 import FadeIn from "@/components/FadeIn";
 import ContactMe from "@/components/ContactMe";
+import MyArt from "@/components/MyArt";
 
 const ooohBaby = Oooh_Baby({
     subsets: ["latin"],
@@ -70,6 +71,8 @@ export default function AboutPage(){
                 </FadeIn>
             </div>
             </div>
+
+            <MyArt/>
 
             <ContactMe/>
         </main>

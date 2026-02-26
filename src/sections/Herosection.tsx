@@ -12,19 +12,20 @@ export default function Herosection({image, title, address}: HeroSectionProps) {
 
     return (
         <div>
-            <div className="relative bg-orange-50 p-10  hidden md:block">
+            <div className="relative  pb-10  pt-8 hidden md:block">
                 <Image
                     src={image}
                     alt={title}
                     width={1024}
                     height={384}
-                    className="max-w-5xl mx-auto object-cover h-[500px]"
+                    className="w-full mx-auto object-cover h-[600px] z-20 "
                     priority
                 />
 
                 <Link href={`${address}`} target="_blank" rel="noreferrer">
-                    <div className="hidden md:flex md:absolute items-center justify-center
-                             text-center bottom-8 right-16 w-24 h-24 border border-gray-400 rounded-full z-20">
+                    <div className="hidden md:flex md:absolute items-center justify-center text-text text-xl
+                             text-center -bottom-14 right-25 w-32 h-24 bg-accent rounded-b-full z-20
+                             hover:translate-y-1 hover:scale-y-110 transition duration-150">
                         <p className="text-sm font-light">view design</p>
                     </div>
                 </Link>
