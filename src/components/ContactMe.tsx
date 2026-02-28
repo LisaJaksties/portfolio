@@ -14,7 +14,7 @@ export default function ContactMe() {
 
             <FadeIn amount={0.5} duration={1.4}>
                 <SlideUp y={80} delay={0.2} duration={1.0}>
-                    <h1 className={`${soligant.className} text-text text-5xl leading-16 md:leading-34 tracking-wider md:text-[10vw]`}>
+                    <h1 className={`${soligant.className} text-text text-8xl leading-24 md:leading-34 tracking-wider md:text-[10vw]`}>
                        IF <br/> YOU
                     </h1>
                     <h2 className={`${soligant.className}  tracking-widest text-2xl`}>

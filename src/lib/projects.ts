@@ -26,14 +26,19 @@ export const projects: Project[] = [
         problem_description:"Die Problembeschreibung wird hier stehen.",
         solution_description:"Die Lösungsbeschreibung wird hier stehen.",
         type:"UX Design and Website Development",
-        tasks: ["UI Design", "Prototyping", "Frontend Development"],
-        tools: ["Adobe Photoshop", "Next.js", "TailwindCSS"],
+        tasks: ["UX/UI Design", "Branding", "Prototyping", "Frontend Development"],
+        tools: ["Adobe Photoshop", "Adobe Illustrator", "Next.js", "TailwindCSS"],
 
         sections: [
             {
                 type: "design-system",
-                designsystemname: "Design Process: Double Diamond",
-                designsystemdescription:"Das Double Diamond Design System ist Userorientiert.",
+                designsystemname: "Double Diamond Design Process Model",
+                designsystemdescription:
+                "The Double Diamond Model consists of four stages: Discover, Define, Develop and Deliver. " +
+                    "The two diamonds symbolise two central thought processes: exploration and action. " +
+                    "Exploration involves closely examining and perspectives broadening = divergent thinking. " +
+                    "Action thinking focuses on exploration and consolidation of ideas = convergent thinking. " +
+                    "The model enables flexible iterative development cycles that are strongly oriented towards user feedback and actual user needs.",
                 image: "/clover.jpg"
             },
             {

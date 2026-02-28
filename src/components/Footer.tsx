@@ -9,7 +9,7 @@ export default function Footer() {
         <section className="pt-20 pb-8 mb-2 text-center flex flex-col items-center gap-4">
 
             <FadeIn>
-                <Link href="mailto:huinya.illust@gmail.com" className="text-lg underline font-light text-text/80 tracking-wide">
+                <Link href="mailto:huinya.illust@gmail.com" className="text-sm md:text-lg underline font-light text-text/80 tracking-wide">
                     huinya.illust@gmail.com
                 </Link>
             </FadeIn>
@@ -17,21 +17,21 @@ export default function Footer() {
             <FadeIn>
                 <div className="flex gap-4 text-text/80">
                     <Link href="https://instagram.com/huinya.illust" target="_blank">
-                        <Instagram className="w-8 h-8 hover:text-accent transition"/>
+                        <Instagram className="w-6 h-6 md:w-8 md:h-8 hover:text-accent transition"/>
                     </Link>
 
                     <Link href="https://github.com/LisaJaksties" target="_blank">
-                        <Github className="w-8 h-8 hover:text-accent transition"/>
+                        <Github className="w-6 h-6 md:w-8 md:h-8 hover:text-accent transition"/>
                     </Link>
 
                     <Link href="https://linkedin.net/deinProfil" target="_blank">
-                        <Linkedin className="w-8 h-8 hover:text-accent transition"/>
+                        <Linkedin className=" w-6 h-6 md:w-8 md:h-8 hover:text-accent transition"/>
                     </Link>
                 </div>
             </FadeIn>
 
             <FadeIn>
-                <div className="flex gap-2 text-lg font-light text-text/80 tracking-widest">
+                <div className="md:flex gap-2 text-sm md:text-lg font-light text-text/80 tracking-widest">
                     <p>Lisa Choi © 2026. All rights reserved.</p>
                     <Link href="/impressum" className="hover:underline transition ease-in duration-200">
                         Impressum

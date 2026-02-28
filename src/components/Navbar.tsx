@@ -47,7 +47,7 @@ export default function Navbar() {
                         alt="logo"
                         width={140}
                         height={40}
-                        className="relative translate-y-7 md:translate-y-4 w-24 md:w-34"
+                        className="relative md:translate-y-4 w-14 md:w-24"
                     />
                 </Link>
 

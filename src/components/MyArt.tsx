@@ -14,10 +14,10 @@ export default function MyArt() {
 
             <FadeIn amount={0.5} duration={1.4}>
                 <SlideUp y={80} delay={0.2} duration={1.0}>
-                    <h1 className={`${soligant.className} text-text text-3xl leading-16 md:leading-40 tracking-tight md:text-[6vw]`}>
+                    <h1 className={`${soligant.className} text-text text-6xl leading-24 md:leading-40 tracking-tight md:text-[6vw]`}>
                         I also do
                     </h1>
-                    <h1 className={`${soligant.className} text-text text-5xl leading-16 md:leading-40 tracking-widest md:text-[13vw]`}>
+                    <h1 className={`${soligant.className} text-text text-9xl leading-32 md:leading-40 tracking-widest md:text-[13vw]`}>
                         ART
                     </h1>
                     <h3 className="mt-3 font-medium tracking-tight">

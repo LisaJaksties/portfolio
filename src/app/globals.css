@@ -31,3 +31,21 @@ body {
   color: var(--foreground);
   font-family: Poppins, sans-serif;
 }
+
+/* Blob Keyframes */
+@keyframes blob {
+  0% {
+    border-radius: 42% 58% 63% 37% / 41% 44% 56% 59%;
+  }
+  50% {
+    border-radius: 58% 42% 37% 63% / 59% 56% 44% 41%;
+  }
+  100% {
+    border-radius: 42% 58% 63% 37% / 41% 44% 56% 59%;
+  }
+}
+
+/* Utility Class */
+.animate-blob {
+  animation: blob 8s ease-in-out infinite;
+}
