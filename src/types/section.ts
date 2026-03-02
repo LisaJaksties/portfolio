@@ -1,6 +1,6 @@
 export type Section =
     | DesignSystemSection
-    | ResearchSection
+    | DiscoverSection
     | InspirationSection
     | IdeateSection
     | DefineSection
@@ -16,12 +16,31 @@ export type DesignSystemSection = {
     image?: string;
 };
 
-export type ResearchSection = {
-    type: "research";
-    researchtitel: string;
+export type DiscoverSection = {
+    type: "discover";
+    discovertitel: string;
+    stakeholdertitel?: string;
+    stakeholders?: Stakeholder[];
+    personas?: Personas[];
     content: string;
 };
 
+export type Stakeholder = {
+    name: string;
+    role?: string;
+    description: string;
+    goals?: string[];
+};
+
+export type Personas = {
+    name: string;
+    description: string;
+    images?: {
+        src: string;
+        alt?: string;
+    }[];
+
+}
 export type InspirationSection = {
     type: "inspiration";
     inspirationtitel: string;
@@ -44,11 +63,31 @@ export type IdeateSection = {
 
 export type DefineSection = {
     type: "define";
+    definetitel: string;
     content: string;
-    feature_roadmap?: string;
-    site_map?: string;
+    feature_roadmap?: FeatureRoadmap[];
+    site_map?: SiteMap[];
 };
 
+export type FeatureRoadmap = {
+    name: string;
+    description: string;
+    images?: {
+        src: string;
+        alt?: string;
+    }[];
+
+}
+
+export type SiteMap = {
+    name: string;
+    description: string;
+    image: {
+        src: string;
+        alt?: string;
+    };
+
+}
 export type DevelopSection = {
     type: "develop";
     content: string;

@@ -42,38 +42,58 @@ export const projects: Project[] = [
                 image: "/clover.jpg"
             },
             {
-                type:"research",
-                researchtitel: "Research",
-                content: "blabla"
-            },
-            {
-                type: "inspiration",
-                inspirationtitel: "Inspiration",
-                content: "blabla",
-                images: [
+                type:"discover",
+                discovertitel: "Discover",
+                stakeholdertitel: "Stakeholder and Business Goals",
+                content: "The Discover Phase identifies and understands the existing problems. " +
+                    "It involves speaking to and spending time with people who are affected by the issues. " +
+                    "Understanding is created by asking questions. This way potential solutions can be formed.",
+                stakeholders: [
                     {
-                        src: "/clover.jpg",
-                        alt: "Clover illustration"
-                    },
+                        name: "Myself",
+                        role: "UX Designer and Illustrator",
+                        description: "As the only stakeholder, I defined my business goals for the portfolio website.",
+                        goals: ["more qualified recruiter and client requests", "interview invitations", "showcase skills and thinking process",
+                        "convey my softskills (Reliability, Learnability, Adaptability, Patience, Conscientiousness) through design decisions"]
+                    }
+                ],
+                personas:[
                     {
-                        src: "/clover.jpg",
-                        alt: "Second clover sketch"
+                        name:"User Personas",
+                        description:"To make sure that my decisions moving forward in the process are user-centered, I wanted to have a clear understanding of who the users are. " +
+                            "Using what I learned from the Stakeholder and Business goals, I created two user persona to represent who I will be designing for.",
+                        images:[
+                            {
+                                src: "/clover.jpg",
+                                alt: "Persona1"
+                            },
+                                {
+                                    src: "/clover.jpg",
+                                    alt: "Persona2"
+                                }
+                            ],
                     }
                 ]
+
             },
 
             {
-                type: "ideate",
-                ideatetitel: "Ideate",
-                content: "blabla",
-                images: [
+                type: "define",
+                definetitel: "Define",
+                content: "The insights gathered during the previous phase are the foundation to define the project goals. " +
+                    "During the Define phase information is structured to create plans and lists that support a guided developing phase.",
+                site_map: [
                     {
-                        src: "/clover.jpg",
-                        alt: "Clover illustration"
-                    },
-                    {
-                        src: "/clover.jpg",
-                        alt: "Second clover sketch"
+                        name: "Site Map",
+                        description:"The Site Map visualizes how the information is categorized. " +
+                            "The Hiring Manager needs to get a quick overview. Therefore the main navigation is kept simple with four main pages." +
+                            "The Project Overview has subpages for the Project Detail Views. At the end of all pages the user will find a link to " +
+                            "the contact pages so that a smooth transition between information collecting and getting into contact is possible. ",
+                        image: {
+                                src: "/clover.jpg",
+                                alt: "siteMap"
+                        },
+
                     }
                 ]
             }
