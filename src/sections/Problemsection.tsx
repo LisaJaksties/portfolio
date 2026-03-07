@@ -18,7 +18,7 @@ export default function ProblemSection({problem_description,solution_description
                     <p className="text-md text-text/80">{solution_description}</p>
                 </div>
 
-                <div className=" p-8 pt-10 pb-10 bg-accent rounded-4xl shadow-xl">
+                <div className=" p-8 pt-10 pb-10 bg-accent flex items-center rounded-4xl shadow-xl">
 
                     <div className="text-text grid grid-cols-2 gap-y-4 p-4">
                         {/* TYPE */}

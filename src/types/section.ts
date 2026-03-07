@@ -67,6 +67,8 @@ export type DefineSection = {
     content: string;
     feature_roadmap?: FeatureRoadmap[];
     site_map?: SiteMap[];
+    task_flow?: TaskFlow[];
+    lofi_wireframes?: LofiWireframes[];
 };
 
 export type FeatureRoadmap = {
@@ -88,26 +90,80 @@ export type SiteMap = {
     };
 
 }
+
+export type TaskFlow = {
+    name: string;
+    description: string;
+    task_flow_titel: string;
+    image: {
+        src: string;
+        alt?: string;
+    };
+
+}
+
+export type LofiWireframes = {
+    name: string;
+    description: string;
+    images?: {
+        src: string;
+        alt?: string;
+    }[];
+
+}
+
 export type DevelopSection = {
     type: "develop";
+    developtitel: string;
     content: string;
-    wireframes?: {
-        src: string;
-        alt?: string;
-    }[];
-    userflows?: {
-        src: string;
-        alt?: string;
-    }[];
-    stiletile?: {
-        src: string;
-        alt?: string;
-    }[];
-    Uidesign?: {
-        src: string;
-        alt?: string;
-    }[];
+    inspiration?: Inspiration[];
+    style_tile?: StyleTile[];
+    ui_kit?: UIKit[];
+    final_design?: FinalDesign[];
+
 }
+
+export type Inspiration = {
+    name: string;
+    description: string;
+    image: {
+        src: string;
+        alt?: string;
+    };
+
+}
+
+export type StyleTile = {
+    name: string;
+    description: string;
+    image: {
+        src: string;
+        alt?: string;
+    };
+
+}
+
+export type UIKit = {
+    name: string;
+    description: string;
+    image: {
+        src: string;
+        alt?: string;
+    };
+
+}
+
+export type FinalDesign = {
+    name: string;
+    description: string;
+    images?: {
+        src: string;
+        alt?: string;
+    }[];
+    link?: string;
+
+}
+
 
 export type ConceptdevSection = {
     type: "conceptdev";

@@ -22,7 +22,7 @@ export default async function ProjectPage({ params }: {params: Promise <{slug: s
             {/*line*/}
             <hr className="border-t border-gray-400 max-w-7xl mx-auto my-12"/>
 
-            <Problemsection problem_description={project.description} solution_description={project.solution_description} type={project.type} tasks={project.tasks} tools={project.tools}/>
+            <Problemsection problem_description={project.problem_description} solution_description={project.solution_description} type={project.type} tasks={project.tasks} tools={project.tools}/>
 
             {/*line*/}
             <hr className="border-t border-gray-400 max-w-7xl mx-auto my-12"/>
