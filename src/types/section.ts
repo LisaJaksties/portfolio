@@ -7,6 +7,7 @@ export type Section =
     | DevelopSection
     | ConceptdevSection
     | DeliverSection
+    | ReflectionSection
 ;
 
 export type DesignSystemSection = {
@@ -119,7 +120,7 @@ export type DevelopSection = {
     inspiration?: Inspiration[];
     style_tile?: StyleTile[];
     ui_kit?: UIKit[];
-    final_design?: FinalDesign[];
+    prototypes?: Prototypes[];
 
 }
 
@@ -153,7 +154,7 @@ export type UIKit = {
 
 }
 
-export type FinalDesign = {
+export type Prototypes = {
     name: string;
     description: string;
     images?: {
@@ -173,16 +174,64 @@ export type ConceptdevSection = {
 
 export type DeliverSection = {
     type: "deliver";
+    delivertitel: string;
     content: string;
-    protoype?: {
+    usability?: Usability[];
+    iteration?: Iteration[];
+    finaldesign?: FinalDesign[];
+}
+
+export type Usability = {
+    name: string;
+    description: string;
+    testobjectivestitel?: string;
+    testobjectives?: string[];
+    taskstitel?: string;
+    tasks?: string[];
+    outcomestitel?: string;
+    outcomes?: string;
+    insightstitel?: string;
+    insights?: string[];
+    images?: {
         src: string;
         alt?: string;
     }[];
-    usability?: string;
-    usabilitytestoutcomes?: string[];
-    finalproduct?: {
+    link?: string;
+
+}
+
+export type Iteration = {
+    name: string;
+    description: string;
+    revisions?: string[];
+    images?: {
         src: string;
         alt?: string;
     }[];
-    reflection?:string;
+
+}
+
+export type FinalDesign = {
+    name: string;
+    description: string;
+    images?: {
+        src: string;
+        alt?: string;
+    }[];
+    link?: string;
+
+}
+
+export type ReflectionSection = {
+    type: "reflection";
+    name: string;
+    description: string;
+    learnings1: string;
+    learnings1_text: string;
+    learnings2?: string;
+    learnings2_text?: string;
+    learnings3?: string;
+    learnings3_text?: string;
+    learnings4?: string;
+    learnings4_text?: string;
 }

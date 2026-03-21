@@ -177,7 +177,7 @@ export const projects: Project[] = [
                             "Combined with a minimal but bold color palette and a clean sans serif font for the content, it aligns with my " +
                             "goal of creating a clear visual hierarchy.",
                         image: {
-                            src: "/clover.jpg",
+                            src: "/StylePortfolio.png",
                             alt: "stileTile"
                         },
 
@@ -199,7 +199,94 @@ export const projects: Project[] = [
                     }
                 ],
 
-                final_design: [
+                prototypes: [
+                    {
+                        name: "Prototypes",
+                        description:"The project is exceptional since I directly tested my ideas in code. The first prototype is a functional website " +
+                            "developed with next.js, react and tailwind css. I used framer motion to create micro animations and smooth scroll effects to " +
+                            "guide the user through the Portfolio page and evoke curiosity. " +
+                            "",
+                        link:"/",
+                        images:[
+                            {
+                                src: "/clover.jpg",
+                                alt: "prototype1"
+                            },
+                            {
+                                src: "/clover.jpg",
+                                alt: "prototype2"
+                            },
+                            {
+                                src: "/clover.jpg",
+                                alt: "prototype3"
+                            },
+                            {
+                                src: "/clover.jpg",
+                                alt: "prototype4"
+                            }
+                        ],
+
+                    }
+                ]
+            },
+            {
+                type: "deliver",
+                delivertitel: "Deliver",
+                content: "This stage is all about testing out developed ideas and prototypes from the prevoius step. " +
+                    "I sort out things that will not work and improve prototypes according to insights from Usability tests " +
+                    "in order to create a final version. ",
+
+                usability: [
+                    {
+                        name: "Usability Testing",
+                        description:"With my first prototype completed, I started working on a test plan that will guide my tests for usability. " +
+                            "That includes the objectives of the usability test. What do I want to analyze and what outcomes do I hope for. Followed " +
+                            "by a list of tasks I will give to each participant. "
+                        +"Then I requited participants and test my first design to see where users have problems and how they interact with it generally. " +
+                            "By Sorting, Mapping and Understanding the users feedback and observations, I drew insights from the test results. ",
+                        testobjectivestitel:"Test Objectives",
+                        testobjectives: ["example text","example text"],
+                        taskstitel:"Tasks",
+                        tasks: ["example text","example text"],
+                        outcomestitel:"Outcomes",
+                        outcomes: "example text",
+                        insightstitel:"Insights",
+                        insights: ["example text","example text"],
+                        images:[
+                            {
+                                src: "/clover.jpg",
+                                alt: "usability1"
+                            },
+                            {
+                                src: "/clover.jpg",
+                                alt: "usability2"
+                            },
+                        ],
+
+                    }
+                ],
+
+                iteration: [
+                    {
+                        name: "Iteration",
+                        description:"example text",
+                        revisions:["example text","example text"],
+                        images: [
+                            {
+                                src: "/clover.jpg",
+                                alt: "usability1"
+                            },
+                            {
+                                src: "/clover.jpg",
+                                alt: "usability2"
+                            },
+                        ],
+
+                    }
+                ],
+
+
+                finaldesign: [
                     {
                         name: "Final Design and Website",
                         description:"The project is exceptional since I directly tested my ideas in code. The first prototype is a functional website " +
@@ -228,6 +315,22 @@ export const projects: Project[] = [
 
                     }
                 ]
+            },
+
+            {
+                type: "reflection",
+                name: "Reflection",
+                description: "This stage is all about testing out developed ideas and prototypes from the prevoius step. " +
+                    "I sort out things that will not work and improve prototypes according to insights from Usability tests " +
+                    "in order to create a final version. ",
+                learnings1:"example text",
+                learnings1_text:"example text",
+                learnings2:"example text",
+                learnings2_text:"example text",
+                learnings3:"example text",
+                learnings3_text:"example text",
+                learnings4:"example text",
+                learnings4_text:"example text",
             }
         ]
 
