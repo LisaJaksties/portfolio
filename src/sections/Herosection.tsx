@@ -1,18 +1,21 @@
 import Image from "next/image";
 import Link from "next/link";
+import FadeIn from "@/components/FadeIn";
 
 type HeroSectionProps = {
+    id: string;
     image: string;
     title: string;
     address: string;
 };
 
-export default function Herosection({image, title, address}: HeroSectionProps) {
+export default function Herosection({id, image, title, address}: HeroSectionProps) {
 
 
     return (
         <div>
-            <div className="relative  pb-10  pt-8 hidden md:block">
+            <div id={id} className="relative  pb-10  pt-14 hidden md:block">
+                <FadeIn>
                 <Image
                     src={image}
                     alt={title}
@@ -21,6 +24,7 @@ export default function Herosection({image, title, address}: HeroSectionProps) {
                     className="w-full mx-auto object-cover h-[600px] z-20 "
                     priority
                 />
+                </FadeIn>
 
                 <Link href={`${address}`} target="_blank" rel="noreferrer">
                     <div className="hidden md:flex md:absolute items-center justify-center text-text text-xl
@@ -31,6 +35,7 @@ export default function Herosection({image, title, address}: HeroSectionProps) {
                 </Link>
             </div>
             <div className="md:hidden block">
+                <FadeIn>
                 <Image
                     src={image}
                     alt={title}
@@ -39,6 +44,7 @@ export default function Herosection({image, title, address}: HeroSectionProps) {
                     className="max-w-full mx-auto object-cover"
                     priority
                 />
+                </FadeIn>
             </div>
 
             <Link href={`${address}`} target="_blank" rel="noreferrer">

@@ -17,9 +17,14 @@ export default function Catchphrase() {
                         Between Germany and Korea I create a visual language influenced by culture and nature.
                     </h1>
                 </SlideUp>
-                <SlideUp y={90} delay={0.4} duration={1.0}>
-                    <h2 className={`text-secondarydark pt-20 text-center text-3xl font-semibold md:text-6xl leading-none tracking-widest`}>
+                <SlideUp y={80} delay={0.4} duration={1.0}>
+                    <h2 className={`text-secondarydark hidden md:block pt-20 text-center font-semibold md:text-6xl leading-none tracking-widest`}>
                         UX/UI · Design · Illustration · Web
+                    </h2>
+                </SlideUp>
+                <SlideUp y={80} delay={0.4} duration={1.0}>
+                    <h2 className={`text-secondarydark block md:hidden pt-20 text-center text-3xl font-semibold leading-14 tracking-widest`}>
+                        UX/UI <br/> Design <br/> Illustration <br/> Web
                     </h2>
                 </SlideUp>
             </FadeIn>

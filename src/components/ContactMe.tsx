@@ -21,7 +21,8 @@ export default function ContactMe() {
                         WONDER
                     </h2>
                     <h3 className="mt-3 font-medium tracking-tight">
-                        let`s stay in <Link href="/contact" className="text-secondarydark underline hover:text-accent transition ease-in-out">contact</Link>
+                        let`s stay in <Link href="/contact" className=" inline-block text-secondarydark transition-all duration-300 ease-out
+                                       hover:scale-110 hover:translate-x-0.5 origin-left underline hover:text-accent transition ease-in-out">contact</Link>
                     </h3>
                 </SlideUp>
             </FadeIn>

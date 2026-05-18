@@ -1,45 +1,347 @@
+
 import Image from "next/image";
 import { Section } from "@/types/section";
 import {soligant} from "@/fonts/soligant";
 import ReactMarkdown from "react-markdown";
+import FadeIn from "../components/FadeIn";
+import SlideUp from "../components/SlideUp";
 import Link from "next/link";
-
+import Imageview from "@/components/Imageview";
 
 export function SectionRenderer({ section }: { section: Section }) {
+
     switch (section.type) {
         case "design-system":
             return (
-                <section className="max-w-7xl mx-auto py-40">
+                <section id={section.type} className="max-w-7xl mx-auto py-40">
+
+                    <FadeIn>
                     {section.designsystemname &&
                         <h2 className={`${soligant.className} text-secondaryverydark px-4 mb:px-0 mb-20 text-5xl md:text-7xl`}>{section.designsystemname}</h2>}
-                    <p className="max-w-6xl mx-auto  font-light text-text/80 text-md md:text-xl px-4 mb:px-0 mb-20 text-justify leading-relaxed tracking-wide" >
+                    </FadeIn>
+                    <FadeIn>
+                        <p className="max-w-6xl mx-auto  font-light text-text/80 text-md md:text-xl px-4 mb:px-0 mb-20 text-justify leading-relaxed tracking-wide" >
                         {section.designsystemdescription}
                     </p>
-                    <Image
+                    </FadeIn>
+                    <SlideUp>
+                    <Imageview
                         src={section.image ?? ""}
                         alt={section.image ?? ""}
                         width={1024}
                         height={384}
-                        className="w-full max-h-[600px] mx-auto block object-cover"
+                        className="w-full max-h-[600px] mx-auto block object-contain"
                     />
+                    </SlideUp>
+                </section>
+            );
+
+        case "research-brand-personality":
+            return (
+                <section id={section.type} className="max-w-5xl mx-auto py-16">
+                    <FadeIn>
+                        {section.name &&
+                            <h2 className={`${soligant.className} text-secondaryverydark px-4 mb:px-0 mb-20 text-5xl md:text-7xl`}>
+                                {section.name}
+                            </h2>}
+                    </FadeIn>
+                    <FadeIn>
+                        <p className="font-light text-text/80 text-md md:text-xl px-4 mb:px-0 mb-30 text-justify leading-relaxed tracking-wide">
+                            {section.description}
+                        </p>
+                    </FadeIn>
+
+                    <FadeIn>
+                        <p className="text-center text-lg md:text-xl font-semibold text-text mb-8">
+                            {section.questiongoal}</p>
+                    </FadeIn>
+                    <FadeIn>
+                        <p className="mb-20 text-md md:text-lg font-light text-text text-justify">
+                            {section.answergoal}</p>
+                    </FadeIn>
+
+                    <FadeIn>
+                        <p className="text-center text-lg md:text-xl font-semibold text-text mb-8">
+                            {section.questiontarget}</p>
+                    </FadeIn>
+                    <FadeIn>
+                        <p className="text-md md:text-lg font-light text-text mb-8 text-justify">
+                            {section.answertarget}</p>
+                    </FadeIn>
+
+                    <FadeIn>
+                        <p className="text-center text-lg md:text-xl font-semibold text-text mb-8">
+                            {section.questionspecial}</p>
+                    </FadeIn>
+                    <FadeIn>
+                        <p className="mb-20 text-md md:text-lg font-light text-text text-justify">
+                            {section.answerspecial}</p>
+                    </FadeIn>
+
+                    <FadeIn>
+                        <p className="text-center text-lg md:text-xl font-semibold text-text mb-8">
+                            {section.questionpersonality}</p>
+                    </FadeIn>
+                    <FadeIn>
+                        <p className="text-center mb-20 text-md md:text-lg font-light text-text mb-8">
+                            {section.answerpersonality}</p>
+                    </FadeIn>
+
+                    <FadeIn>
+                        <p className="text-center text-lg md:text-xl font-semibold text-text mb-8">
+                            {section.questionstory}</p>
+                    </FadeIn>
+                    <FadeIn>
+                        <p className="text-md md:text-lg font-light text-text mb-8 text-justify">
+                            {section.answerstory}</p>
+                    </FadeIn>
+                </section>
+            );
+
+        case "concept-development":
+            return (
+                <section id={section.type} className="max-w-5xl mx-auto py-16">
+                    <FadeIn>
+                        {section.name &&
+                            <h2 className={`${soligant.className} text-secondaryverydark px-4 mb:px-0 mb-20 text-5xl md:text-7xl`}>
+                                {section.name}
+                            </h2>}
+                    </FadeIn>
+                    <FadeIn>
+                        <p className="font-light text-text/80 text-md md:text-xl px-4 mb:px-0 mb-30 text-justify leading-relaxed tracking-wide">
+                            {section.description}
+                        </p>
+                    </FadeIn>
+
+                    <FadeIn>
+                        <p className="text-center text-3xl md:text-5xl text-text mb-8">
+                            {section.moodboard}</p>
+                    </FadeIn>
+                    <FadeIn>
+                        <p className="mb-10 text-md md:text-lg font-light text-text text-justify">
+                            {section.moodboarddescription}</p>
+                    </FadeIn>
+
+                    <div className="grid grid-cols-2 gap-6 md:gap-8 md:py-10 mb-30">
+                        {section.moodimages?.map((img, i) => (
+                            <Imageview key={i}
+                                       src={img.src}
+                                       alt={img.alt ?? ""}
+                                       width={1024}
+                                       height={600}
+                                       className="max-h-[600px] mx-auto block object-contain"
+                            />
+                        ))}
+                    </div>
+
+                    <FadeIn>
+                        <p className="text-center text-3xl md:text-5xl text-text mb-8">
+                            {section.language}</p>
+                    </FadeIn>
+                    <FadeIn>
+                        <p className="mb-30 text-md md:text-lg font-light text-text text-justify">
+                            {section.languageideation}</p>
+                    </FadeIn>
+
+                    <FadeIn>
+                        <p className="text-center text-3xl md:text-5xl text-text mb-8">
+                            {section.visuals}</p>
+                    </FadeIn>
+                    <FadeIn>
+                        <p className="mb-10 text-md md:text-lg font-light text-text text-justify">
+                            {section.visualsdescription}</p>
+                    </FadeIn>
+
+                    <div className="grid grid-cols-2 gap-6 md:gap-8 md:py-10">
+                        {section.visualsimages?.map((img, i) => (
+                            <Imageview key={i}
+                                       src={img.src}
+                                       alt={img.alt ?? ""}
+                                       width={1024}
+                                       height={600}
+                                       className="max-h-[600px] mx-auto block object-contain"
+                            />
+                        ))}
+                    </div>
+
+
+                </section>
+            );
+
+        case "visual-identity":
+            return (
+                <section id={section.type} className="max-w-5xl mx-auto py-16">
+                    <FadeIn>
+                        {section.name &&
+                            <h2 className={`${soligant.className} text-secondaryverydark px-4 mb:px-0 mb-20 text-5xl md:text-7xl`}>
+                                {section.name}
+                            </h2>}
+                    </FadeIn>
+                    <FadeIn>
+                        <p className="font-light text-text/80 text-md md:text-xl px-4 mb:px-0 mb-20 text-justify leading-relaxed tracking-wide">
+                            {section.description}
+                        </p>
+                    </FadeIn>
+
+                    <div className="grid grid-cols-1 gap-6 md:gap-8 md:py-10">
+                        {section.images?.map((img, i) => (
+                            <Imageview key={i}
+                                       src={img.src}
+                                       alt={img.alt ?? ""}
+                                       width={1024}
+                                       height={600}
+                                       className="max-h-[600px] mx-auto block object-contain"
+                            />
+                        ))}
+                    </div>
+                </section>
+            );
+
+        case "application":
+            return (
+                <section id={section.type} className="max-w-5xl mx-auto py-16">
+                    <FadeIn>
+                        {section.name &&
+                            <h2 className={`${soligant.className} text-secondaryverydark px-4 mb:px-0 mb-20 text-5xl md:text-7xl`}>
+                                {section.name}
+                            </h2>}
+                    </FadeIn>
+                    <FadeIn>
+                        <p className="font-light text-text/80 text-md md:text-xl px-4 mb:px-0 mb-20 text-justify leading-relaxed tracking-wide">
+                            {section.description}
+                        </p>
+                    </FadeIn>
+
+                    <div className="grid grid-cols-1 gap-6 md:gap-8 md:py-10">
+                        {section.images?.map((img, i) => (
+                            <Imageview key={i}
+                                       src={img.src}
+                                       alt={img.alt ?? ""}
+                                       width={1024}
+                                       height={600}
+                                       className="max-h-[600px] mx-auto block object-contain"
+                            />
+                        ))}
+                    </div>
                 </section>
             );
 
         case "discover":
             return (
-                <section className="py-40 rounded-t-full bg-accent">
+                <section id={section.type} className="py-40 rounded-t-full bg-accent">
                     <div className="max-w-7xl mx-auto">
-                    {section.discovertitel &&
-                        <h2 className={`${soligant.className} text-primary px-4 mb:px-0 mb-20 text-5xl md:text-8xl`}>{section.discovertitel}</h2>}
-                    <p className="max-w-4xl mx-auto text-text/80 text-md md:text-xl px-4 mb:px-0 mb-60 text-justify leading-relaxed tracking-wide">{section.content}</p>
+                        <FadeIn>
+                            {section.discovertitel &&
+                                <h2 className={`${soligant.className} max-w-3xl mx-auto text-primary px-4 mb:px-0 mb-20 text-5xl md:text-8xl`}>{section.discovertitel}</h2>}
+                        </FadeIn>
+                        <FadeIn>
+                            <p className="max-w-4xl mx-auto text-text/80 text-md md:text-xl px-4 mb:px-0 mb-60 text-justify leading-relaxed tracking-wide">{section.content}</p>
+                        </FadeIn>
 
-                        {section.stakeholdertitel && <h3 className="text-3xl md:text-5xl text-text mb-20">{section.stakeholdertitel}</h3>}
-                        {section.stakeholders && (
+                        {section.researchplan && (
+                            <div className="md:max-w-5xl p-3 md:p-0 mx-auto mb-60">
+                                {section.researchplan.map((researchplan, index) => (
+                                    <div key={index}>
+                                        <FadeIn>
+                                        <h3 className="text-3xl md:text-5xl text-text mb-20">
+                                            {researchplan.name}
+                                        </h3>
+                                        </FadeIn>
+
+                                        <FadeIn>
+                                        <p className="text-md md:text-lg font-light text-text mb-8 text-justify">
+                                            {researchplan.description}</p>
+                                        </FadeIn>
+
+                                        {researchplan.questions && (
+                                            <ul className="text-left list-disc pl-10 space-y-3 font-light text-md md:text-lg text-text">
+                                                {researchplan.questions.map((question, i) => (
+                                                    <li key={i}>{question}</li>
+                                                ))}
+                                            </ul>
+                                        )}
+
+                                        <FadeIn>
+                                            <p className="text-md md:text-lg font-light text-text mb-8 text-justify">
+                                                {researchplan.questiongoal}</p>
+                                        </FadeIn>
+                                        <FadeIn>
+                                            <p className="text-md md:text-lg font-light text-text mb-8 text-justify">
+                                                {researchplan.answergoal}</p>
+                                        </FadeIn>
+
+                                        <FadeIn>
+                                            <p className="text-md md:text-lg font-light text-text mb-8 text-justify">
+                                                {researchplan.questiontarget}</p>
+                                        </FadeIn>
+                                        <FadeIn>
+                                            <p className="text-md md:text-lg font-light text-text mb-8 text-justify">
+                                                {researchplan.answertarget}</p>
+                                        </FadeIn>
+
+                                        <FadeIn>
+                                            <p className="text-md md:text-lg font-light text-text mb-8 text-justify">
+                                                {researchplan.questionspecial}</p>
+                                        </FadeIn>
+                                        <FadeIn>
+                                            <p className="text-md md:text-lg font-light text-text mb-8 text-justify">
+                                                {researchplan.answerspecial}</p>
+                                        </FadeIn>
+                                    </div>
+                                ))}
+                            </div>
+                        )}
+
+                        {section.culturaldimensions && (
+                            <div className="md:max-w-5xl p-3 md:p-0 mx-auto">
+                                {section.culturaldimensions.map((culturaldimensions, index) => (
+                                    <div key={index}>
+                                        <FadeIn>
+                                            <h3 className="text-3xl md:text-5xl text-text mb-20">
+                                                {culturaldimensions.name}
+                                            </h3>
+                                        </FadeIn>
+
+                                        <FadeIn>
+                                            <p className="text-md md:text-lg font-light text-text mb-8 text-justify">
+                                                {culturaldimensions.description}</p>
+                                        </FadeIn>
+
+                                        <SlideUp>
+                                            {culturaldimensions.table && (
+                                                <Image
+                                                    src={culturaldimensions.table.src}
+                                                    alt={culturaldimensions.table.alt ?? ""}
+                                                    width={800}
+                                                    height={600}
+                                                    className="max-h-[600px] mx-auto block object-cover"/>
+                                            )}
+                                        </SlideUp>
+
+                                        {culturaldimensions.dimensions?.map ((dimension, index) => (
+                                                <div key={index} className={`p-8`}>
+                                                    <h4 className="text-xl md:text-2xl bg-background text-secondarydark border-2 border-secondarydark p-3 font-semibold mb-5">
+                                                        {dimension.name}
+                                                    </h4>
+                                                </div>
+                                            )
+                                        )}
+
+                                    </div>
+                                ))}
+                            </div>
+                        )}
+
+                        <FadeIn>
+                            {section.stakeholdertitel && <h3 className="text-3xl md:text-5xl text-text mb-20">{section.stakeholdertitel}</h3>}
+                        </FadeIn>
+                        <FadeIn>
+                            {section.stakeholders && (
                             <div className={`grid gap-8 ${
                                 section.stakeholders.length === 1
                                     ? "grid-cols-1 max-w-3xl mx-auto place-items-center" 
                                     : "grid-cols-1 md:grid-cols-2"
-                            } place-items-center bg-background/60 shadow-xl rounded-3xl p-8`}>
+                            } place-items-center bg-background shadow-xl rounded-3xl md:p-8`}>
                                 {section.stakeholders.map((stakeholder, index) => (
                                     <div key={index} className={`p-8`}>
 
@@ -57,7 +359,7 @@ export function SectionRenderer({ section }: { section: Section }) {
                                         <p className="text-md md:text-lg font-light text-text mb-8 text-justify">{stakeholder.description}</p>
 
                                         {stakeholder.goals && (
-                                            <ul className="text-left list-none md:list-disc pl-10 space-y-3 font-light text-md md:text-lg text-text">
+                                            <ul className="text-left list-disc pl-10 space-y-3 font-light text-md md:text-lg text-text">
                                                 {stakeholder.goals.map((goal, i) => (
                                                     <li key={i}>{goal}</li>
                                                 ))}
@@ -67,21 +369,82 @@ export function SectionRenderer({ section }: { section: Section }) {
                                 ))}
                             </div>
                         )}
+                        </FadeIn>
+
+                        <FadeIn>
+                        {section.competitiveAnalysisTitel && <h3 className="text-3xl md:text-5xl text-text mt-60 mb-20">
+                            {section.competitiveAnalysisTitel}</h3>}
+                        </FadeIn>
+                        <FadeIn>
+                            {section.competitorAnalysisDescription && <p className="text-md md:max-w-5xl p-3 md:p-0 mx-auto md:text-lg font-light text-text mb-8 text-justify">
+                                {section.competitorAnalysisDescription}</p>}
+                        </FadeIn>
+
+                            {section.competitor && (
+                            <div className={`grid bg-background rounded-3xl max-w-5xl mx-auto place-items-start gap-8 ${
+                                section.competitor.length === 1
+                                    ? "grid-cols-1 max-w-3xl mx-auto place-items-center"
+                                    : "grid-cols-1 md:grid-cols-3"
+                            } place-items-center `}>
+
+                                {section.competitor.map((competitor, index) => (
+                                        <div key={index} className={`p-8`}>
+
+                                        <h4 className="text-xl md:text-2xl bg-background text-secondarydark border-2 border-secondarydark p-3 font-semibold mb-5">
+                                            {competitor.name}
+                                        </h4>
+
+                                        {competitor.picture && (
+                                            <Image
+                                                   src={competitor.picture.src}
+                                                   alt={competitor.picture.alt ?? ""}
+                                                   width={250}
+                                                   height={100}
+                                                   className="w-full md:h-20 mx-auto block object-cover"/>
+                                        )}
+
+                                        <p className="mt-10 text-text text-lg md:text-xl font-semibold text-start mb-2 ">Strengths</p>
+                                        {competitor.strength && (
+                                            <ul className="text-left list-disc pl-10 space-y-3 font-light text-md md:text-lg text-text">
+                                                {competitor.strength.map((strength, i) => (
+                                                    <li key={i}>{strength}</li>
+                                                ))}
+                                            </ul>
+                                        )}
+
+                                        <p className="mt-10 text-text text-lg md:text-xl font-semibold text-start mb-2">Weaknesses</p>
+                                        {competitor.weakness && (
+                                            <ul className="text-left list-disc pl-10 space-y-3 font-light text-md md:text-lg text-text ">
+                                                {competitor.weakness.map((weakness, i) => (
+                                                    <li key={i}>{weakness}</li>
+                                                ))}
+                                            </ul>
+                                        )}
+                                    </div>
+                                ))}
+                            </div>
+                        )}
+
 
                         {section.personas &&(
                             <div className="mx-auto">
                                 {section.personas.map((personas, index) => (
                                     <div key={index} className={`pt-60 p-8`}>
+                                        <FadeIn>
                                         <h3 className="text-3xl md:text-5xl text-text mb-20"> {personas.name}</h3>
-                                        <p className="md:max-w-5xl font-light mx-auto text-md md:text-lg text-text mb-8 text-justify">{personas.description}</p>
-                                        <div className="grid grid-cols-1 gap-30 py-20">
+                                        </FadeIn>
+                                        <FadeIn>
+                                            <p className="md:max-w-5xl font-light mx-auto text-md md:text-lg text-text mb-8 text-justify">{personas.description}</p>
+                                        </FadeIn>
+                                            <div className="grid grid-cols-1 gap-10 md:gap-30 md:py-20">
                                             {personas.images?.map((img, i) => (
-                                                <Image key={i}
+                                                <Imageview key={i}
                                                        src={img.src}
                                                        alt={img.alt ?? ""}
                                                        width={1024}
                                                        height={600}
-                                                       className="max-h-[600px] mx-auto block object-cover"/>
+                                                       className="max-h-[600px] mx-auto block object-contain"
+                                                />
                                             ))}
                                         </div>
                                     </div>
@@ -96,7 +459,7 @@ export function SectionRenderer({ section }: { section: Section }) {
 
         case "inspiration":
             return (
-                <section className="max-w-5xl mx-auto py-16">
+                <section id={section.type} className="max-w-5xl mx-auto py-16">
                     {/*line*/}
                     <hr className="border-t border-gray-400 max-w-7xl mx-auto my-12"/>
                     {section.inspirationtitel && <h1 className="text-3xl font-bold mb-8">{section.inspirationtitel}</h1>}
@@ -116,7 +479,7 @@ export function SectionRenderer({ section }: { section: Section }) {
 
         case "ideate":
             return (
-                <section className="max-w-5xl mx-auto py-16">
+                <section id={section.type} className="max-w-5xl mx-auto py-16">
                     {/*line*/}
                     <hr className="border-t border-gray-400 max-w-7xl mx-auto my-12"/>
                     {section.ideatetitel && <h1 className="text-3xl font-bold mb-8">{section.ideatetitel}</h1>}
@@ -136,27 +499,34 @@ export function SectionRenderer({ section }: { section: Section }) {
 
         case "define":
             return (
-                <section className="max-w-7xl mx-auto py-40">
-
+                <section id={section.type} className="max-w-7xl mx-auto py-40">
+                   <FadeIn>
                     {section.definetitel && <h2 className={`${soligant.className} text-secondaryverydark px-4 mb:px-0 mb-20 text-5xl md:text-8xl`}>{section.definetitel}</h2>}
+                   </FadeIn>
+                    <FadeIn>
                     <p className="max-w-4xl mx-auto font-light text-text/80 text-md md:text-xl px-4 mb:px-0 mb-20 text-justify leading-relaxed tracking-wide">{section.content}</p>
-
+                    </FadeIn>
                     {section.site_map &&(
                         <div className="mx-auto">
                             {section.site_map.map((site_map, index) => (
                                 <div key={index} className={`pt-60 p-8`}>
+                                    <FadeIn>
                                     <h3 className="text-3xl md:text-5xl text-text mb-20 "> {site_map.name}</h3>
-                                    <div className="md:max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 space-x-10 pb-20 justify-content-center mx-auto">
-                                        <p className="text-md md:text-lg text-text mb-8 font-light text-justify">{site_map.description}</p>
+                                    </FadeIn>
 
-                                        <Image
+                                    <div className="md:max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 md:space-x-10 pb-20 justify-content-center mx-auto">
+                                        <FadeIn>
+                                        <p className="text-md md:text-lg text-text mb-8 font-light text-justify">{site_map.description}</p>
+                                        </FadeIn>
+                                        <SlideUp>
+                                        <Imageview
                                             src={site_map.image.src}
                                             alt={site_map.image.alt ?? ""}
                                             width={1024}
                                             height={600}
                                             className="max-h-[600px] mx-auto block object-cover"
                                         />
-
+                                        </SlideUp>
 
                                     </div>
                                 </div>
@@ -170,19 +540,31 @@ export function SectionRenderer({ section }: { section: Section }) {
                         <div className="mx-auto">
                             {section.task_flow.map((task_flow, index) => (
                                 <div key={index} className={`pt-60 p-8`}>
+                                    <FadeIn>
                                     <h3 className="text-3xl md:text-5xl text-text mb-20 "> {task_flow.name}</h3>
+                                    </FadeIn>
 
                                     <div className="md:max-w-5xl mx-auto">
-                                    <p className="text-md md:text-lg text-text font-light mb-14 text-justify tracking-wide">{task_flow.description}</p>
-                                    <p className="text-md md:text-lg text-text/70 font-semibold mb-8 text-justify tracking-wide">{task_flow.task_flow_titel}</p>
+                                        <FadeIn>
+                                            <p className="text-md md:text-lg text-text font-light mb-14 text-justify tracking-wide">
+                                                {task_flow.description}</p>
+                                        </FadeIn>
+                                        <FadeIn delay={0.4}>
+                                            <p className="text-md md:text-lg text-text/70 font-semibold mb-8 text-justify tracking-wide">
+                                                {task_flow.task_flow_titel}</p>
+                                        </FadeIn>
+                                        </div >
+
+                                    <div className="md:max-w-5xl mx-auto grid grid-cols-1 gap-20 pb-20">
+                                    {task_flow.images?.map((img, i) => (
+                                        <Imageview key={i}
+                                               src={img.src}
+                                               alt={img.alt ?? ""}
+                                               width={1024}
+                                               height={600}
+                                               className="max-h-[600px] mx-auto block object-contain"/>
+                                    ))}
                                     </div>
-                                    <Image
-                                        src={task_flow.image.src}
-                                        alt={task_flow.image.alt ?? ""}
-                                        width={1024}
-                                        height={600}
-                                        className="max-h-[600px] mx-auto block object-cover"
-                                    />
                                 </div>
 
                             ))}
@@ -194,22 +576,35 @@ export function SectionRenderer({ section }: { section: Section }) {
                         <div className="mx-auto">
                             {section.lofi_wireframes.map((lofi_wireframes, index) => (
                                 <div key={index} className={`pt-60 p-8`}>
+                                    <FadeIn>
                                     <h3 className="text-3xl md:text-5xl text-text mb-20 "> {lofi_wireframes.name}</h3>
+                                    </FadeIn>
+                                    <FadeIn>
                                     <p className="md:max-w-5xl mx-auto text-md md:text-lg text-text mb-8 font-light text-justify">{lofi_wireframes.description}</p>
-                                    <div
-                                        className="md:max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 pb-20 ">
+                                    </FadeIn>
+                                        <div
+                                        className="md:max-w-5xl mx-auto grid grid-cols-10 md:grid-cols-10 gap-1 pb-20 ">
 
                                         {lofi_wireframes.images?.map((img, i) => (
-                                            <Image key={i}
-                                                   src={img.src}
-                                                   alt={img.alt ?? ""}
-                                                   width={1024}
-                                                   height={600}
-                                                   className="max-h-[600px] mx-auto block object-cover"/>
+                                            <Imageview key={i}
+                                                       src={img.src}
+                                                       alt={img.alt ?? ""}
+                                                       width={1024}
+                                                       height={600}
+                                                       className="max-h-[1000px] mx-auto block object-contain
+                                                   "/>
                                         ))}
 
 
                                     </div>
+                                    <button
+                                        type="button"
+                                        className="place-items-center bg-accent rounded-3xl px-4 py-2 justify-center rounded
+                                                    hover:bg-background hover:text-primary hover:border border-accent duration-300
+                                                    hover:scale-108 md:hover:scale-110 hover:cursor-pointer transition ease-in-out"
+                                    >
+                                        See Figma File
+                                    </button>
                                 </div>
 
                             ))}
@@ -223,27 +618,37 @@ export function SectionRenderer({ section }: { section: Section }) {
 
         case "develop":
             return (
-                <section className="bg-accent rounded-t-full py-40">
+                <section id={section.type} className="bg-accent rounded-t-full py-40">
                     <div className="max-w-7xl mx-auto">
-                    {section.developtitel && <h2 className={`${soligant.className} text-primary px-4 mb:px-0 mb-20 text-5xl md:text-8xl`}>{section.developtitel}</h2>}
-                    <p className="max-w-4xl mx-auto font-light text-text/80 text-md md:text-xl px-4 mb:px-0 mb-20 text-justify leading-relaxed tracking-wide">{section.content}</p>
+                        <FadeIn>
+                        {section.developtitel &&
+                            <h2 className={`${soligant.className} text-primary px-4 mb:px-0 mb-20 text-5xl md:text-8xl`}>{section.developtitel}</h2>}
+                        </FadeIn>
+                        <FadeIn>
+                            <p className="max-w-4xl mx-auto font-light text-text/80 text-md md:text-xl px-4 mb:px-0 mb-20 text-justify leading-relaxed tracking-wide">{section.content}</p>
+                        </FadeIn>
 
                     {section.inspiration &&(
                         <div className="mx-auto">
                             {section.inspiration.map((inspiration, index) => (
                                 <div key={index} className={`pt-60 p-8`}>
+                                    <FadeIn>
                                     <h3 className="text-3xl md:text-5xl text-primary mb-20 "> {inspiration.name}</h3>
-                                    <div className="md:max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 space-x-10 pb-20 justify-content-center mx-auto">
-                                        <p className="text-md md:text-lg text-text mb-8 font-light text-justify">{inspiration.description}</p>
+                                    </FadeIn>
 
-                                        <Image
+                                    <div className="md:max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 md:space-x-10 pb-20 justify-content-center mx-auto">
+                                        <FadeIn>
+                                        <p className="text-md md:text-lg text-text mb-8 font-light text-justify">{inspiration.description}</p>
+                                        </FadeIn>
+                                        <SlideUp>
+                                        <Imageview
                                             src={inspiration.image.src}
                                             alt={inspiration.image.alt ?? ""}
                                             width={1024}
                                             height={600}
                                             className="max-h-[600px] mx-auto block object-cover"
                                         />
-
+                                        </SlideUp>
 
                                     </div>
                                 </div>
@@ -257,18 +662,28 @@ export function SectionRenderer({ section }: { section: Section }) {
                         <div className="mx-auto">
                             {section.style_tile.map((style_tile, index) => (
                                 <div key={index} className={`pt-60 p-8`}>
-                                    <h3 className="text-3xl md:text-5xl text-primary mb-20 "> {style_tile.name}</h3>
-
+                                    <FadeIn>
+                                        <h3 className="text-3xl md:text-5xl text-primary mb-20 "> {style_tile.name}</h3>
+                                    </FadeIn>
                                     <div className="md:max-w-5xl mx-auto">
-                                        <p className="text-md md:text-lg text-text font-light mb-14 text-justify tracking-wide">{style_tile.description}</p>
+                                        <FadeIn>
+                                            <p className="text-md md:text-lg text-text font-light mb-14 text-justify tracking-wide">{style_tile.description}</p>
+                                        </FadeIn>
                                     </div>
-                                    <Image
-                                        src={style_tile.image.src}
-                                        alt={style_tile.image.alt ?? ""}
-                                        width={1024}
-                                        height={600}
-                                        className="max-h-[600px] mx-auto block object-cover"
-                                    />
+                                    <div
+                                        className="md:max-w-5xl mx-auto grid grid-cols-1 gap-10 pb-20 ">
+
+                                        {style_tile.images?.map((img, i) => (
+                                            <Imageview key={i}
+                                                       src={img.src}
+                                                       alt={img.alt ?? ""}
+                                                       width={1024}
+                                                       height={600}
+                                                       className="max-h-[600px] mx-auto block object-cover"/>
+                                        ))}
+
+
+                                    </div>
                                 </div>
 
                             ))}
@@ -276,19 +691,25 @@ export function SectionRenderer({ section }: { section: Section }) {
                         </div>
                     )}
 
-                    {section.ui_kit &&(
-                        <div className="mx-auto">
-                            {section.ui_kit.map((ui_kit, index) => (
-                                <div key={index} className={`pt-60 p-8`}>
-                                    <h3 className="text-3xl md:text-5xl text-primary mb-20 "> {ui_kit.name}</h3>
-                                    <p className="md:max-w-5xl mx-auto text-md md:text-lg text-text mb-8 font-light text-justify">{ui_kit.description}</p>
-                                    <Image
+                        {section.ui_kit && (
+                            <div className="mx-auto">
+                                {section.ui_kit.map((ui_kit, index) => (
+                                    <div key={index} className={`pt-60 p-8`}>
+                                        <FadeIn>
+                                            <h3 className="text-3xl md:text-5xl text-primary mb-20 "> {ui_kit.name}</h3>
+                                        </FadeIn>
+                                        <FadeIn>
+                                            <p className="md:max-w-5xl mx-auto text-md md:text-lg text-text mb-8 font-light text-justify">{ui_kit.description}</p>
+                                    </FadeIn>
+                                    <SlideUp>
+                                        <Imageview
                                         src={ui_kit.image.src}
                                         alt={ui_kit.image.alt ?? ""}
                                         width={1024}
                                         height={600}
-                                        className="max-h-[600px] mx-auto block object-cover"
+                                        className="max-h-[600px] mx-auto block object-contain"
                                     />
+                                    </SlideUp>
                                 </div>
 
                             ))}
@@ -306,7 +727,7 @@ export function SectionRenderer({ section }: { section: Section }) {
                                         className="md:max-w-5xl mx-auto grid grid-cols-1 gap-10 pb-20 ">
 
                                         {prototypes.images?.map((img, i) => (
-                                            <Image key={i}
+                                            <Imageview key={i}
                                                    src={img.src}
                                                    alt={img.alt ?? ""}
                                                    width={1024}
@@ -328,115 +749,10 @@ export function SectionRenderer({ section }: { section: Section }) {
 
             );
 
-        case "develop":
-            return (
-                <section className="bg-accent rounded-t-full py-40">
-                    <div className="max-w-7xl mx-auto">
-                        {section.developtitel && <h2 className={`${soligant.className} text-primary px-4 mb:px-0 mb-20 text-5xl md:text-8xl`}>{section.developtitel}</h2>}
-                        <p className="max-w-4xl mx-auto font-light text-text/80 text-md md:text-xl px-4 mb:px-0 mb-20 text-justify leading-relaxed tracking-wide">{section.content}</p>
-
-                        {section.inspiration &&(
-                            <div className="mx-auto">
-                                {section.inspiration.map((inspiration, index) => (
-                                    <div key={index} className={`pt-60 p-8`}>
-                                        <h3 className="text-3xl md:text-5xl text-primary mb-20 "> {inspiration.name}</h3>
-                                        <div className="md:max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 space-x-10 pb-20 justify-content-center mx-auto">
-                                            <p className="text-md md:text-lg text-text mb-8 font-light text-justify">{inspiration.description}</p>
-
-                                            <Image
-                                                src={inspiration.image.src}
-                                                alt={inspiration.image.alt ?? ""}
-                                                width={1024}
-                                                height={600}
-                                                className="max-h-[600px] mx-auto block object-cover"
-                                            />
-
-
-                                        </div>
-                                    </div>
-
-                                ))}
-
-                            </div>
-                        )}
-
-                        {section.style_tile &&(
-                            <div className="mx-auto">
-                                {section.style_tile.map((style_tile, index) => (
-                                    <div key={index} className={`pt-60 p-8`}>
-                                        <h3 className="text-3xl md:text-5xl text-primary mb-20 "> {style_tile.name}</h3>
-
-                                        <div className="md:max-w-5xl mx-auto">
-                                            <p className="text-md md:text-lg text-text font-light mb-14 text-justify tracking-wide">{style_tile.description}</p>
-                                        </div>
-                                        <Image
-                                            src={style_tile.image.src}
-                                            alt={style_tile.image.alt ?? ""}
-                                            width={1024}
-                                            height={600}
-                                            className="max-h-[600px] mx-auto block object-cover"
-                                        />
-                                    </div>
-
-                                ))}
-
-                            </div>
-                        )}
-
-                        {section.ui_kit &&(
-                            <div className="mx-auto">
-                                {section.ui_kit.map((ui_kit, index) => (
-                                    <div key={index} className={`pt-60 p-8`}>
-                                        <h3 className="text-3xl md:text-5xl text-primary mb-20 "> {ui_kit.name}</h3>
-                                        <p className="md:max-w-5xl mx-auto text-md md:text-lg text-text mb-8 font-light text-justify">{ui_kit.description}</p>
-                                        <Image
-                                            src={ui_kit.image.src}
-                                            alt={ui_kit.image.alt ?? ""}
-                                            width={1024}
-                                            height={600}
-                                            className="max-h-[600px] mx-auto block object-cover"
-                                        />
-                                    </div>
-
-                                ))}
-
-                            </div>
-                        )}
-
-                        {section.prototypes &&(
-                            <div className="mx-auto">
-                                {section.prototypes.map((prototypes, index) => (
-                                    <div key={index} className={`pt-60 p-8`}>
-                                        <h3 className="text-3xl md:text-5xl text-primary mb-20 "> {prototypes.name}</h3>
-                                        <p className="md:max-w-5xl mx-auto text-md md:text-lg text-text mb-8 font-light text-justify">{prototypes.description}</p>
-                                        <div
-                                            className="md:max-w-5xl mx-auto grid grid-cols-1 gap-10 pb-20 ">
-
-                                            {prototypes.images?.map((img, i) => (
-                                                <Image key={i}
-                                                       src={img.src}
-                                                       alt={img.alt ?? ""}
-                                                       width={1024}
-                                                       height={600}
-                                                       className="max-h-[600px] mx-auto block object-cover"/>
-                                            ))}
-
-
-                                        </div>
-                                    </div>
-
-                                ))}
-
-                            </div>
-                        )}
-                    </div>
-                </section>
-
-            );
 
         case "deliver":
             return (
-                <section className="max-w-7xl mx-auto py-40">
+                <section id={section.type} className="max-w-7xl mx-auto py-40">
 
                     {section.delivertitel && <h2 className={`${soligant.className} text-secondaryverydark px-4 mb:px-0 mb-20 text-5xl md:text-8xl`}>{section.delivertitel}</h2>}
                     <p className="max-w-4xl mx-auto font-light text-text/80 text-md md:text-xl px-4 mb:px-0 mb-20 text-justify leading-relaxed tracking-wide">{section.content}</p>
@@ -452,7 +768,7 @@ export function SectionRenderer({ section }: { section: Section }) {
 
                                         <h4 className="text-2xl md:text-4xl text-start text-secondarydark font-semibold mb-3">{usability.testobjectivestitel}</h4>
                                         {usability.testobjectives && (
-                                            <ul className="text-left list-none md:list-disc pl-10 space-y-3 font-light text-md md:text-lg text-text">
+                                            <ul className="text-left list-disc pl-10 space-y-3 font-light text-md md:text-lg text-text">
                                                 {usability.testobjectives.map((objective, i) => (
                                                     <li key={i}>{objective}</li>
                                                 ))}
@@ -461,7 +777,7 @@ export function SectionRenderer({ section }: { section: Section }) {
 
                                         <h4 className="text-2xl md:text-4xl text-start text-secondarydark font-semibold mt-10 mb-3">{usability.taskstitel}</h4>
                                         {usability.tasks && (
-                                            <ul className="text-left list-none md:list-disc pl-10 space-y-3 font-light text-md md:text-lg text-text">
+                                            <ul className="text-left list-disc pl-10 space-y-3 font-light text-md md:text-lg text-text">
                                                 {usability.tasks.map((task, i) => (
                                                     <li key={i}>{task}</li>
                                                 ))}
@@ -473,7 +789,7 @@ export function SectionRenderer({ section }: { section: Section }) {
 
                                         <h4 className="text-2xl md:text-4xl text-start text-secondarydark font-semibold mt-10 mb-3">{usability.insightstitel}</h4>
                                         {usability.insights && (
-                                            <ul className="text-left list-none md:list-disc pl-10 space-y-3 font-light text-md md:text-lg text-text">
+                                            <ul className="text-left list-disc pl-10 space-y-3 font-light text-md md:text-lg text-text">
                                                 {usability.insights.map((insight, i) => (
                                                     <li key={i}>{insight}</li>
                                                 ))}
@@ -483,7 +799,7 @@ export function SectionRenderer({ section }: { section: Section }) {
                                             className="md:max-w-5xl mx-auto grid grid-cols-1 gap-10 pb-20 pt-20 ">
 
                                             {usability.images?.map((img, i) => (
-                                                <Image key={i}
+                                                <Imageview key={i}
                                                        src={img.src}
                                                        alt={img.alt ?? ""}
                                                        width={1024}
@@ -512,7 +828,7 @@ export function SectionRenderer({ section }: { section: Section }) {
                                     <div className="md:max-w-5xl mx-auto">
                                         <p className="text-md md:text-lg text-text mb-20 font-light text-justify">{iteration.description}</p>
                                         {iteration.revisions && (
-                                            <ul className="text-left list-none md:list-disc pl-10 space-y-3 font-light text-md md:text-lg text-text">
+                                            <ul className="text-left list-disc pl-10 space-y-3 font-light text-md md:text-lg text-text">
                                                 {iteration.revisions.map((revision, i) => (
                                                     <li key={i}>{revision}</li>
                                                 ))}
@@ -523,7 +839,7 @@ export function SectionRenderer({ section }: { section: Section }) {
                                         className="md:max-w-5xl mx-auto grid grid-cols-1 gap-10 pt-20 pb-20 ">
 
                                         {iteration.images?.map((img, i) => (
-                                            <Image key={i}
+                                            <Imageview key={i}
                                                    src={img.src}
                                                    alt={img.alt ?? ""}
                                                    width={1024}
@@ -550,7 +866,7 @@ export function SectionRenderer({ section }: { section: Section }) {
                                         className="md:max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 pb-20 ">
 
                                         {finaldesign.images?.map((img, i) => (
-                                            <Image key={i}
+                                            <Imageview key={i}
                                                    src={img.src}
                                                    alt={img.alt ?? ""}
                                                    width={1024}
@@ -577,36 +893,47 @@ export function SectionRenderer({ section }: { section: Section }) {
 
         case "reflection":
             return (
-                <section className="py-40 rounded-t-full bg-accent">
+                <section id={section.type} className="py-40 rounded-t-full bg-accent">
                     <div className="max-w-7xl mx-auto">
+                        <FadeIn>
                         {section.name &&
                             <h2 className={`${soligant.className} text-primary px-4 mb:px-0 mb-20 text-5xl md:text-8xl`}>{section.name}</h2>}
-                        <p className="max-w-4xl mx-auto text-text/80 text-md md:text-xl px-4 mb:px-0 mb-60 text-justify leading-relaxed tracking-wide">{section.description}</p>
+                        </FadeIn>
+                        <FadeIn>
+                            <p className="max-w-4xl mx-auto text-text/80 text-md md:text-xl px-4 mb:px-0 mb-60 text-justify leading-relaxed tracking-wide">{section.description}</p>
+                        </FadeIn>
 
-                        <div className=" max-w-4xl grid grid-cols-2 mx-auto gap-20">
-                            <div>
-                                <h3 className="text-3xl md:text-5xl text-text mb-5 ">{section.learnings1}</h3>
-                                <p className="text-text/80 text-md md:text-xl px-4 mb:px-0 mb-10 text-justify leading-relaxed tracking-wide">{section.learnings1_text}</p>
+                        <div className="max-w-3xl grid grid-cols-1 md:grid-cols-2 gap-20 mx-auto">
+                            <SlideUp>
+                            <div className="md:max-w-fit p-2 md:p-0 ">
+                                <h4 className="text-text mb-5 text-2xl md:text-4xl md:text-start font-semibold">{section.learnings1}</h4>
+                                <p className="text-text/80 text-md md:text-xl px-4 md:px-0 mb-10 text-justify leading-relaxed tracking-wide">{section.learnings1_text}</p>
                             </div>
-
-                            <div>
-                                <h3 className="text-3xl md:text-5xl text-text mb-5 ">{section.learnings2}</h3>
-                                <p className=" mx-auto text-text/80 text-md md:text-xl px-4 mb:px-0 mb-10 text-justify leading-relaxed tracking-wide">{section.learnings2_text}</p>
+                            </SlideUp>
+                            <SlideUp>
+                            <div className="md:max-w-fit">
+                                <h4 className="text-text mb-5 text-2xl md:text-4xl md:text-start font-semibold">{section.learnings2}</h4>
+                                <p className=" mx-auto text-text/80 text-md md:text-xl px-4 md:px-0 mb-10 text-justify leading-relaxed tracking-wide">{section.learnings2_text}</p>
                             </div>
-
-                            <div>
-                                <h3 className="text-3xl md:text-5xl text-text mb-5 ">{section.learnings3}</h3>
-                                <p className=" mx-auto text-text/80 text-md md:text-xl px-4 mb:px-0 mb-10 text-justify leading-relaxed tracking-wide">{section.learnings3_text}</p>
+                            </SlideUp>
+                            <SlideUp>
+                            <div className="md:max-w-fit">
+                                <h4 className="text-text mb-5 text-2xl md:text-4xl md:text-start font-semibold">{section.learnings3}</h4>
+                                <p className=" mx-auto text-text/80 text-md md:text-xl px-4 md:px-0 mb-10 text-justify leading-relaxed tracking-wide">{section.learnings3_text}</p>
                             </div>
-
-                            <div>
-                                <h3 className="text-3xl md:text-5xl text-text mb-5 ">{section.learnings4}</h3>
-                                <p className=" mx-auto text-text/80 text-md md:text-xl px-4 mb:px-0 mb-10 text-justify leading-relaxed tracking-wide">{section.learnings4_text}</p>
+                            </SlideUp>
+                            <SlideUp>
+                            <div className="md:max-w-fit">
+                                <h4 className="text-text mb-5 text-2xl md:text-4xl md:text-start font-semibold">{section.learnings4}</h4>
+                                <p className=" mx-auto text-text/80 text-md md:text-xl px-4 md:px-0 mb-10 text-justify leading-relaxed tracking-wide">{section.learnings4_text}</p>
                             </div>
-
+                            </SlideUp>
                         </div>
                     </div>
                 </section>
+
             );
     }
 }
+
+

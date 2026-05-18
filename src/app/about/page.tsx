@@ -23,13 +23,6 @@ export default function AboutPage(){
                     <div className="relative w-[300px] h-[300px] md:w-[500px] md:h-[500px] flex-shrink-0">
                         <FadeIn delay={1} duration={2.5}>
                             <Blobframe />
-                            {/*<Image
-                                src="/example.jpg"
-                                alt="Portfolio preview"
-                                fill
-                                className="object-cover shadow-md"
-                                priority
-                            />*/}
                         </FadeIn>
                     </div>
 
@@ -38,13 +31,14 @@ export default function AboutPage(){
 
                         <FadeIn delay={2} duration={2}>
                             <p className="text-sm font-normal tracking-wide leading-loose text-justify">
-                                You can also call me Huinya. I am a (UX) designer and
+                                I am a (UX) designer and
                                 illustrator with roots in Germany
-                                and a second home in Busan, South Korea.
+                                and a second home in South Korea.
+                                I use the artist name Huinya (흰야).
                             </p>
                         </FadeIn>
 
-                        <FadeIn delay={2.3} duration={2}>
+                        <FadeIn delay={2.6} duration={2}>
                             <p className="mt-4 text-sm font-normal tracking-wide leading-loose text-justify">
                                 I design and develop personalised websites
                                 that look beautiful and feel good, paying great
@@ -55,7 +49,7 @@ export default function AboutPage(){
                             </p>
                         </FadeIn>
 
-                        <FadeIn delay={2.5} duration={2}>
+                        <FadeIn delay={3.2} duration={2}>
                             <p className="mt-4 text-sm font-normal tracking-wide leading-loose text-justify">
                                 Art, design, and people have been with me my
                                 whole life. I always wanted to be an artist.
@@ -64,7 +58,7 @@ export default function AboutPage(){
                             </p>
                         </FadeIn>
 
-                        <FadeIn delay={0.5}>
+                        <FadeIn delay={3.8} duration={2}>
                             <p className="mt-4 text-sm font-normal tracking-wide leading-loose text-justify">
                                 When I am not immersed into
                                 creative work, I like to travel or spend time with my

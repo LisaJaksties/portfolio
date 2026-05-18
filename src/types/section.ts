@@ -8,7 +8,46 @@ export type Section =
     | ConceptdevSection
     | DeliverSection
     | ReflectionSection
+    | ResearchBrand
+    | VisualIdentity
+    | Application
 ;
+
+export type ResearchBrand = {
+    type: "research-brand-personality";
+    name: string;
+    description: string;
+    questiongoal?: string;
+    answergoal?: string;
+    questiontarget?: string;
+    answertarget?: string;
+    questionspecial?: string;
+    answerspecial?: string;
+    questionpersonality?: string;
+    answerpersonality?: string;
+    questionstory?: string;
+    answerstory?: string;
+};
+
+export type VisualIdentity = {
+    type: "visual-identity";
+    name: string;
+    description: string;
+    images?: {
+        src: string;
+        alt?: string;
+    }[];
+}
+
+export type Application = {
+    type: "application";
+    name: string;
+    description: string;
+    images?: {
+        src: string;
+        alt?: string;
+    }[];
+}
 
 export type DesignSystemSection = {
     type: "design-system";
@@ -22,8 +61,62 @@ export type DiscoverSection = {
     discovertitel: string;
     stakeholdertitel?: string;
     stakeholders?: Stakeholder[];
+    competitiveAnalysisTitel?: string;
+    competitorAnalysisDescription?: string;
+    competitor?: Competitor[];
     personas?: Personas[];
+    researchplan?: Researchplan[];
+    culturaldimensions?: CulturalDimensions[];
+    websitecasestudy?: WebsiteCaseStudy[];
+    interview?: Interview[];
     content: string;
+};
+
+export type Researchplan = {
+    name: string;
+    description: string;
+    questions?: string[];
+    questiongoal?: string;
+    answergoal?: string;
+    questiontarget?: string;
+    answertarget?: string;
+    questionspecial?: string;
+    answerspecial?: string;
+};
+
+export type CulturalDimensions = {
+    name: string;
+    description: string;
+    table?: {
+        src: string;
+        alt?: string;
+    };
+    dimensions?: Dimensions[];
+};
+
+export type Dimensions ={
+    name?: string;
+    description?: string;
+    description2?: string;
+    country1?: string;
+    country2?: string;
+}
+
+export type WebsiteCaseStudy = {
+    name: string;
+    description: string;
+    culture1?: string;
+    culture2?: string;
+    dimensions?: string[];
+    descriptions?: string[];
+};
+
+export type Interview = {
+    name: string;
+    description: string;
+    quote?: string[];
+    culture?: string[];
+    insights?: string[];
 };
 
 export type Stakeholder = {
@@ -31,6 +124,17 @@ export type Stakeholder = {
     role?: string;
     description: string;
     goals?: string[];
+};
+
+export type Competitor = {
+    name?: string;
+    picture?: {
+        src: string;
+        alt?: string;
+    };
+    strength?: string[];
+    weakness?: string[];
+
 };
 
 export type Personas = {
@@ -70,7 +174,15 @@ export type DefineSection = {
     site_map?: SiteMap[];
     task_flow?: TaskFlow[];
     lofi_wireframes?: LofiWireframes[];
+    projectgoals?: ProjectGoals[];
 };
+
+export type ProjectGoals = {
+    name: string;
+    description: string;
+    goals:string[];
+
+}
 
 export type FeatureRoadmap = {
     name: string;
@@ -96,10 +208,10 @@ export type TaskFlow = {
     name: string;
     description: string;
     task_flow_titel: string;
-    image: {
+    images?: {
         src: string;
         alt?: string;
-    };
+    }[];
 
 }
 
@@ -110,6 +222,7 @@ export type LofiWireframes = {
         src: string;
         alt?: string;
     }[];
+    link?: string;
 
 }
 
@@ -137,10 +250,10 @@ export type Inspiration = {
 export type StyleTile = {
     name: string;
     description: string;
-    image: {
+    images?: {
         src: string;
         alt?: string;
-    };
+    }[];
 
 }
 
@@ -167,10 +280,26 @@ export type Prototypes = {
 
 
 export type ConceptdevSection = {
-    type: "conceptdev";
-    conceptdefinition: string;
-    explanation?: string;
+    type: "concept-development";
+    name: string;
+    description: string;
+    moodboard?: string;
+    moodboarddescription?: string;
+    moodimages?: {
+        src: string;
+        alt?: string;
+    }[];
+    language?: string;
+    languageideation?: string;
+    visuals?: string;
+    visualsdescription?: string;
+    visualsimages?:{
+        src: string;
+        alt?: string;
+    }[];
 }
+
+
 
 export type DeliverSection = {
     type: "deliver";

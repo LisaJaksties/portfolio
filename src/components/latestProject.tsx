@@ -2,43 +2,76 @@ import { Project } from "@/lib/projects";
 import Link from "next/link";
 import Image from "next/image";
 import FadeIn from "@/components/FadeIn";
-import {soligant} from "@/fonts/soligant";
 
 export default function LatestProject({ project }: { project: Project }){
     return (
-        <section className="py-10 md:py-30 max-w-full">
+        <section className=" max-w-full">
 
-            <div className="flex flex-col items-center">
-            <FadeIn amount={0.4}>
-                <Link href={`/projects/${project.slug}`}>
 
-                    <Image
-                        src={project.image}
-                        alt={project.title}
-                        width={800}
-                        height={300}
-                        className="h-[500px] w-80 md:h-[450px] md:w-5xl p-2 md:p-6 border border-2 rounded-4xl inset-2
-                        border-secondaryverydark
-                         transition ease-in-out delay-150 duration-300 hover:-translate-y-1 hover:scale-104
-                         md:hover:scale-105 object-cover hover:border-background"
-                        style={{zIndex: 10}}
-                    />
+            <div className="grid grid-cols-1 md:grid-cols-2 md:items-start max-w-7xl mx-auto gap-6 md:gap-8 pb-20">
 
-                </Link>
+                <FadeIn amount={0.4}>
 
-            </FadeIn>
+                        <Link href={`/projects/${project.slug}`}>
+                            <Image
+                                src={project.image}
+                                alt={project.title}
+                                width={900}
+                                height={500}
+                                sizes="(max-width: 768px) 100vw, 50vw"
+                                className="
+                                          w-full
+                                          h-[280px] md:h-[420px]
+                                          object-cover
+                                          p-2 md:p-0
+                                        "
+                            />
+                        </Link>
+
+
+                </FadeIn>
 
                 <FadeIn>
-                    <div className="text-center md:text-end w-80 md:w-5xl">
+                    <div className="text-center md:text-start px-4 md:px-8 h-full flex flex-col justify-start">
                         <Link href={`/projects/${project.slug}`}>
-                            <p className="text-md text-text mt-5">{project.date}</p>
-                            <h2 className="pt-6 pb-2 text-3xl md:text-6xl text-text font-semibold hover:text-accent transition ease-in">{project.title}</h2>
-                            <p className="text-lg text-text/50">{project.description}</p>
+
+                            <h2 className="text-3xl md:text-6xl text-text font-semibold hover:text-accent transition leading-tight">{project.title}</h2>
+                            <p className="text-md text-text mt-3">
+                                {new Date(project.date).toLocaleDateString("en-US", {
+                                    month: "long",
+                                    year: "numeric",
+                                })}
+                            </p>
+                            <p className="text-lg text-text/50 mt-30 leading-relaxed">{project.description}</p>
 
                         </Link>
+                        <a
+                            href={project.address} target="_blank" rel="noreferrer"
+                            className="
+                                            self-center md:self-start  items-center justify-center
+                                            bg-accent rounded-3xl px-4 py-2
+                                            hover:bg-background hover:text-primary
+                                            border border-accent
+                                            duration-300 transition ease-in-out
+                                            hover:scale-110
+                                            cursor-pointer mt-8
+                                          "
+                        >
+                            See prototype
+                        </a>
                     </div>
                 </FadeIn>
             </div>
+
+            <Image
+                src="/Frame 7.png"
+                alt="line"
+                width={900}
+                height={200}
+                quality={100}
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover mx-auto pb-20">
+            </Image>
 
         </section>
 
