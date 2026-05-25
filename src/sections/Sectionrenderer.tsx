@@ -7,6 +7,14 @@ import FadeIn from "../components/FadeIn";
 import SlideUp from "../components/SlideUp";
 import Link from "next/link";
 import Imageview from "@/components/Imageview";
+import {Oooh_Baby} from "next/font/google";
+
+const ooohBaby = Oooh_Baby({
+    subsets: ["latin"],
+    weight: "400",
+    display: "swap",
+});
+
 
 export function SectionRenderer({ section }: { section: Section }) {
 
@@ -293,7 +301,7 @@ export function SectionRenderer({ section }: { section: Section }) {
                         )}
 
                         {section.culturaldimensions && (
-                            <div className="md:max-w-5xl p-3 md:p-0 mx-auto">
+                            <div className="md:max-w-5xl p-3 md:p-0 mx-auto mb-60">
                                 {section.culturaldimensions.map((culturaldimensions, index) => (
                                     <div key={index}>
                                         <FadeIn>
@@ -312,17 +320,38 @@ export function SectionRenderer({ section }: { section: Section }) {
                                                 <Image
                                                     src={culturaldimensions.table.src}
                                                     alt={culturaldimensions.table.alt ?? ""}
-                                                    width={800}
+                                                    width={1200}
                                                     height={600}
-                                                    className="max-h-[600px] mx-auto block object-cover"/>
+                                                    className="max-h-[600px] mx-auto block object-cover pb-20"/>
                                             )}
                                         </SlideUp>
 
                                         {culturaldimensions.dimensions?.map ((dimension, index) => (
-                                                <div key={index} className={`p-8`}>
-                                                    <h4 className="text-xl md:text-2xl bg-background text-secondarydark border-2 border-secondarydark p-3 font-semibold mb-5">
+                                                <div key={index} className={`p-8 bg-background`}>
+                                                    <h4 className="max-w-3xl mx-auto text-xl md:text-2xl bg-background text-secondarydark border-2 border-secondarydark p-3 font-semibold mb-5">
                                                         {dimension.name}
                                                     </h4>
+                                                    <div
+                                                        className="md:grid hidden grid-cols-2 text-justify gap-8 mx-auto max-w-3xl ">
+                                                        <div
+                                                            className="grid grid-rows-2 font-bold text-secondaryverydark text-center gap-10">
+                                                            <p>{dimension.country1}</p>
+                                                            <p>{dimension.country2}</p>
+                                                        </div>
+                                                        <div className="grid grid-rows-2 gap-10">
+                                                            <p>{dimension.description1}</p>
+                                                            <p>{dimension.description2}</p>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        className="md:hidden grid-cols-2 font-light text-justify gap-8 mx-auto max-w-3xl ">
+
+                                                        <p className="font-bold text-secondaryverydark text-center">{dimension.country1}</p>
+                                                        <p className="text-justify pb-10">{dimension.description1}</p>
+                                                        <p className="font-bold text-secondaryverydark text-center">{dimension.country2}</p>
+                                                        <p>{dimension.description2}</p>
+
+                                                    </div>
                                                 </div>
                                             )
                                         )}
@@ -332,16 +361,101 @@ export function SectionRenderer({ section }: { section: Section }) {
                             </div>
                         )}
 
+                        {section.websitecasestudy && (
+                            <div className="md:max-w-5xl p-3 md:p-0 mx-auto mb-60">
+                                {section.websitecasestudy.map((culturaldimensions, index) => (
+                                    <div key={index}>
+                                        <FadeIn>
+                                            <h3 className="text-3xl md:text-5xl text-text mb-20">
+                                                {culturaldimensions.name}
+                                            </h3>
+                                        </FadeIn>
+
+                                        <FadeIn>
+                                            <p className="text-md md:text-lg font-light text-text mb-8 text-justify">
+                                                {culturaldimensions.description}</p>
+                                        </FadeIn>
+
+                                        {culturaldimensions.dimensions?.map ((dimension, index) => (
+                                                <div key={index} className={`p-8 border-b bg-background`}>
+                                                    <h4 className="max-w-3xl mx-auto text-xl md:text-2xl bg-background text-secondarydark border-2 border-secondarydark p-3 font-semibold mb-5">
+                                                        {dimension.name}
+                                                    </h4>
+                                                    <div
+                                                        className="md:grid hidden grid-cols-2 text-justify gap-8 mx-auto max-w-3xl ">
+                                                        <div
+                                                            className="grid grid-rows-2 font-bold text-secondaryverydark text-center gap-10">
+                                                            <p>{dimension.country1}</p>
+                                                            <p>{dimension.country2}</p>
+                                                        </div>
+                                                        <div className="grid grid-rows-2 gap-10">
+                                                            <p>{dimension.description1}</p>
+                                                            <p>{dimension.description2}</p>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        className="md:hidden grid-cols-2 text-justify gap-8 mx-auto max-w-3xl ">
+
+                                                        <p className="font-bold text-secondaryverydark text-center">{dimension.country1}</p>
+                                                        <p className="text-justify pb-10">{dimension.description1}</p>
+                                                        <p className="font-bold text-secondaryverydark text-center">{dimension.country2}</p>
+                                                        <p>{dimension.description2}</p>
+
+                                                    </div>
+                                                </div>
+                                            )
+                                        )}
+
+                                    </div>
+                                ))}
+                            </div>
+                        )}
+
+                        {section.interview && (
+                            <div className="md:max-w-5xl p-3 md:p-0 mx-auto mb-60">
+                                {section.interview.map((interview, index) => (
+                                    <div key={index}>
+                                        <FadeIn>
+                                            <h3 className="text-3xl md:text-5xl text-text mb-20">
+                                                {interview.name}
+                                            </h3>
+                                        </FadeIn>
+
+                                        <FadeIn>
+                                            <p className="text-md md:text-lg font-light text-text mb-30 text-justify">
+                                                {interview.description}</p>
+                                        </FadeIn>
+
+                                        {interview.quote && (
+                                            <ul className="text-left list-disc pl-10 space-y-3 font-light text-md md:text-lg text-text">
+                                                {interview.quote.map((quote, i) => (
+
+                                                    <div key={i} className="">
+                                                        <p className={`${ooohBaby.className} text-center max-w-3xl mx-auto text-primary px-4 mb:px-0 mb-1 text-xl md:text-3xl`}>{quote.quote}</p>
+                                                        <p className="max-w-3xl text-center mx-auto mb:px-0 mb-8 text-sm md:text-lg text-text font-semibold">{quote.culture}</p>
+                                                        <p className="max-w-3xl text-justify text-center  mx-auto mb:px-0 mb-20 text-md md:text-xl text-text">{quote.insights}</p>
+                                                    </div>
+                                                ))}
+                                            </ul>
+                                        )}
+
+
+                                    </div>
+                                ))}
+                            </div>
+                        )}
+
                         <FadeIn>
-                            {section.stakeholdertitel && <h3 className="text-3xl md:text-5xl text-text mb-20">{section.stakeholdertitel}</h3>}
+                            {section.stakeholdertitel &&
+                                <h3 className="text-3xl md:text-5xl text-text mb-20">{section.stakeholdertitel}</h3>}
                         </FadeIn>
                         <FadeIn>
                             {section.stakeholders && (
-                            <div className={`grid gap-8 ${
-                                section.stakeholders.length === 1
-                                    ? "grid-cols-1 max-w-3xl mx-auto place-items-center" 
-                                    : "grid-cols-1 md:grid-cols-2"
-                            } place-items-center bg-background shadow-xl rounded-3xl md:p-8`}>
+                                <div className={`grid gap-8 ${
+                                    section.stakeholders.length === 1
+                                        ? "grid-cols-1 max-w-3xl mx-auto place-items-center"
+                                        : "grid-cols-1 md:grid-cols-2"
+                                } place-items-center bg-background shadow-xl rounded-3xl md:p-8`}>
                                 {section.stakeholders.map((stakeholder, index) => (
                                     <div key={index} className={`p-8`}>
 
@@ -509,25 +623,30 @@ export function SectionRenderer({ section }: { section: Section }) {
                     {section.site_map &&(
                         <div className="mx-auto">
                             {section.site_map.map((site_map, index) => (
-                                <div key={index} className={`pt-60 p-8`}>
+                                <div key={index} className={`pt-60 p-8 text-center mx-auto`}>
                                     <FadeIn>
                                     <h3 className="text-3xl md:text-5xl text-text mb-20 "> {site_map.name}</h3>
                                     </FadeIn>
-
-                                    <div className="md:max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 md:space-x-10 pb-20 justify-content-center mx-auto">
+                                    <div className="md:max-w-5xl mx-auto justify-content-center">
                                         <FadeIn>
-                                        <p className="text-md md:text-lg text-text mb-8 font-light text-justify">{site_map.description}</p>
+                                            <p className="text-md md:text-lg text-text mb-8 font-light text-justify ">{site_map.description}</p>
                                         </FadeIn>
-                                        <SlideUp>
-                                        <Imageview
-                                            src={site_map.image.src}
-                                            alt={site_map.image.alt ?? ""}
-                                            width={1024}
-                                            height={600}
-                                            className="max-h-[600px] mx-auto block object-cover"
-                                        />
-                                        </SlideUp>
 
+                                        <div
+                                            className="grid grid-cols-1 md:grid-cols-2 md:space-x-10 pb-20 ">
+
+
+                                            {site_map.images?.map((img, i) => (
+                                                    <Imageview key={i}
+                                                               src={img.src}
+                                                               alt={img.alt ?? ""}
+                                                               width={1024}
+                                                               height={600}
+                                                               className="max-h-[600px] mx-auto block object-contain"/>
+                                            ))}
+
+
+                                        </div>
                                     </div>
                                 </div>
 
@@ -536,12 +655,12 @@ export function SectionRenderer({ section }: { section: Section }) {
                         </div>
                     )}
 
-                    {section.task_flow &&(
+                    {section.task_flow && (
                         <div className="mx-auto">
                             {section.task_flow.map((task_flow, index) => (
                                 <div key={index} className={`pt-60 p-8`}>
                                     <FadeIn>
-                                    <h3 className="text-3xl md:text-5xl text-text mb-20 "> {task_flow.name}</h3>
+                                        <h3 className="text-3xl md:text-5xl text-text mb-20 "> {task_flow.name}</h3>
                                     </FadeIn>
 
                                     <div className="md:max-w-5xl mx-auto">
@@ -562,8 +681,40 @@ export function SectionRenderer({ section }: { section: Section }) {
                                                alt={img.alt ?? ""}
                                                width={1024}
                                                height={600}
-                                               className="max-h-[600px] mx-auto block object-contain"/>
+                                               className="max-h-[1200px] mx-auto block object-contain"/>
                                     ))}
+                                    </div>
+                                </div>
+
+                            ))}
+
+                        </div>
+                    )}
+
+                    {section.feature_roadmap && (
+                        <div className="mx-auto">
+                            {section.feature_roadmap.map((feature_roadmap, index) => (
+                                <div key={index} className={`pt-60 p-8`}>
+                                    <FadeIn>
+                                        <h3 className="text-3xl md:text-5xl text-text mb-20 "> {feature_roadmap.name}</h3>
+                                    </FadeIn>
+
+                                    <div className="md:max-w-5xl mx-auto">
+                                        <FadeIn>
+                                            <p className="text-md md:text-lg text-text font-light mb-14 text-justify tracking-wide">
+                                                {feature_roadmap.description}</p>
+                                        </FadeIn>
+                                    </div >
+
+                                    <div className="md:max-w-5xl mx-auto grid grid-cols-1 gap-20 pb-20">
+                                        {feature_roadmap.images?.map((img, i) => (
+                                            <Imageview key={i}
+                                                       src={img.src}
+                                                       alt={img.alt ?? ""}
+                                                       width={1024}
+                                                       height={600}
+                                                       className="max-h-[1200px] mx-auto block object-contain"/>
+                                        ))}
                                     </div>
                                 </div>
 
@@ -583,7 +734,9 @@ export function SectionRenderer({ section }: { section: Section }) {
                                     <p className="md:max-w-5xl mx-auto text-md md:text-lg text-text mb-8 font-light text-justify">{lofi_wireframes.description}</p>
                                     </FadeIn>
                                         <div
-                                        className="md:max-w-5xl mx-auto grid grid-cols-10 md:grid-cols-10 gap-1 pb-20 ">
+                                        className="md:max-w-5xl mx-auto grid grid-cols-2
+                                                    md:grid-cols-4
+                                                    lg:grid-cols-5 gap-2 pb-20 place-items-start ">
 
                                         {lofi_wireframes.images?.map((img, i) => (
                                             <Imageview key={i}
@@ -591,7 +744,7 @@ export function SectionRenderer({ section }: { section: Section }) {
                                                        alt={img.alt ?? ""}
                                                        width={1024}
                                                        height={600}
-                                                       className="max-h-[1000px] mx-auto block object-contain
+                                                       className="max-h-[700px] mx-auto block object-contain
                                                    "/>
                                         ))}
 
@@ -700,31 +853,36 @@ export function SectionRenderer({ section }: { section: Section }) {
                                         </FadeIn>
                                         <FadeIn>
                                             <p className="md:max-w-5xl mx-auto text-md md:text-lg text-text mb-8 font-light text-justify">{ui_kit.description}</p>
-                                    </FadeIn>
-                                    <SlideUp>
-                                        <Imageview
-                                        src={ui_kit.image.src}
-                                        alt={ui_kit.image.alt ?? ""}
-                                        width={1024}
-                                        height={600}
-                                        className="max-h-[600px] mx-auto block object-contain"
-                                    />
-                                    </SlideUp>
-                                </div>
+                                        </FadeIn>
+                                        <div
+                                            className="md:max-w-5xl mx-auto grid grid-cols-1 gap-10 pb-20 ">
 
-                            ))}
+                                            {ui_kit.images?.map((img, i) => (
+                                                <Imageview key={i}
+                                                           src={img.src}
+                                                           alt={img.alt ?? ""}
+                                                           width={1024}
+                                                           height={600}
+                                                           className="max-h-[900px] mx-auto block object-contain"/>
+                                            ))}
 
-                        </div>
-                    )}
 
-                    {section.prototypes &&(
-                        <div className="mx-auto">
-                            {section.prototypes.map((prototypes, index) => (
-                                <div key={index} className={`pt-60 p-8`}>
-                                    <h3 className="text-3xl md:text-5xl text-primary mb-20 "> {prototypes.name}</h3>
-                                    <p className="md:max-w-5xl mx-auto text-md md:text-lg text-text mb-8 font-light text-justify">{prototypes.description}</p>
-                                    <div
-                                        className="md:max-w-5xl mx-auto grid grid-cols-1 gap-10 pb-20 ">
+                                        </div>
+                                    </div>
+
+                                ))}
+
+                            </div>
+                        )}
+
+                        {section.prototypes && (
+                            <div className="mx-auto">
+                                {section.prototypes.map((prototypes, index) => (
+                                    <div key={index} className={`pt-60 p-8`}>
+                                        <h3 className="text-3xl md:text-5xl text-primary mb-20 "> {prototypes.name}</h3>
+                                        <p className="md:max-w-5xl mx-auto text-md md:text-lg text-text mb-8 font-light text-justify">{prototypes.description}</p>
+                                        <div
+                                            className="md:max-w-5xl mx-auto grid grid-cols-1 gap-10 pb-20 ">
 
                                         {prototypes.images?.map((img, i) => (
                                             <Imageview key={i}
@@ -796,7 +954,7 @@ export function SectionRenderer({ section }: { section: Section }) {
                                             </ul>
                                         )}
                                         <div
-                                            className="md:max-w-5xl mx-auto grid grid-cols-1 gap-10 pb-20 pt-20 ">
+                                            className="md:max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 pb-20 pt-20 ">
 
                                             {usability.images?.map((img, i) => (
                                                 <Imageview key={i}
@@ -836,7 +994,7 @@ export function SectionRenderer({ section }: { section: Section }) {
                                         )}
                                     </div>
                                     <div
-                                        className="md:max-w-5xl mx-auto grid grid-cols-1 gap-10 pt-20 pb-20 ">
+                                        className="md:max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 pt-20 pb-20 ">
 
                                         {iteration.images?.map((img, i) => (
                                             <Imageview key={i}

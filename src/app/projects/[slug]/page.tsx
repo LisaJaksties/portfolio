@@ -18,7 +18,7 @@ export default async function ProjectPage({ params }: {params: Promise <{slug: s
 
     return (
         <main className="max-w-full text-center mx-auto">
-            <Herosection id="top" image={project.image} title={project.title} address={project.address}/>
+            <Herosection id="top" image={project.image} title={project.title} links={project.links}/>
             <Descriptionsection id="project-description" title={project.title} description={project.description}/>
 
             {/*line*/}

@@ -96,7 +96,7 @@ export type CulturalDimensions = {
 
 export type Dimensions ={
     name?: string;
-    description?: string;
+    description1?: string;
     description2?: string;
     country1?: string;
     country2?: string;
@@ -105,18 +105,19 @@ export type Dimensions ={
 export type WebsiteCaseStudy = {
     name: string;
     description: string;
-    culture1?: string;
-    culture2?: string;
-    dimensions?: string[];
-    descriptions?: string[];
+    dimensions?: Dimensions[];
 };
 
 export type Interview = {
     name: string;
     description: string;
-    quote?: string[];
-    culture?: string[];
-    insights?: string[];
+    quote?: Quote[];
+};
+
+export type Quote ={
+    quote?: string;
+    culture?: string;
+    insights?: string;
 };
 
 export type Stakeholder = {
@@ -197,10 +198,10 @@ export type FeatureRoadmap = {
 export type SiteMap = {
     name: string;
     description: string;
-    image: {
+    images?: {
         src: string;
         alt?: string;
-    };
+    }[];
 
 }
 
@@ -260,10 +261,10 @@ export type StyleTile = {
 export type UIKit = {
     name: string;
     description: string;
-    image: {
+    images?: {
         src: string;
         alt?: string;
-    };
+    }[];
 
 }
 
@@ -274,7 +275,10 @@ export type Prototypes = {
         src: string;
         alt?: string;
     }[];
-    link?: string;
+    links: {
+        label: string;
+        url: string;
+    }[];
 
 }
 
