@@ -65,7 +65,7 @@ export default function Herosection({id, image, title, links}: HeroSectionProps)
 
                 */}
             </div>
-            <div className="md:hidden block">
+            <div className="md:hidden block pt-8">
                 <FadeIn>
                     <Image
                         src={image}
@@ -85,19 +85,30 @@ export default function Herosection({id, image, title, links}: HeroSectionProps)
             </Link>
             */}
 
+            <div className="grid grid-cols-2 px-6 mx-auto">
             {links?.map((link, i) => (
                 <Link
                     key={i}
                     href={link.url}
                     target="_blank"
                     rel="noreferrer"
+                    className="md:hidden group space-x-0 flex flex-row items-center pt-10 w-fit"
                 >
-                    <p className="md:hidden block pt-8 hover:underline text-sm text-center items-center font-light">
+                    <Image
+                        src="/Frame 1.png"
+                        alt="Flower"
+                        width={20}
+                        height={20}
+                        className="transition-all duration-300 ease-out  group-hover:scale-110 group-hover:rotate-30 group-active:scale-110 group-active:rotate-30 "
+                    />
+
+                    <p className="text-text text-sm font-light transition-all duration-300 ease-out group-hover:scale-105 group-hover:underline group-active:scale-105 group-active:underline">
                         {link.label}
                     </p>
 
                 </Link>
             ))}
+            </div>
         </div>
     );
 }

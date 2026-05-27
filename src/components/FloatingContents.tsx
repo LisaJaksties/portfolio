@@ -39,6 +39,7 @@ export default function FloatingContents({ sections }: { sections: Section [] })
                             {staticSections.map((item) => (
                                 <li key={item.id}>
                                     <a href={`#${item.id}`}
+                                       onClick={() => setOpen(false)}
                                        className=" text-end block hover:text-primary transition-all duration-300 ease-out
                                        hover:scale-105 origin-left text-text transition capitalize ">
                                         {item.label}

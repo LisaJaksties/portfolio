@@ -20,10 +20,25 @@ export default function ContactMe() {
                     <h2 className={`${soligant.className}  tracking-widest text-2xl`}>
                         WONDER
                     </h2>
-                    <h3 className="mt-3 font-medium tracking-tight">
-                        let`s stay in <Link href="/contact" className=" inline-block text-secondarydark transition-all duration-300 ease-out
-                                       hover:scale-110 hover:translate-x-0.5 origin-left underline hover:text-accent transition ease-in-out">contact</Link>
-                    </h3>
+
+                    <Link
+                        href="/contact"
+                        className="group mx-auto flex flex-row items-center gap-3 w-fit pt-10"
+                    >
+                        <Image
+                            src="/Frame 1.png"
+                            alt="Flower"
+                            width={30}
+                            height={30}
+                            className="h-5 w-5 md:h-8 md:w-8 transition-all duration-300 ease-out group-hover:scale-110 group-hover:rotate-30"
+                        />
+
+                        <p
+                            className="text-text text-sm md:text-md font-light transition-all duration-300 ease-out group-hover:scale-105 group-hover:underline"
+                        >
+                            let`s stay in contact
+                        </p>
+                    </Link>
                 </SlideUp>
             </FadeIn>
 

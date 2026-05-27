@@ -18,7 +18,7 @@ export default function Home() {
 
           <Catchphrase/>
 
-          <div className="relative px-4 md:max-w-7xl pt-32 md:pt-40 pb-10  mx-auto">
+          <div className="relative px-4 md:max-w-7xl pt-20 md:pt-40 mx-auto">
               <div className="absolute -bottom-5 md:-bottom-30 md:right-1/5 flex justify-center items-center -z-10 pointer-events-none">
                   <FloatIn x={-20} y={-60} delay={0.2}>
                       <Image
@@ -41,7 +41,7 @@ export default function Home() {
           </div>
 
 
-          <div className="py-60">
+          <div className="py-20 md:py-60">
               {latest.map((project) => (
                   <LatestProject key={project.slug} project={project}/>
               ))}

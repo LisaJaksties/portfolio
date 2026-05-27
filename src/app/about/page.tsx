@@ -29,19 +29,21 @@ export default function AboutPage(){
 
                     <div className="max-w-full">
 
-                        <FadeIn delay={2} duration={2}>
+                        <FadeIn delay={2} duration={1.5}>
                             <p className="text-sm font-normal tracking-wide leading-loose text-justify">
-                                I am a (UX) designer and
-                                illustrator with roots in Germany
-                                and a second home in South Korea.
-                                I use the artist name Huinya (흰야).
+                                I am a multidisciplinary designer and
+                                illustrator with a background in computer science
+                                and a strong passion for visual storytelling.
+                                I enjoy working across different areas of design
+                                from UX/UI and digital experiences to illustration,
+                                branding, and editorial visuals.
                             </p>
                         </FadeIn>
 
-                        <FadeIn delay={2.6} duration={2}>
+                        <FadeIn delay={2.6} duration={1.5}>
                             <p className="mt-4 text-sm font-normal tracking-wide leading-loose text-justify">
-                                I design and develop personalised websites
-                                that look beautiful and feel good, paying great
+                                I design digital user interfaces
+                                that captivate users attention and feel good, paying great
                                 attention to detail. With my background in CS
                                 I understand architectures behind digital products
                                 but my passion lies in its visual and human expression
@@ -49,20 +51,24 @@ export default function AboutPage(){
                             </p>
                         </FadeIn>
 
-                        <FadeIn delay={3.2} duration={2}>
+                        <FadeIn delay={2} duration={1.5}>
                             <p className="mt-4 text-sm font-normal tracking-wide leading-loose text-justify">
-                                Art, design, and people have been with me my
-                                whole life. I always wanted to be an artist.
-                                I like everything crafty from illustration over
-                                pottery to baking. You can find more of my Art in the link below.
+                                I am especially interested in how culture influences usability, trust,
+                                visual communication, and user behavior.
+                                My interest in cross-cultural design grew through both personal experiences
+                                and academic research. In my bachelor thesis, I explored how cultural context
+                                influence usability and digital booking experiences.
                             </p>
                         </FadeIn>
 
-                        <FadeIn delay={3.8} duration={2}>
+                        <FadeIn delay={2} duration={1.5}>
                             <p className="mt-4 text-sm font-normal tracking-wide leading-loose text-justify">
-                                When I am not immersed into
-                                creative work, I like to travel or spend time with my
-                                inspiring husband.
+                                Creativity has always been a central part of my life.
+                                Beyond UX/UI design, I enjoy exploring branding, poster design, and visual
+                                storytelling as additional ways to create emotional and memorable experiences.
+                                I like exploring creative disciplines like illustration
+                                and pottery, which influence my visual thinking and attention to detail and
+                                inspire my design perspective.
                             </p>
 
                         </FadeIn>

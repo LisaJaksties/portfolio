@@ -120,7 +120,7 @@ export default function Navbar() {
                                 <Link
                                     href="/about"
                                     onClick={() => setOpen(false)}
-                                    className={`relative z-10 hover:text-accent transition  ${linkClass("/about")}`}
+                                    className={`relative z-10 hover:text-accent active:text-accent transition  ${linkClass("/about")}`}
                                 >
                                     About me
                                 </Link>
@@ -128,7 +128,7 @@ export default function Navbar() {
                                 <motion.img
                                     src="/Frame%201.png"
                                     alt="flower"
-                                    className="pointer-events-none absolute right-full mr-6 top-1/2 -translate-y-1/2 w-10 h-10 opacity-0 group-hover:opacity-100"
+                                    className="pointer-events-none absolute right-full mr-6 top-1/2 -translate-y-1/2 w-10 h-10 opacity-0 group-active:opacity-100 group-hover:opacity-100"
                                     animate={{rotate: 360}}
                                     transition={{repeat: Infinity, duration: 4, ease: "linear"}}
                                 />
@@ -139,7 +139,7 @@ export default function Navbar() {
                                 <Link
                                     href="/projects"
                                     onClick={() => setOpen(false)}
-                                    className={`relative z-10 hover:text-accent  transition ${linkClass("/projects")}`}
+                                    className={`relative z-10 hover:text-accent active:text-accent  transition ${linkClass("/projects")}`}
                                 >
                                     Works
                                 </Link>
@@ -147,7 +147,7 @@ export default function Navbar() {
                                 <motion.img
                                     src="/Frame%201.png"
                                     alt="flower"
-                                    className="pointer-events-none absolute right-full mr-6 top-1/2 -translate-y-1/2 w-10 h-10 opacity-0 group-hover:opacity-100"
+                                    className="pointer-events-none absolute right-full mr-6 top-1/2 -translate-y-1/2 w-10 h-10 opacity-0 group-active:opacity-100 group-hover:opacity-100"
                                     animate={{rotate: 360}}
                                     transition={{repeat: Infinity, duration: 4, ease: "linear"}}
                                 />
@@ -157,7 +157,7 @@ export default function Navbar() {
                                 <Link
                                     href="/art"
                                     onClick={() => setOpen(false)}
-                                    className={`relative z-10 hover:text-accent  transition ${linkClass("/art")}`}
+                                    className={`relative z-10 hover:text-accent active:text-accent transition ${linkClass("/art")}`}
                                 >
                                     Illustration
                                 </Link>
@@ -165,7 +165,7 @@ export default function Navbar() {
                                 <motion.img
                                     src="/Frame%201.png"
                                     alt="flower"
-                                    className="pointer-events-none absolute right-full mr-6 top-1/2 -translate-y-1/2 w-10 h-10 opacity-0 group-hover:opacity-100"
+                                    className="pointer-events-none absolute right-full mr-6 top-1/2 -translate-y-1/2 w-10 h-10 opacity-0 group-active:opacity-100 group-hover:opacity-100"
                                     animate={{rotate: 360}}
                                     transition={{repeat: Infinity, duration: 4, ease: "linear"}}
                                 />
@@ -176,7 +176,7 @@ export default function Navbar() {
                                 <Link
                                     href="/contact"
                                     onClick={() => setOpen(false)}
-                                    className={`relative z-10 hover:text-accent  transition ${linkClass("/contact")}`}
+                                    className={`relative z-10 hover:text-accent active:text-accent transition ${linkClass("/contact")}`}
                                 >
                                     Contact
                                 </Link>
@@ -184,7 +184,7 @@ export default function Navbar() {
                                 <motion.img
                                     src="/Frame%201.png"
                                     alt="flower"
-                                    className="pointer-events-none absolute right-full mr-6 top-1/2 -translate-y-1/2 w-10 h-10 opacity-0 group-hover:opacity-100"
+                                    className="pointer-events-none absolute right-full mr-6 top-1/2 -translate-y-1/2 w-10 h-10 opacity-0 group-active:opacity-100 group-hover:opacity-100"
                                     animate={{rotate: 360}}
                                     transition={{repeat: Infinity, duration: 4, ease: "linear"}}
                                 />

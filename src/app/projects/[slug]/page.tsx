@@ -18,11 +18,11 @@ export default async function ProjectPage({ params }: {params: Promise <{slug: s
 
     return (
         <main className="max-w-full text-center mx-auto">
-            <Herosection id="top" image={project.image} title={project.title} links={project.links}/>
+            <Herosection id="ffp" image={project.image} title={project.title} links={project.links}/>
             <Descriptionsection id="project-description" title={project.title} description={project.description}/>
 
             {/*line*/}
-            <hr className="border-t border-gray-400 max-w-7xl mx-auto my-12"/>
+            <hr className="border-t border-gray-400 max-w-7xl mx-auto my-5 md:my-12"/>
 
             <Problemsection
                 id="overview"
@@ -31,12 +31,31 @@ export default async function ProjectPage({ params }: {params: Promise <{slug: s
                             tasks={project.tasks} tools={project.tools}/>
 
             {/*line*/}
-            <hr className="border-t border-gray-400 max-w-7xl mx-auto my-12"/>
+            <hr className="border-t border-gray-400 max-w-7xl mx-auto my-5 md:my-12"/>
 
             {/*sections rendered depending on the definded sections in each projectfile*/}
             {project.sections?.map((section, index) => (
                 <SectionRenderer key={index} section={section}/>
             ))}
+
+            <Link
+                href="/projects"
+                className="group mx-auto flex flex-row items-center gap-3 w-fit pt-20"
+            >
+                <Image
+                    src="/Frame 1.png"
+                    alt="Flower"
+                    width={30}
+                    height={30}
+                    className="transition-all duration-300 ease-out  group-hover:scale-110 group-hover:rotate-30 group-active:scale-110 group-active:rotate-30 "
+                />
+
+                <p
+                    className="text-text text-sm md:text-lg font-light transition-all duration-300 ease-out group-hover:scale-105 group-hover:underline group-active:scale-105 group-active:underline"
+                >
+                    explore more works
+                </p>
+            </Link>
 
             <FloatingContents sections={project.sections || []} />
         </main>

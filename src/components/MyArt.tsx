@@ -20,20 +20,32 @@ export default function MyArt() {
                     <h1 className={`${soligant.className} text-text text-5xl leading-20 md:leading-40 tracking-widest md:text-[9vw]`}>
                         illustrations
                     </h1>
-                    <h3 className="mt-10 md:mt-8 font-medium tracking-tight">
-                        find out more {" "}
-                        <Link href="/art"
-                              className="inline-block text-secondarydark underline hover:text-primary transition-all duration-300 ease-out
-                                       hover:scale-110 hover:translate-x-0.5 origin-left transition ease-in-out">
-                            here
-                        </Link>
-                    </h3>
+
+                    <Link
+                        href="/art"
+                        className="group mx-auto flex flex-row items-center gap-3 w-fit pt-10"
+                    >
+                        <Image
+                            src="/Frame 1.png"
+                            alt="Flower"
+                            width={40}
+                            height={40}
+                            className="h-5 w-5 md:h-10 md:w-10 transition-all duration-300 ease-out group-hover:scale-110 group-hover:rotate-30"
+                        />
+
+                        <p
+                            className="text-text text-sm md:text-lg font-light transition-all duration-300 ease-out group-hover:scale-105 group-hover:underline"
+                        >
+                            find out more
+                        </p>
+                    </Link>
                     <Image
                         src="/Frame 4.png"
                         alt="pastels"
-                        width={140}
-                        height={50}
-                        className="w-24 md:w-48 mx-auto pt-8 md:pt-4 "
+                        width={150}
+                        height={150}
+                        quality={100}
+                        className="w-24 md:w-48 mx-auto pt-10 "
                     />
                 </SlideUp>
             </FadeIn>

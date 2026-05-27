@@ -26,7 +26,7 @@ export const projects: Project[] = [
         description: "A UX/UI and frontend portfolio project designed to present creative work through a clean and responsive user " +
             "experience. The website includes a complete UX case study and was developed using Next.js and Tailwind CSS.",
         image: "/Cover Portfolio.svg",
-        date: "2025-08-10",
+        date: "2026-05-30",
         links:[
             {
                 label: "View Website",
@@ -39,7 +39,7 @@ export const projects: Project[] = [
             "introducing attention-catching homepage, clear information architecture, visual hierarchy and modular designed process oriented case " +
             "studies to match individual project works.",
         type:"UX Design and website development",
-        tasks: ["UX research, UX/UI Design", "Branding", "Prototyping", "Frontend Development"],
+        tasks: ["UX research", "UX/UI Design", "Branding", "Prototyping", "Usability Testing"],
         tools: ["Adobe Photoshop", "Adobe Illustrator", "Next.js", "TailwindCSS"],
 
         sections: [
@@ -72,7 +72,7 @@ export const projects: Project[] = [
                 ],
                 competitiveAnalysisTitel:"Competitive Analysis",
                 competitorAnalysisDescription:"To get a better understanding of similar websites, " +
-                    "I analyzed portfolio websites of ux designers. I pointed out strengths and weaknesses to guide " +
+                    "I analyzed portfolio websites of UX designers. I pointed out strengths and weaknesses to guide " +
                     "my user personas development and determine ways to stand out.",
                 competitor: [
                     {
@@ -261,7 +261,7 @@ export const projects: Project[] = [
                             "goal of creating a clear visual hierarchy.",
                         images: [
                             {
-                                src: "/StylePortfolio.png",
+                                src: "/Style.svg",
                                 alt: "stileTile"
                             },
                         ]
@@ -443,16 +443,18 @@ export const projects: Project[] = [
     {
         slug: "stay-a",
         title: "Stay A",
-        description: "A cross-cultural UX study using hotel booking websites as an example, featuring a UX research and web development",
+        description: "A cross-cultural UX/UI project exploring how cultural differences influence usability, trust, and interaction patterns " +
+            "in hotel booking platforms. The project compares booking experiences for German and Korean users through two culturally adapted " +
+            "prototypes.",
         image: "/Cover Stay A.svg",
-        date: "2025-06-02",
+        date: "2025-11-02",
         links:[
             {
-                label: "View Korean Website Wind",
+                label: "View Korean Website",
                 url: "https://stay-awind.vercel.app/en"
             },
             {
-                label: "View German Website Welle",
+                label: "View German Website",
                 url: "https://stay-awelle.vercel.app/en"
             }
         ],
@@ -465,7 +467,7 @@ export const projects: Project[] = [
             "cultures (Germany and South Korea). User research was conducted based on interviews with users from both groups, " +
             "as well as usability tests, to compare overall satisfaction with the user experience.",
         type:"UX Design and website development",
-        tasks: ["Cross Cultural UX Research", "UX/UI Design", "Usability Testing", "Database", "Front- and Backend Development"],
+        tasks: ["Cross Cultural UX Research", "UX/UI Design", "Usability Testing", "Frontend Development"],
         tools: ["Adobe Photoshop", "Figma", "Next.js", "TailwindCSS", "MongoDB"],
 
         sections: [
@@ -486,7 +488,9 @@ export const projects: Project[] = [
                 discovertitel: "Discover",
                 content: "The Discover Phase identifies and understands the existing problems. " +
                     "It involves speaking to and spending time with people who are affected by the issues. " +
-                    "Understanding is created by asking questions. This way potential solutions can be formed.",
+                    "Understanding is created by asking questions. This way potential solutions can be formed. " +
+                    "In this project it also included literature research and studying the context of cultures and cross-cultural " +
+                    "UX Design. ",
 
                 researchplan:[
                     {
@@ -512,9 +516,9 @@ export const projects: Project[] = [
                     {
                         name:"Cultural Dimensions",
                         description:"One of the most spread cultural theories are the cultural dimensions by Hofstede. " +
-                            "He studied ... cultures by analyzing how culture influences the values and behaviors of its members. " +
+                            "He studied over 100 cultures by analyzing how culture influences the values and behaviors of its members. " +
                             "He categorized his findings into six dimensions and each country scores between 0 and 100 which indicates a " +
-                            "tendency. I have highlighted the dimensions where the two cultures differ the most.",
+                            "tendency. I highlighted the dimensions where the two cultures differ the most.",
                         table:{
                             src:"/Hofstede.jpg",
                             alt:"Hofstedes cultural dimensions",
@@ -522,8 +526,10 @@ export const projects: Project[] = [
                         dimensions: [
                             {
                               name:"Power Distance",
-                              description1:"Users expect transparency, equality, and a certain degree of autonomy in their lives and in the services they use.",
-                              description2:"A higher power distance reflects a society shaped by Confucian values. Authority and hierarchy are highly valued and respected.",
+                              description1:"Users expect transparency, equality, and a certain degree of autonomy in their lives " +
+                                  "and in the services they use.",
+                              description2:"A higher power distance reflects a society shaped by Confucian values. Authority " +
+                                  "and hierarchy are highly valued and respected.",
                               country1:"Germany",
                               country2:"South Korea",
                             },
@@ -542,7 +548,9 @@ export const projects: Project[] = [
                 websitecasestudy:[
                     {
                         name:"Website Case Study",
-                        description:"This case study explores how cultural differences shape UX and UI design through a comparison " +
+                        description:"After learning about culture in general I needed to analyze interfaces on how they reflect that specific " +
+                            "culture and that culture groups needs. " +
+                            "This case study explores how cultural differences shape UX and UI design through a comparison " +
                             "of two leading travel booking platforms from Germany and South Korea. By analyzing visual language, " +
                             "communication styles, and user expectations, the case study enables the identification of culture-specific " +
                             "characteristics reflected in the interface design and possible deviations from theoretical models. " +
@@ -603,14 +611,16 @@ export const projects: Project[] = [
                     {
                         name:"User Interviews",
                         description:
+                            "The case study showed that some cultural values are reflected in the UX Design while others " +
+                            "were rather domain driven and very similar on both websites. I wanted to collect empirical information " +
+                            "through interviews with user from both cultures." +
                             "The interview questions were divided into five categories: " +
                             "1. Design and layout, 2. User needs; 3. Pain points and trust. 4. Cultural adaptation 5." +
-                            "Contextual data.  To ensure the interviews were both comparable and relevant, the target group " +
-                            "was limited to individuals aged 20 to 40. Participants were also required to have experience " +
-                            "with hotel booking websites and a basic understanding of how to use them. A total of 16 " +
-                            "participants took part: seven women and nine men, with an equal number of women and men in " +
-                            "both the Korean and German groups." +
-                            "I quoted some users below and related the insights I gained from these opinions.",
+                            "Contextual data. To ensure the interviews were both comparable and relevant, the target group " +
+                            "was limited to individuals aged 20 to 40. A total of 16 " +
+                            "participants took part: seven women and nine men." +
+                            "I collected all answers and gained insights through content and thematic analysis of my findings. " +
+                            "The quotes below should give you an idea of the insights I gained from some recurring opinions.",
 
                         quote: [
                             {
@@ -622,7 +632,7 @@ export const projects: Project[] = [
                             },
 
                             {
-                                quote:"\"The hotel information should be short but I want to have an option to see more details.\" ",
+                                quote:"\"The hotel information should be short but I still want to have an option to see more details.\" ",
                                 culture:"German user",
                                 insights:"For the German prototype too much information at a glance can feel overwhelming. " +
                                     "Detailed information should " +
@@ -651,7 +661,7 @@ export const projects: Project[] = [
                         description:"To make sure that my decisions moving forward in the process are user-centered, I wanted to have a clear " +
                             "understanding of who the users are. " +
                             "The following two personas are based on the findings of the preliminary study: interview results, website case study, " +
-                            "and the information taken from the cultural dimensions of Germany and South Korea. The personas will serve as a reference during the design and " +
+                            "and the information taken from the cultural dimensions of Germany and South Korea. The personas serve as a reference during the design and " +
                             "implementation process. Korean persona: Eun Woo; German cultural persona: Anna",
                         images:[
                             {
@@ -677,7 +687,11 @@ export const projects: Project[] = [
                     {
                         name: "Information architecture",
                         description:"The Information Architecture visualizes how the information is categorized. " +
-                            "",
+                            "The time of the project was very limited so I had to focus on the essential pages from searching to booking. " +
+                            "The information architecture shows also pages like 'About' and 'Travel Insurance' that were not planned to be implemented and therefore " +
+                            "marked accordingly. The architecture of the korean prototype was developed taking into account that " +
+                            "most koreans use mobile screens, search through recommendations and need to be able to book conveniently and time saving. " +
+                            "On the other hand the german prototypes architecture highlights a desktop-first menu based search system and detailed filter search. ",
                         images:[ {
                                 src: "/IA ko.png",
                                 alt: "information architecture korean page"
@@ -718,7 +732,7 @@ export const projects: Project[] = [
                     {
                         name: "Feature Roadmap",
                         description:"From the prior research and development of personas and user flows I got an idea what the key " +
-                            "features are and how they differ fro my two prototypes. I learned that the German prototype should prioritize clarity, " +
+                            "features are and how they differ. I learned that the German prototype should prioritize clarity, " +
                             "transparency, structure, and reduced uncertainty. The interface should support analytical " +
                             "decision-making through detailed information visibility, stable navigation patterns, and predictable booking flows." +
                             "On the other side the Korean prototype should prioritize speed, engagement, social validation, and mobile-first " +
@@ -737,9 +751,11 @@ export const projects: Project[] = [
                     {
                         name: "Lofi Wireframe sketches",
                         link: "https://www.figma.com/proto/XZei9zRcLMuHmQje69ETUL/Portfolio-Website?node-id=67-805&p=f&t=gIDm7Eu4Ezi9n4Bo-0&scaling=min-zoom&content-scaling=fixed&page-id=67%3A804&starting-point-node-id=67%3A805",
-                        description:"I used the insights gained from the user goals and his interactions with the website (user flow) " +
-                            "to make informed decisions on how to sketch the 4 Key Screens: Home, Search Results, Hotel Detail, Checkout. The low fidelity wireframes " +
-                            "show responsive designs adapted to Desktop screen and mobile screen size.",
+                        description:"Beside common UX heuristics and domain specific characteristics, I used the insights gained from the " +
+                            "user goals and his interactions with the website (user flow) " +
+                            "to make informed decisions on how to sketch the 4 Key Screens: Home, " +
+                            "Search Results, Hotel Detail, Checkout. The low fidelity wireframes " +
+                            "show responsive designs adapted to desktop screen and mobile screen size.",
                         images:[
                             {
                                 src: "/Homepage stayA ko.png",
@@ -790,9 +806,14 @@ export const projects: Project[] = [
                 style_tile: [
                     {
                         name: "Style Tile",
-                        description:"First I worked on a logo for stayA. While creating the visual identity I used the learnings from the cultural dimensions and interviews " +
-                            "to create two visual design concepts." +
-                            "",
+                        description:"First I worked on a logo for stayA. While creating the visual identity I used the learnings " +
+                            "from the cultural dimensions and interviews " +
+                            "to create two visual design concepts that mostly differ through color, visuals and text styles. " +
+                            "According to literature findings, cool colors, especially pastels, create a sense of trustworthiness for " +
+                            "Korean users. I picked a color palette that creates a significantly more dynamic and playful overall effect, " +
+                            "which corresponds to the Korean design style evident in the website case study. " +
+                            "The color palette for the german prototype focuses on natural and elegant colors. " +
+                            "Clear strong contrasts are used sparingly and purposefully throughout the interface.",
                         images: [
                             {
                             src: "/Design Guide 1.jpg",
@@ -810,7 +831,7 @@ export const projects: Project[] = [
                 ui_kit: [
                     {
                         name: "UI Kit",
-                        description:"Using the style tile as a guideline, I incorporated my branding into the UI elements. " +
+                        description:"Using the style tile as a guideline, I incorporated the two concepts into the UI elements. " +
                             "To ensure that the design standards remain coherent across future developments, I created a UI kit " +
                             "to document the elements for reference.",
 
@@ -831,8 +852,9 @@ export const projects: Project[] = [
                     {
                         name: "Prototypes",
                         description:"The project is exceptional since I directly tested my ideas in code. The first prototype is a functional website " +
-                            "developed with next.js, react and tailwind css. I used framer motion to create micro animations and smooth scroll effects to " +
-                            "guide the user through the Portfolio page and evoke curiosity. " +
+                            "developed with next.js, react and tailwind css. I used framer motion to create micro animations to " +
+                            "guide the user through the Portfolio page and evoke curiosity. The mobile screen version couldn't be tested in the " +
+                            "usability test. " +
                             "",
                         links:[
                             {
@@ -853,6 +875,14 @@ export const projects: Project[] = [
                                 src: "/Prototype Stay A . de.svg",
                                 alt: "prototype german"
                             },
+                            {
+                                src: "/StayADE Mockup Laptop.png",
+                                alt: "prototype german laptop"
+                            },
+                            {
+                                src: "/StayAKO Mockup Mobile.png",
+                                alt: "prototype korean mobile"
+                            },
                         ],
 
                     }
@@ -862,8 +892,8 @@ export const projects: Project[] = [
             {
                 type: "deliver",
                 delivertitel: "Deliver",
-                content: "In this stage I test out the developed ideas and prototypes from the prevoius step. " +
-                    "Deliver includes Usability tests and drawing isnights from their results.",
+                content: "In this stage I test out the developed ideas and prototypes from the previous step. " +
+                    "Deliver includes Usability tests and drawing insights from their results.",
 
                 usability: [
                     {
@@ -959,7 +989,7 @@ export const projects: Project[] = [
         title: "Poette und Kauken",
         description: "Creating a unique german brand that combines handmade craftsmanship, slow coffee culture, and quiet creative moments.",
         image: "/Cover (1).svg",
-        date: "2026-05-16",
+        date: "2026-04-16",
         links:[
             {
                 label: "View Design",
