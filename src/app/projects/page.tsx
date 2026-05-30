@@ -19,7 +19,7 @@ export default function ProjectsPage(){
                         projects
                     </h1>
                 </SlideUp>
-                <SlideUp y={60} delay={0.1} duration={1.2}>
+                <SlideUp y={60} delay={0} duration={1.2}>
                 <div className=" grid grid-cols-1 sm:grid-cols-2 md:gap-12 gap-10">
                     {projects.map((project) => (
                         <ProjectCard key={project.slug} project={project}/>

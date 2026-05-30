@@ -51,9 +51,9 @@ export default function AboutPage(){
                             </p>
                         </FadeIn>
 
-                        <FadeIn delay={2} duration={1.5}>
+                        <FadeIn delay={0.5} duration={1.5}>
                             <p className="mt-4 text-sm font-normal tracking-wide leading-loose text-justify">
-                                I am especially interested in how culture influences usability, trust,
+                                I am interested in how culture influences usability, trust,
                                 visual communication, and user behavior.
                                 My interest in cross-cultural design grew through both personal experiences
                                 and academic research. In my bachelor thesis, I explored how cultural context
@@ -61,7 +61,7 @@ export default function AboutPage(){
                             </p>
                         </FadeIn>
 
-                        <FadeIn delay={2} duration={1.5}>
+                        <FadeIn delay={0.5} duration={1.5}>
                             <p className="mt-4 text-sm font-normal tracking-wide leading-loose text-justify">
                                 Creativity has always been a central part of my life.
                                 Beyond UX/UI design, I enjoy exploring branding, poster design, and visual

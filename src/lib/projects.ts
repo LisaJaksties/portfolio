@@ -339,7 +339,7 @@ export const projects: Project[] = [
                             "Based on user feedback, I hope to improve the readability of the site where necessary and determine whether the " +
                             "portfolio effectively portrays the skills and experience."],
                         taskstitel:"Tasks and Questions",
-                        tasks: ["What work does the person do based on what zou see?","What are the main topics of this website?",
+                        tasks: ["What work does the person do based on what you see?","What are the main topics of this website?",
                         "Find the project on intercultural UX research and talk aloud the steps you take to go there.",
                         "Spend 3 minutes reading a porject of your choice. Did you understand its main problem and goal?",
                         "Describe how you read the project page (quick scan, using quick links, reading summary first).",

@@ -13,11 +13,11 @@ export default function MyArt() {
         <section className="bg-accent flex flex-col items-center rounded-t-full mx-auto text-center px-4 md:px-12 pt-32 pb-32 md:pt-52 md:pb-40">
 
             <FadeIn amount={0.5} duration={1.0}>
-                <SlideUp y={80} delay={0.2} duration={1.0}>
+                <SlideUp y={80} delay={0.0} duration={1.0}>
                     <h1 className={`${soligant.className} text-text text-3xl leading-20 md:leading-40 tracking-tight md:text-[6vw]`}>
                         I also make
                     </h1>
-                    <h1 className={`${soligant.className} text-text text-5xl leading-20 md:leading-40 tracking-widest md:text-[9vw]`}>
+                    <h1 className={`${soligant.className} text-text text-5xl leading-20 md:leading-30 tracking-widest md:text-[9vw]`}>
                         illustrations
                     </h1>
 

@@ -24,6 +24,8 @@ export default function LatestProject({ project }: { project: Project }){
                                           h-[280px] md:h-[420px]
                                           object-cover
                                           shadow-lg
+                                          hover:scale-103
+                                          duration-400 transition ease-in-out
                                         "
                             />
                         </Link>
@@ -97,7 +99,7 @@ export default function LatestProject({ project }: { project: Project }){
                 height={200}
                 quality={100}
                 sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover mx-auto pb-20">
+                className="object-cover  mx-auto pb-20">
             </Image>
 
         </section>
