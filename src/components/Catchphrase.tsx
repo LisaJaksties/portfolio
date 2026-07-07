@@ -1,13 +1,8 @@
 import Image from "next/image";
-import {Oooh_Baby, Poppins} from "next/font/google";
 import FadeIn from "../components/FadeIn";
 import SlideUp from "../components/SlideUp"
-import {soligant} from "@/fonts/soligant";
 import Link from "next/link";
-const poppins = Poppins({
-    subsets: ["latin"],
-    weight: ["300", "400", "500"],
-});
+import { cormorant } from "@/fonts/cormorant";
 
 export default function Catchphrase() {
     return (
@@ -16,8 +11,8 @@ export default function Catchphrase() {
 
             <FadeIn amount={0.5} duration={1.4}>
                 <SlideUp y={80} delay={0.2} duration={1.0}>
-                    <h1 className={`${soligant.className} text-primary text-center text-4xl md:text-7xl tracking-widest`}>
-                        Creating culture aware digital experiences through usability<span className={`${poppins.className} font-light`}>, </span>visual storytelling and thoughtful design.
+                    <h1 className={`${cormorant.className} text-primary text-center text-4xl md:text-8xl tracking-tight`}>
+                        Creating culture aware digital experiences through usability, visual storytelling and thoughtful design
                     </h1>
                 </SlideUp>
                 <SlideUp y={80} delay={0.4} duration={1.0}>

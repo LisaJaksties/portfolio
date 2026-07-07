@@ -1,13 +1,12 @@
 
 import Image from "next/image";
 import { Section } from "@/types/section";
-import {soligant} from "@/fonts/soligant";
-import ReactMarkdown from "react-markdown";
 import FadeIn from "../components/FadeIn";
 import SlideUp from "../components/SlideUp";
 import Link from "next/link";
 import Imageview from "@/components/Imageview";
 import {Oooh_Baby} from "next/font/google";
+import { cormorant } from "@/fonts/cormorant";
 
 const ooohBaby = Oooh_Baby({
     subsets: ["latin"],
@@ -25,7 +24,7 @@ export function SectionRenderer({ section }: { section: Section }) {
 
                     <FadeIn>
                     {section.designsystemname &&
-                        <h2 className={`${soligant.className} text-secondaryverydark mb-20 text-5xl md:text-7xl`}>{section.designsystemname}</h2>}
+                        <h2 className={`${cormorant.className} text-secondaryverydark mb-20 text-5xl md:text-7xl`}>{section.designsystemname}</h2>}
                     </FadeIn>
                     <FadeIn>
                         <p className="max-w-6xl mx-auto  font-light text-text/80 text-md md:text-xl mb-10 text-justify leading-relaxed tracking-wide" >
@@ -49,7 +48,7 @@ export function SectionRenderer({ section }: { section: Section }) {
                 <section id={section.type} className="max-w-6xl mx-auto px-6 md:px-0 py-10 md:py-20">
                     <FadeIn>
                         {section.name &&
-                            <h2 className={`${soligant.className} text-secondaryverydark mb-20 text-5xl md:text-7xl`}>
+                            <h2 className={`${cormorant.className} text-secondaryverydark mb-20 text-5xl md:text-7xl`}>
                                 {section.name}
                             </h2>}
                     </FadeIn>
@@ -111,7 +110,7 @@ export function SectionRenderer({ section }: { section: Section }) {
                 <section id={section.type} className="max-w-6xl px-6 md:px-0 mx-auto py-10 md:py-20">
                     <FadeIn>
                         {section.name &&
-                            <h2 className={`${soligant.className} text-secondaryverydark mb-20 text-5xl md:text-7xl`}>
+                            <h2 className={`${cormorant.className} text-secondaryverydark mb-20 text-5xl md:text-7xl`}>
                                 {section.name}
                             </h2>}
                     </FadeIn>
@@ -181,7 +180,7 @@ export function SectionRenderer({ section }: { section: Section }) {
                 <section id={section.type} className="max-w-6xl px-6 md:px-0 mx-auto py-10 md:py-20">
                     <FadeIn>
                         {section.name &&
-                            <h2 className={`${soligant.className} text-secondaryverydark mb-20 text-5xl md:text-7xl`}>
+                            <h2 className={`${cormorant.className} text-secondaryverydark mb-20 text-5xl md:text-7xl`}>
                                 {section.name}
                             </h2>}
                     </FadeIn>
@@ -210,7 +209,7 @@ export function SectionRenderer({ section }: { section: Section }) {
                 <section id={section.type} className="max-w-6xl px-6 md:px-0 mx-auto py-10 md:py-20">
                     <FadeIn>
                         {section.name &&
-                            <h2 className={`${soligant.className} text-secondaryverydark mb-20 text-5xl md:text-7xl`}>
+                            <h2 className={`${cormorant.className} text-secondaryverydark mb-20 text-5xl md:text-7xl`}>
                                 {section.name}
                             </h2>}
                     </FadeIn>
@@ -240,7 +239,7 @@ export function SectionRenderer({ section }: { section: Section }) {
                     <div className="max-w-6xl mx-auto">
                         <FadeIn>
                             {section.discovertitel &&
-                                <h2 className={`${soligant.className} mx-auto text-secondaryverydark mb-20 text-5xl md:text-8xl`}>{section.discovertitel}</h2>}
+                                <h2 className={`${cormorant.className} mx-auto text-secondaryverydark mb-20 text-5xl md:text-8xl`}>{section.discovertitel}</h2>}
                         </FadeIn>
                         <FadeIn>
                             <p className="font-light text-text/80 text-md md:text-xl mb-20 text-justify leading-relaxed tracking-wide">{section.content}</p>
@@ -615,7 +614,7 @@ export function SectionRenderer({ section }: { section: Section }) {
             return (
                 <section id={section.type} className="max-w-6xl mx-auto px-6 md:px-0 py-10 md:py-20">
                    <FadeIn>
-                    {section.definetitel && <h2 className={`${soligant.className} text-secondaryverydark mb-20 text-5xl md:text-8xl`}>{section.definetitel}</h2>}
+                    {section.definetitel && <h2 className={`${cormorant.className} text-secondaryverydark mb-20 text-5xl md:text-8xl`}>{section.definetitel}</h2>}
                    </FadeIn>
                     <FadeIn>
                     <p className="font-light text-text/80 text-md md:text-xl text-justify leading-relaxed tracking-wide">{section.content}</p>
@@ -781,7 +780,7 @@ export function SectionRenderer({ section }: { section: Section }) {
                     <div className="max-w-6xl mx-auto">
                         <FadeIn>
                         {section.developtitel &&
-                            <h2 className={`${soligant.className} text-secondaryverydark mb-20 text-5xl md:text-8xl`}>{section.developtitel}</h2>}
+                            <h2 className={`${cormorant.className} text-secondaryverydark mb-20 text-5xl md:text-8xl`}>{section.developtitel}</h2>}
                         </FadeIn>
                         <FadeIn>
                             <p className="font-light text-text/80 text-md md:text-xl text-justify leading-relaxed tracking-wide">{section.content}</p>
@@ -842,7 +841,7 @@ export function SectionRenderer({ section }: { section: Section }) {
                                                        alt={img.alt ?? ""}
                                                        width={1024}
                                                        height={600}
-                                                       className="max-h-[600px] mx-auto block object-cover"/>
+                                                       className="max-h-[600px] mx-auto block object-contain"/>
                                         ))}
 
 
@@ -926,7 +925,7 @@ export function SectionRenderer({ section }: { section: Section }) {
             return (
                 <section id={section.type} className="max-w-6xl mx-auto px-6 md:px-0 py-20">
 
-                    {section.delivertitel && <h2 className={`${soligant.className} text-secondaryverydark px-4 mb:px-0 mb-20 text-5xl md:text-8xl`}>{section.delivertitel}</h2>}
+                    {section.delivertitel && <h2 className={`${cormorant.className} text-secondaryverydark px-4 mb:px-0 mb-20 text-5xl md:text-8xl`}>{section.delivertitel}</h2>}
                     <p className="font-light text-text/80 text-md md:text-xl mb-10 text-justify leading-relaxed tracking-wide">{section.content}</p>
 
                     {section.usability &&(
@@ -1083,7 +1082,7 @@ export function SectionRenderer({ section }: { section: Section }) {
                     <div className="max-w-7xl mx-auto">
                         <FadeIn>
                         {section.name &&
-                            <h2 className={`${soligant.className} text-primary px-4 mb:px-0 mb-20 text-5xl md:text-8xl`}>{section.name}</h2>}
+                            <h2 className={`${cormorant.className} text-primary px-4 mb:px-0 mb-20 text-5xl md:text-8xl`}>{section.name}</h2>}
                         </FadeIn>
                         <FadeIn>
                             <p className="max-w-4xl mx-auto text-text/80 font-light text-md md:text-xl mb-20 text-justify leading-relaxed tracking-wide">{section.description}</p>

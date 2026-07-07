@@ -1,11 +1,12 @@
-import {soligant} from "@/fonts/soligant";
+
 import FadeIn from "@/components/FadeIn";
+import { cormorant } from "@/fonts/cormorant";
 
 export default function Imprint(){
     return (
         <main>
             <FadeIn delay={0.2} duration={2}>
-                <h1 className={`${soligant.className} text-text text-7xl font-medium pt-20 pb-10 text-center`}>Imprint</h1>
+                <h1 className={`${cormorant.className} text-text text-7xl font-medium pt-20 pb-10 text-center`}>Imprint</h1>
             </FadeIn>
             <div className="text-text p-2 text-center md:text-start md:max-w-4xl mx-auto">
 

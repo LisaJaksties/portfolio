@@ -8,10 +8,18 @@ export default function Blobframe() {
 
             <div className="relative w-full h-full animate-blob overflow-hidden">
                 <Image
-                    src="/example.jpg"
+                    src="/profile.png"
                     alt="lisachoi"
                     fill
-                    className="object-cover"
+                    className="object-cover transition-opacity duration-300 group-hover:opacity-0"
+                />
+
+                {/* Hover image */}
+                <Image
+                    src="/profile2.png"
+                    alt="lisachoi hover"
+                    fill
+                    className="object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                 />
             </div>
         </div>

@@ -1,10 +1,8 @@
 import Image from "next/image";
-import { Oooh_Baby } from "next/font/google";
 import FadeIn from "../components/FadeIn";
 import SlideUp from "../components/SlideUp"
-import {soligant} from "@/fonts/soligant";
 import Link from "next/link";
-
+import { cormorant } from "@/fonts/cormorant";
 
 
 export default function MyArt() {
@@ -14,10 +12,10 @@ export default function MyArt() {
 
             <FadeIn amount={0.5} duration={1.0}>
                 <SlideUp y={80} delay={0.0} duration={1.0}>
-                    <h1 className={`${soligant.className} text-text text-3xl leading-20 md:leading-40 tracking-tight md:text-[6vw]`}>
+                    <h1 className={`${cormorant.className} text-text text-3xl leading-20 md:leading-40 tracking-tight md:text-[7vw]`}>
                         I also make
                     </h1>
-                    <h1 className={`${soligant.className} text-text text-5xl leading-20 md:leading-30 tracking-widest md:text-[9vw]`}>
+                    <h1 className={`${cormorant.className} text-text text-5xl leading-20 md:leading-30 tracking-widest md:text-[10vw]`}>
                         illustrations
                     </h1>
 

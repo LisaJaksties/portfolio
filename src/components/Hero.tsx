@@ -1,13 +1,9 @@
 import Image from "next/image";
 import { Oooh_Baby } from "next/font/google";
 import FadeIn from "../components/FadeIn";
-import SlideUp from "../components/SlideUp"
-import ArrowAnimation from "@/components/ArrowAnimation";
-import RotatingSmiley from "@/components/RotatingSmiley";
-import { costaline } from "@/fonts/costaline";
-import {costaline_italic} from "@/fonts/costaline_italic";
-import {soligant} from "@/fonts/soligant";
+import SlideUp from "../components/SlideUp";
 import FloatIn from "@/components/FLoatIn";
+import { cormorant } from "@/fonts/cormorant";
 
 const ooohBaby = Oooh_Baby({
     subsets: ["latin"],
@@ -118,7 +114,7 @@ export default function Hero() {
                 </div>
 
 
-                <div className="absolute hidden md:block top-50 left-6 -z-10 pointer-events-none">
+                <div className="absolute hidden md:block top-60 left-10 -z-10 pointer-events-none">
                     <FloatIn x={-20} y={-80} rotate={-20} delay={0.2}>
                         <Image
                             src="/Frame 2.png"
@@ -157,20 +153,20 @@ export default function Hero() {
                 <div className="max-w-7xl text-text z-10">
 
                     <SlideUp y={80} delay={0.2} duration={1.0}>
-                    <h1 className={`${soligant.className} text-center text-4xl md:text-7xl leading-none tracking-tight`}>
+                    <h1 className={`${cormorant.className} text-center text-4xl md:text-8xl leading-none tracking-tight`}>
                         Welcome to the
                     </h1>
                     </SlideUp>
 
                     <div className=" md:flex md:justify-center md:space-x-10">
                         <SlideUp y={60} delay={0.4} duration={1.0}>
-                        <h1 className={`${soligant.className} text-center text-8xl md:text-[11vw] mt-5 md:mt-10 leading-none tracking-wide`}>
+                        <h1 className={`${cormorant.className} text-center text-8xl md:text-[13vw] mt-5 md:mt-10 leading-none tracking-wide`}>
                             creative
                         </h1>
                         </SlideUp>
 
                         <SlideUp y={60} delay={0.5} duration={1.0}>
-                            <h1 className={`${soligant.className} text-center text-8xl md:text-[11vw] mt-5 md:mt-10 leading-none tracking-wide`}>
+                            <h1 className={`${cormorant.className} text-center text-8xl md:text-[13vw] mt-5 md:mt-10 leading-none tracking-wide`}>
                                 space
                             </h1>
                         </SlideUp>
@@ -189,13 +185,13 @@ export default function Hero() {
                         </FadeIn>*/}
                     </div>
                     <SlideUp y={40} delay={0.4} duration={1.0}>
-                        <h1 className={`${soligant.className} mt-5 text-center text-6xl md:text-[9vw] tracking-widest`}>
+                        <h1 className={`${cormorant.className} mt-5 text-center text-6xl md:text-[9vw] tracking-widest`}>
                             of
                         </h1>
                     </SlideUp>
 
                     <SlideUp y={40} delay={0.4} duration={1.0}>
-                    <h1 className={`${soligant.className} mt-5 text-text md:mt-8 text-center text-8xl md:text-[11vw] md:tracking-widest`}>
+                    <h1 className={`${cormorant.className} mt-5 text-text md:mt-8 text-center text-8xl md:text-[14vw] md:tracking-wide`}>
                         lisa choi
                     </h1>
                     </SlideUp>

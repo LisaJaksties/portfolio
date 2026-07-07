@@ -31,7 +31,7 @@ export default function AboutPage(){
 
                         <FadeIn delay={2} duration={1.5}>
                             <p className="text-sm font-normal tracking-wide leading-loose text-justify">
-                                I am a multidisciplinary designer and
+                                I am a UX designer and
                                 illustrator with a background in computer science
                                 and a strong passion for visual storytelling.
                                 I enjoy working across different areas of design

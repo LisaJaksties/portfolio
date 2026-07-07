@@ -1,9 +1,9 @@
 import FadeIn from "@/components/FadeIn";
-import {soligant} from "@/fonts/soligant";
 import Image from "next/image";
 import Imageview from "@/components/Imageview";
 import {Oooh_Baby} from "next/font/google";
 import SlideUp from "@/components/SlideUp";
+import { cormorant } from "@/fonts/cormorant";
 const ooohBaby = Oooh_Baby({
     subsets: ["latin"],
     weight: "400",
@@ -118,14 +118,14 @@ export default function ArtPage(){
             <section className="py-40 z-0">
 
                 <FadeIn amount={0.8} duration={1.0}>
-                    <div className="absolute bottom-70 left-5 md:bottom-20 md:right-50 rotate-180 -z-5">
+                    <div className="absolute bottom-70 left-5 md:bottom-30 md:right-50 rotate-180 -z-5">
                         <SlideUp y={100} delay={0.4} duration={1.0}>
                         <Image
                             src="/Frame 1.png"
                             alt="Flower"
-                            width={150}
-                            height={150}
-                            className="h-20 md:h-50 w-fit pointer-events-none"
+                            width={110}
+                            height={110}
+                            className="h-12 md:h-28 w-fit pointer-events-none"
                         />
                         </SlideUp>
                     </div>
@@ -145,45 +145,12 @@ export default function ArtPage(){
                 </FadeIn>
 
                 <FadeIn>
-                    <h1 className={`${soligant.className} z-5 text-secondarydark text-center text-6xl md:text-[10vw] mt-5 md:mt-10 leading-none tracking-wide`}>
+                    <h1 className={`${cormorant.className} z-5 text-secondarydark text-center text-6xl md:text-[10vw] mt-5 md:mt-10 leading-none tracking-wide`}>
                         Illustrations
                     </h1>
                 </FadeIn>
             </section>
 
-            {/* My materials section*/}
-            <section className=" py-40 max-w-7xl px-6 md:px-0 mx-auto text-center">
-                <FadeIn>
-                    <h2 className={`${ooohBaby.className} md:-translate-x-36 text-text text-center mb-5 md:mb-10 text-5xl md:text-7xl mt-5 md:mt-10 leading-none tracking-wide`}>
-                        soft pastels
-                    </h2>
-                </FadeIn>
-                <SlideUp y={10} delay={0.4} duration={1.0}>
-                    <Imageview
-                        src="/clover.jpg"
-                        alt="materials"
-                        width={800}
-                        height={600}
-                        className="block max-h-[400px] mx-auto object-cover"
-                    />
-                </SlideUp>
-
-                <FadeIn>
-                    <h2 className={`${ooohBaby.className} md:translate-x-36 text-text text-center text-5xl md:text-7xl mt-5 md:mt-10 leading-none tracking-wide`}>
-                        watercolor
-                    </h2>
-                </FadeIn>
-            </section>
-
-            <Image
-                src="/Frame 7.png"
-                alt="line"
-                width={900}
-                height={200}
-                quality={100}
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover mx-auto">
-            </Image>
 
             {/* My illustrations section*/}
             <section className="py-20 max-w-7xl px-6 md:px-0 mx-auto text-center">
@@ -220,7 +187,7 @@ export default function ArtPage(){
 
             <section className="py-20 max-w-7xl mx-auto px-6 md:px-0 text-center">
                 <FadeIn>
-                    <h2 className={`${soligant.className} z-5 text-secondaryverydark text-center text-5xl md:text-7xl mb-5 md:mb-10 leading-none tracking-wide`}>
+                    <h2 className={`${cormorant.className} z-5 text-secondaryverydark text-center text-5xl md:text-7xl mb-5 md:mb-10 leading-none tracking-wide`}>
                         Editorial Design
                     </h2>
                 </FadeIn>
