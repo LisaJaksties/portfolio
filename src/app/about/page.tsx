@@ -32,7 +32,7 @@ export default function AboutPage(){
                         <FadeIn delay={2} duration={1.5}>
                             <p className="text-sm font-normal tracking-wide leading-loose text-justify">
                                 I am a UX designer and
-                                illustrator with a background in computer science
+                                illustrator with a bachelor degree in computer science
                                 and a strong passion for visual storytelling.
                                 I enjoy working across different areas of design
                                 from UX/UI and digital experiences to illustration,
@@ -43,11 +43,17 @@ export default function AboutPage(){
                         <FadeIn delay={2.6} duration={1.5}>
                             <p className="mt-4 text-sm font-normal tracking-wide leading-loose text-justify">
                                 I design digital user interfaces
-                                that captivate users attention and feel good, paying great
-                                attention to detail. With my background in CS
+                                that captivate users attention and feel good.
+                                I encountered various designs and visuals in my
+                                daily life. They influenced my design and illustration style.
+                                In this sense I create user interfaces that mirror the clients
+                                individual style and the users needs. Working on a project
+                                thoroughly paying great attention to detail is the only way to work for me.
+                                With my background in Computer Science
                                 I understand architectures behind digital products
-                                but my passion lies in its visual and human expression
-                                striving to enhance peoples quality of life.
+                                but my passion lies in its visual and human expression.
+                                Developing my skills in design and gaining more experiences
+                                is important and meaningful for me.
                             </p>
                         </FadeIn>
 

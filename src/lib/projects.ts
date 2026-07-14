@@ -29,8 +29,8 @@ export const projects: Project[] = [
         date: "2026-05-30",
         links:[
             {
-                label: "View Website",
-                url: "/"
+                label: "View Portfolio Website",
+                url: "https://lisachoiportfolio.vercel.app/"
             }
         ],
         problem_description:"Recruiter need to be able to scan my portfolio in short time and decide if my abilities and characteristics align with their expectations.",
@@ -294,26 +294,18 @@ export const projects: Project[] = [
                         links:[
                             {
                                 label: "View Website",
-                                url: "https://stay-awelle.vercel.app/en"
+                                url: "https://lisachoiportfolio.vercel.app/"
                             }
                         ],
                         images:[
                             {
-                                src: "/clover.jpg",
-                                alt: "prototype1"
+                                src: "/Portfolio Prototype.png",
+                                alt: "portfolio prototype 1"
                             },
                             {
-                                src: "/clover.jpg",
-                                alt: "prototype2"
+                                src: "/Portfolio Prototype 2.png",
+                                alt: "portfolio prototype 2"
                             },
-                            {
-                                src: "/clover.jpg",
-                                alt: "prototype3"
-                            },
-                            {
-                                src: "/clover.jpg",
-                                alt: "prototype4"
-                            }
                         ],
 
                     }
@@ -331,32 +323,45 @@ export const projects: Project[] = [
                         name: "Usability Testing",
                         description:"With my first prototype completed, I started working on a test plan that will guide my tests for usability. " +
                             "That includes the objectives of the usability test. What do I want to analyze and what outcomes do I hope for. Followed " +
-                            "by a list of tasks I will give to each participant. "
-                        +"Then I requited participants and test my first design to see where users have problems and how they interact with it generally. " +
-                            "By sorting, mapping and understanding the users feedback and observations, I drew insights from the test results. ",
+                            "by a list of tasks and questions I will give to each participant. "
+                        +"Then I requited 4 participants and test my first design to see where users have problems and how they interact with it generally. " +
+                            "By sorting, mapping and understanding the users feedback and observations, I drew insights from the test results in an affinity map. ",
                         testobjectivestitel:"Test Objectives",
                         testobjectives: ["How do users navigate and read the website? Are there bothering aspects or difficulties in understanding?",
                             "Based on user feedback, I hope to improve the readability of the site where necessary and determine whether the " +
                             "portfolio effectively portrays the skills and experience."],
                         taskstitel:"Tasks and Questions",
-                        tasks: ["What work does the person do based on what you see?","What are the main topics of this website?",
-                        "Find the project on intercultural UX research and talk aloud the steps you take to go there.",
-                        "Spend 3 minutes reading a porject of your choice. Did you understand its main problem and goal?",
-                        "Describe how you read the project page (quick scan, using quick links, reading summary first).",
-                        "Did you have any trouble in understanding or did you feel bothered by something while reading the page? Please describe.",
-                        "How do you contact the portfolio holder? Which options did you find and which one would you choose?"],
+                        tasks: ["After looking at the homepage, what do you think what kind of work does the person do?","What are the main topics of this website?",
+                        "How would you contact the portfolio holder? Which options did you find and which one would you choose?",
+                        "You can choose one of the projects and look at it/ read it.",
+                            "Did you encounter words or contexts that you didn't understand?",
+                            "Was there something that bothered or annoyed you while reading/ scanning the project?",
+                        "Did you understand the main problem and goal of the project? Can you describe it shortly?",
+                        "There is an About Me section on the portfolio website. Go to that page and read the information.",
+                        "What information do you find about the person and her experiences?"],
                         outcomestitel:"Outcomes",
-                        outcomes: "example text",
+                        outcomes: "The usability test results identified some confusing UI elements and functionality of the website. " +
+                            "Also I could get feedback on the texts and words used. Apparently some technical or special terms caused " +
+                            "confusion for 3 out of 4 participants. The text paragraphs were perceived as too long at some points. The usability " +
+                            "test also had many positive outcomes matching with the original portfolio goals. ",
                         insightstitel:"Insights",
-                        insights: ["example text","example text"],
+                        insights: ["Technical terms and special terms or software lead to misunderstandings",
+                            "Important project details are overlooked and text paragraphs can be very long",
+                        "User mistakes icons for menu elements or oversees them",
+                        "Project overview link system is unclear",
+                        "clear description of personality and work style is missing",],
                         images:[
                             {
-                                src: "/clover.jpg",
-                                alt: "usability1"
+                                src: "/Affinity Map Insights.png",
+                                alt: "affinity map portfolio usability test"
                             },
                             {
-                                src: "/clover.jpg",
-                                alt: "usability2"
+                                src: "/Affinity Map Insights2.png",
+                                alt: "affinity map part 2 portfolio usability test"
+                            },
+                            {
+                                src: "/Affinity Map Insights3.png",
+                                alt: "affinity map part 3 portfolio usability test"
                             },
                         ],
 
@@ -450,11 +455,11 @@ export const projects: Project[] = [
         date: "2025-11-02",
         links:[
             {
-                label: "View Korean Website",
+                label: "View Korean Website Prototype",
                 url: "https://stay-awind.vercel.app/en"
             },
             {
-                label: "View German Website",
+                label: "View German Website Prototype",
                 url: "https://stay-awelle.vercel.app/en"
             }
         ],
@@ -992,7 +997,7 @@ export const projects: Project[] = [
         date: "2026-04-16",
         links:[
             {
-                label: "View Design",
+                label: "View Figma Design File",
                 url: "https://www.figma.com/proto/VQAha4hqLMbjGNdERGUMnN/Caf%C3%A9-und-Atelier?node-id=82-883&t=4QJkjy2rPkmeaZS9-0&scaling=contain&content-scaling=fixed&starting-point-node-id=82%3A883"
             }
         ],

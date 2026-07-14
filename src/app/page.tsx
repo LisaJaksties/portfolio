@@ -7,6 +7,7 @@ import ContactMe from "@/components/ContactMe";
 import MyArt from "@/components/MyArt";
 import SlideUp from "@/components/SlideUp";
 import FloatIn from "@/components/FLoatIn";
+import BackToTop from "@/components/BackToTop";
 import { cormorant } from "@/fonts/cormorant";
 
 export default function Home() {
@@ -50,6 +51,8 @@ export default function Home() {
           <MyArt/>
 
           <ContactMe/>
+
+          <BackToTop/>
       </main>
   );
 }

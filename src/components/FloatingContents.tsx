@@ -1,7 +1,7 @@
 "use client";
 
 import {Section} from "@/types/section";
-import { useState } from "react";
+import {useEffect, useRef, useState} from "react";
 import { TableOfContents } from 'lucide-react';
 import { motion, AnimatePresence } from "framer-motion";
 const staticSections = [
@@ -13,10 +13,27 @@ const staticSections = [
 export default function FloatingContents({ sections }: { sections: Section [] }) {
     const [open, setOpen] = useState(false);
 
+    const containerRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        function handleClickOutside(event: MouseEvent) {
+            if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
+                setOpen(false);
+            }
+        }
+
+        if (open) {
+            document.addEventListener("mousedown", handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [open]);
 
 
     return (
-        <div className="fixed bottom-6 right-6 z-50">
+        <div ref={containerRef} className="fixed bottom-6 right-6 z-50">
             <button
                 onClick={() => setOpen(!open)}
                 className="bg-primary text-md text-white p-3 rounded-full shadow-xl transition-transform duration-300

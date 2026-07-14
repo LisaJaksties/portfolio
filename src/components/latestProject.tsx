@@ -2,6 +2,7 @@ import { Project } from "@/lib/projects";
 import Link from "next/link";
 import Image from "next/image";
 import FadeIn from "@/components/FadeIn";
+import CursorHover from "@/components/CursorHover";
 
 export default function LatestProject({ project }: { project: Project }){
     return (
@@ -13,6 +14,7 @@ export default function LatestProject({ project }: { project: Project }){
                 <FadeIn amount={0.4}>
 
                         <Link href={`/projects/${project.slug}`}>
+
                             <Image
                                 src={project.image}
                                 alt={project.title}
@@ -36,10 +38,11 @@ export default function LatestProject({ project }: { project: Project }){
                 <FadeIn>
                     <div className="text-center md:text-start px-4 md:px-8 h-full flex flex-col justify-between">
                         <Link href={`/projects/${project.slug}`}>
-
-                            <h2 className="text-3xl md:text-6xl text-text font-semibold active:text-accent hover:text-accent transition leading-tight">{project.title}</h2>
-
-
+                            <CursorHover hoverText="project details" className="inline-block cursor-pointer">
+                            <h2 className="text-3xl md:text-6xl text-text font-semibold active:text-accent hover:text-accent transition leading-tight">
+                                {project.title}
+                            </h2>
+                            </CursorHover>
                         </Link>
 
                         <p className="text-sm md:text-lg text-text mt-3">

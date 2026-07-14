@@ -91,13 +91,13 @@ export default function Hero() {
                     </FloatIn>
                 </div>
 
-                <div className="absolute hidden md:block top-100 right-10 rotate-60 -z-10 pointer-events-none">
+                <div className="absolute hidden md:block top-70 right-20 rotate-60 -z-10 pointer-events-none">
                     <FloatIn x={-20} y={-60} rotate={0} delay={0.2}>
                         <Image
                             src="/Frame 1.png"
                             alt="Flower"
-                            width={60}
-                            height={60}
+                            width={90}
+                            height={90}
                         />
                     </FloatIn>
                 </div>
