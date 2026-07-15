@@ -1,5 +1,6 @@
-This project is a personalised portfolio website with project pages, about section and contact.
-The webapplication is programmed using typescript, tailwind css, and Framer Motion for subtle animations.
+This project is a personalised portfolio website with project pages, about section, illustration page and contact page.
+The webapplication was made using typescript, tailwind css, and Framer Motion for subtle animations.
+It showcases recent works of Lisa Choi in UX/UI Design, Brand Design and Illustration.
 
 
 
