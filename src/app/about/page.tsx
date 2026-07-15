@@ -30,9 +30,13 @@ export default function AboutPage(){
                     <div className="max-w-full">
 
                         <FadeIn delay={2} duration={1.5}>
-                            <p className="text-sm font-normal tracking-wide leading-loose text-justify">
-                                I am a UX designer and
-                                illustrator with a bachelor degree in computer science
+                            <p className="text-sm font-normal tracking-wide leading-loose pt-34">
+                                <span className="float-left text-6xl text-text font-semibold leading-none pr-4 pt-1">
+                                    I
+                                </span>
+                                am a <span className="font-semibold"> UX designer</span> and
+                                <span className="font-semibold"> illustrator</span>
+                                with a bachelor degree in computer science
                                 and a strong passion for visual storytelling.
                                 I enjoy working across different areas of design
                                 from UX/UI and digital experiences to illustration,
@@ -40,46 +44,97 @@ export default function AboutPage(){
                             </p>
                         </FadeIn>
 
-                        <FadeIn delay={2.6} duration={1.5}>
-                            <p className="mt-4 text-sm font-normal tracking-wide leading-loose text-justify">
-                                I design digital user interfaces
-                                that captivate users attention and feel good.
-                                I encountered various designs and visuals in my
-                                daily life. They influenced my design and illustration style.
-                                In this sense I create user interfaces that mirror the clients
-                                individual style and the users needs. Working on a project
-                                thoroughly paying great attention to detail is the only way to work for me.
-                                With my background in Computer Science
-                                I understand architectures behind digital products
-                                but my passion lies in its visual and human expression.
-                                Developing my skills in design and gaining more experiences
-                                is important and meaningful for me.
+                        <FadeIn delay={1} duration={1.5}>
+                            <p className="text-xs tracking-[0.2em] uppercase text-text/50 mb-3 mt-8">
+                                01 — Design Philosophy
+                            </p>
+                            <p className="mt-2 text-sm font-normal tracking-wide leading-loose">
+                                I design digital interfaces that capture attention and feel good to use.
+                                My style is shaped by the visuals and design details I notice in everyday life like
+                                interiors, packaging, typography, which I bring into how I approach interfaces and
+                                illustration.
                             </p>
                         </FadeIn>
 
-                        <FadeIn delay={0.5} duration={1.5}>
-                            <p className="mt-4 text-sm font-normal tracking-wide leading-loose text-justify">
-                                I am interested in how culture influences usability, trust,
-                                visual communication, and user behavior.
-                                My interest in cross-cultural design grew through both personal experiences
-                                and academic research. In my bachelor thesis, I explored how cultural context
-                                influence usability and digital booking experiences.
-                            </p>
-                        </FadeIn>
+                    </div>
+                </div>
 
+                <div className="max-w-6xl p-5 md:mx-auto grid grid-cols-1 md:grid-cols-16 gap-y-10 pt-2">
+
+
+                    <div className="md:col-span-16 md:col-start-3 mt-10 grid grid-cols-1 md:grid-cols-3 gap-10">
+                        <div className="md:col-span-2">
                         <FadeIn delay={0.5} duration={1.5}>
-                            <p className="mt-4 text-sm font-normal tracking-wide leading-loose text-justify">
-                                Creativity has always been a central part of my life.
-                                Beyond UX/UI design, I enjoy exploring branding, poster design, and visual
-                                storytelling as additional ways to create emotional and memorable experiences.
-                                I like exploring creative disciplines like illustration
-                                and pottery, which influence my visual thinking and attention to detail and
-                                inspire my design perspective.
+
+                                <p className="text-xs tracking-[0.2em] uppercase text-text/50 mb-3">
+                                    02 — How I Work
+                                </p>
+                                <p className="text-sm font-normal tracking-wide leading-loose">
+                                    My interest in visual design started with a semester abroad, where I picked up
+                                    fundamentals in graphic and visual communication design and worked on a design
+                                    project as part of an international and interdisciplinary team.
+                                    Since then, I´ve mostly taught myself,
+                                    learning Figma and brand design by building an actual brand from scratch,
+                                    and learning about good UX by building real projects.
+                                    Even when I´m working alone, I make a point of talking to other creatives
+                                    about my design decisions. It´s often the fastest way for me
+                                    to catch problems or find a better solution I hadn´t considered.
+                                </p>
+
+                             </FadeIn>
+                        </div>
+
+                        {/* Pull quote, offset */}
+                        <div className="md:col-span-1">
+                            <FadeIn delay={0.5} duration={1.5}>
+
+                                <p className={`${ooohBaby.className} text-2xl text-secondarydark md:text-3xl text-center pt-5 leading-snug`}>
+                                    &#34; I enjoy getting the details right
+                                    because I care about the end result feeling
+                                    like a genuinely well-made product. &#34;
+                                </p>
+
+                            </FadeIn>
+                        </div>
+
+                    </div>
+
+                {/* Cross-cultural + creativity, side by side */}
+                    <div className="md:col-span-16 md:col-start-3 mt-10 grid grid-cols-1 md:grid-cols-2 gap-20">
+                    <div className="">
+                    <FadeIn delay={0.5} duration={1.5}>
+
+                            <p className="text-xs tracking-[0.2em] uppercase text-text/50 mb-3">
+                                03 — Cross-Cultural Design
+                            </p>
+                            <p className="text-sm font-normal tracking-wide leading-loose">
+                                I´m interested in how culture influences usability, trust, and user behavior —
+                                explored both personally and in my bachelor thesis, where I studied how cultural
+                                context influences digital booking experiences.
                             </p>
 
                         </FadeIn>
                     </div>
-                </div>
+
+                    <div className="">
+                        <FadeIn delay={0.5} duration={1.5}>
+
+                            <p className="text-xs tracking-[0.2em] uppercase text-text/50 mb-3">
+                                04 — Outside Design
+                            </p>
+                            <p className="text-sm font-normal tracking-wide leading-loose">
+                                Creativity has always been a central part of my life.
+                                I like exploring creative disciplines like illustration
+                                and pottery, which influence my visual thinking and attention
+                                to detail and quietly shape my design perspective.
+                            </p>
+
+                        </FadeIn>
+                    </div>
+                    </div>
+            </div>
+
+
             </div>
 
             <MyArt/>

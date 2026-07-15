@@ -391,11 +391,13 @@ export const projects: Project[] = [
                 finaldesign: [
                     {
                         name: "Final Design and Website",
-                        description:"The project is exceptional since I directly tested my ideas in code. The first prototype is a functional website " +
+                        description:"The project is directly tested in code. The first prototype was a functional website " +
                             "developed with next.js, react and tailwind css. I used framer motion to create micro animations and smooth scroll effects to " +
-                            "guide the user through the Portfolio page and evoke curiosity. " +
+                            "guide the user through the Portfolio page and evoke curiosity through animated interactions. " +
+                            "I wanted to create a website that shows my individual style, skills and represents my personal brand. " +
+                            "" +
                             "",
-                        link:"/",
+                        link:"/https://lisachoiportfolio.vercel.app/",
                         images:[
                             {
                                 src: "/clover.jpg",
@@ -473,7 +475,7 @@ export const projects: Project[] = [
             "as well as usability tests, to compare overall satisfaction with the user experience.",
         type:"UX Design and website development",
         tasks: ["Cross Cultural UX Research", "UX/UI Design", "Usability Testing", "Frontend Development"],
-        tools: ["Adobe Photoshop", "Figma", "Next.js", "TailwindCSS", "MongoDB"],
+        tools: ["Adobe Photoshop", "Figma (design tool)", "Next.js", "TailwindCSS", "MongoDB"],
 
         sections: [
             {
@@ -523,7 +525,7 @@ export const projects: Project[] = [
                         description:"One of the most spread cultural theories are the cultural dimensions by Hofstede. " +
                             "He studied over 100 cultures by analyzing how culture influences the values and behaviors of its members. " +
                             "He categorized his findings into six dimensions and each country scores between 0 and 100 which indicates a " +
-                            "tendency. I highlighted the dimensions where the two cultures differ the most.",
+                            "tendency of characteristics and values. I highlighted the dimensions where the two cultures differ the most.",
                         table:{
                             src:"/Hofstede.jpg",
                             alt:"Hofstedes cultural dimensions",
@@ -907,7 +909,9 @@ export const projects: Project[] = [
                             "They were given a task and had to complete it once using the German prototype (Welle) and once using the Korean " +
                             "prototype (Wind), and then answer questions about their experience. In addition to observation-oriented and " +
                             "task-related questions, the questionnaires included " +
-                            "several standardized usability and UX instruments (PWU-G, UMUX-Lite, VisAWI-S, WebCLIC Short). " +
+                            "several standardized usability and UX instruments (PWU-G, UMUX-Lite, VisAWI-S, WebCLIC Short)." +
+                            "PWU-G: Measures how usable users perceive a website to be, UMUX-Lite: captures a general, subjective impression of a system's usability, " +
+                            "VisAWI-S: measures perceived visual/aesthetic quality of a website, WebCLIC Short: measures clarity, likability, informativeness, and credibility in a website. " +
                             "After compiling all the results, I organized them into a tabular, analyzable format using Google " +
                             "Sheets and visualized the results using box plots and bar charts.",
                         testobjectivestitel:"Test Objectives",
@@ -1011,7 +1015,7 @@ export const projects: Project[] = [
             "a consistent atmosphere centered around creativity, comfort, and slow life moments.",
         type: "Brand Design",
         tasks: ["Research","Positioning & Brand Personality", "Concept Development", "Visual Identity", "Mockup Design", "Poster Design"],
-        tools: ["Figma"],
+        tools: ["Figma (design tool)"],
 
         sections: [
             {
@@ -1084,13 +1088,13 @@ export const projects: Project[] = [
                 ],
                 language: "Language ideation",
                 languageideation:"The owners had lived in rural northern Germany for a long time, where older people " +
-                    "often still spoke Low German. We wanted to incorporate that culture into the brand. So we tested " +
-                    "a few Low German words for the brand name. It was important to us that the language remain understandable " +
+                    "often still spoke Low German. I wanted to incorporate that culture into the brands language. So I tested " +
+                    "a few Low German words for the brand name. It was important that the language remains understandable " +
                     "and accessible, yet have a distinctive, recognizable sound. The language is mainly German for menu and poster " +
                     "because the target audience is mainly locals and german people. I added english translations on the menu to include " +
                     "internationals as well.",
                 visuals: "Visual ideation",
-                visualsdescription: "First I ideate ideas for logo, text and composition on paper. Then I transfer my ideas to digital design." +
+                visualsdescription: "First I ideated/brainstormed ideas for logo, text and composition on paper. Then I transferred my ideas to digital design." +
                     " Testing ideas was always connected with applying them to namecards, mockups and see their " +
                     "effect. I started with typography and ideated on composition, style and colors on the way. " +
                     "The pictures below show a part of the ideation process.",
@@ -1186,10 +1190,10 @@ export const projects: Project[] = [
                 name: "Reflection",
                 description: "The project was created as a branding concept for the owners’ " +
                     "envisioned pottery atelier café, translating their future aspirations into a cohesive visual identity. " +
-                    "I used only Figma for this project, so I’m now very familiar with its features and have gotten used to the interface.",
+                    "I used only the design tool Figma for this project, so I’m now very familiar with its features and have gotten used to the interface.",
                 learnings1:"Testing ideas on real scenarios helps to decide.",
                 learnings1_text:"Whenever I was unsure which direction supports the message of the brand better, " +
-                    "I tested it on mockups or on poster designs. This process was very helpful in guiding " +
+                    "I tested it on mockups or on poster designs. This iterative process was very helpful in guiding " +
                     "my decision-making and justifying my design choices.",
                 learnings2:"Finding free usable mockups is not easy.",
                 learnings2_text:"Trying to find free mockups that suit the overall brand design well is very difficult. " +
