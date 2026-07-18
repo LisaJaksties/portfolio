@@ -14,7 +14,7 @@ type FadeInProps = {
 export default function FadeIn({
                                    children,
                                    y = 0,
-                                   amount = 0.8,
+                                   amount = 0.2,
                                    duration = 1.8,
                                    delay = 0,
                                    once = true,
@@ -24,7 +24,7 @@ export default function FadeIn({
             initial={{ opacity: 0, y }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration, delay, ease: "easeOut" }}
-            viewport={{ once, amount }}
+            viewport={{ once, amount, margin: "0px 0px -100px 0px" }}
         >
             {children}
         </motion.div>
