@@ -19,13 +19,13 @@ export default function ProjectsPage(){
                         projects
                     </h1>
                 </SlideUp>
-                <SlideUp y={60} delay={0} duration={1.0}>
+
                 <div className=" grid grid-cols-1 md:grid-cols-2 md:gap-12 gap-10">
                     {projects.map((project) => (
                         <ProjectCard key={project.slug} project={project}/>
                     ))}
                 </div>
-                </SlideUp>
+
             </div>
 
             <MyArt/>
