@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, ReactNode, MouseEvent } from "react";
+import { useState, ReactNode, MouseEvent, TouchEvent } from "react";
 
 interface CursorHoverProps {
     children: ReactNode;
@@ -16,12 +16,31 @@ export default function CursorHover({ children, hoverText, className }: CursorHo
         setPosition({ x: e.clientX, y: e.clientY });
     };
 
+    const handleTouchStart = (e: TouchEvent<HTMLDivElement>) => {
+        const touch = e.touches[0];
+        setPosition({ x: touch.clientX, y: touch.clientY });
+        setIsHovering(true);
+    };
+
+    const handleTouchMove = (e: TouchEvent<HTMLDivElement>) => {
+        const touch = e.touches[0];
+        setPosition({ x: touch.clientX, y: touch.clientY });
+    };
+
+    const handleTouchEnd = () => {
+        setIsHovering(false);
+    };
+
     return (
         <div
             className={className}
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}
             onMouseMove={handleMouseMove}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+            onTouchCancel={handleTouchEnd}
         >
             {children}
 

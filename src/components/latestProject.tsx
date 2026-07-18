@@ -11,7 +11,7 @@ export default function LatestProject({ project }: { project: Project }){
 
             <div className="grid grid-cols-1 md:grid-cols-2 px-6 md:px-0 items-stretch max-w-7xl mx-auto gap-6 md:gap-8 pb-20">
 
-                <FadeIn amount={0.4}>
+                <FadeIn>
 
                         <Link href={`/projects/${project.slug}`}>
 

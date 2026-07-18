@@ -89,25 +89,31 @@ const editorials = [
     {
         src: "/novel mailing.png",
         alt: "editorial",
-        title: "Poster AD Design",
+        title: "Poster AD design",
+        medium: "Adobe Photoshop",
+    },
+    {
+        src: "/Paper namecard.png",
+        alt: "editorial",
+        title: "Namecard design Korean novelist",
         medium: "Adobe Photoshop",
     },
     {
         src: "/restdays1.png",
         alt: "editorial",
-        title: "Visual Activism Poster Design",
+        title: "Visual activism poster design",
         medium: "Figma, Clip Studio Paint",
     },
     {
         src: "/restdays2.png",
         alt: "editorial",
-        title: "Visual Activism Poster Design",
+        title: "Visual activism poster design",
         medium: "Figma, Clip Studio Paint",
     },
     {
         src: "/restdays3.png",
         alt: "editorial",
-        title: "Visual Activism Poster Design",
+        title: "Visual activism poster design",
         medium: "Figma, Clip Studio Paint",
     },
 ];
@@ -115,37 +121,10 @@ export default function ArtPage(){
     return (
         <main>
             {/* Titel section*/}
-            <section className="py-40 z-0">
-
-                <FadeIn amount={0.8} duration={1.0}>
-                    <div className="absolute bottom-70 left-5 md:bottom-30 md:right-50 rotate-180 -z-5">
-                        <SlideUp y={100} delay={0.4} duration={1.0}>
-                        <Image
-                            src="/Frame 1.png"
-                            alt="Flower"
-                            width={110}
-                            height={110}
-                            className="h-12 md:h-28 w-fit pointer-events-none"
-                        />
-                        </SlideUp>
-                    </div>
-
-                    <div className="absolute top-50 right-10 md:top-40 md:left-70 rotate-0 -z-5">
-                        <SlideUp y={100} delay={0.2} duration={1.0}>
-                        <Image
-                            src="/Frame 1.png"
-                            alt="Flower"
-                            width={100}
-                            height={100}
-                            className="h-10 md:h-26 w-fit pointer-events-none"
-                        />
-                        </SlideUp>
-                    </div>
-
-                </FadeIn>
+            <section className="pt-20 z-0">
 
                 <FadeIn>
-                    <h1 className={`${cormorant.className} z-5 text-secondarydark text-center text-6xl md:text-[10vw] mt-5 md:mt-10 leading-none tracking-wide`}>
+                    <h1 className={`${cormorant.className} z-5 text-secondarydark text-center text-6xl md:text-[10vw] leading-none tracking-wide`}>
                         Illustrations
                     </h1>
                 </FadeIn>
@@ -153,7 +132,7 @@ export default function ArtPage(){
 
 
             {/* My illustrations section*/}
-            <section className="py-20 max-w-7xl px-6 md:px-0 mx-auto text-center">
+            <section className="py-10 max-w-7xl px-6 md:px-0 mx-auto text-center">
 
                 <div className="grid grid-cols-1 md:grid-cols-4 md:space-y-10 gap-15 md:gap-8">
 

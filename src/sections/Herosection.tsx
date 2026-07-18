@@ -85,14 +85,14 @@ export default function Herosection({id, image, title, links}: HeroSectionProps)
             </Link>
             */}
 
-            <div className="grid grid-cols-2 px-6 mx-auto">
+            <div className="flex flex-wrap justify-center gap-x-10 px-6 mx-auto">
             {links?.map((link, i) => (
                 <Link
                     key={i}
                     href={link.url}
                     target="_blank"
                     rel="noreferrer"
-                    className="md:hidden group space-x-0 flex flex-row items-center pt-10 w-fit"
+                    className="md:hidden group space-x-2 flex flex-row items-center pt-10 w-fit"
                 >
                     <Image
                         src="/Frame 1.png"
