@@ -47,7 +47,9 @@ export type Application = {
         src: string;
         alt?: string;
     }[];
+    iteration?: Iteration[];
 }
+
 
 export type DesignSystemSection = {
     type: "design-system";

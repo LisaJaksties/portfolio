@@ -34,13 +34,13 @@ export const projects: Project[] = [
             }
         ],
         problem_description:"Recruiter need to be able to scan my portfolio in short time and decide if my abilities and characteristics align with their expectations.",
-        challenge_description:"How to showcase my abilities and experiences? ",
+        challenge_description:"How to showcase my abilities, experiences and potential? ",
         solution_description:"To support the decision making of the User, I developed a structured portfolio website with an" +
-            "introducing attention-catching homepage, clear information architecture, visual hierarchy and modular designed process oriented case " +
-            "studies to match individual project works.",
-        type:"UX Design and website development",
+            "introducing attention-catching homepage and a simple information architecture. I established a visual hierarchy through typography and color. " +
+            "Modular designed process oriented case studies match the individual project works that I showcase on the website. ",
+        type:"UX/UI Design",
         tasks: ["UX research", "UX/UI Design", "Branding", "Prototyping", "Usability Testing"],
-        tools: ["Adobe Photoshop", "Adobe Illustrator", "Next.js", "TailwindCSS"],
+        tools: ["Figma (Design Tool)", "Next.js", "TailwindCSS"],
 
         sections: [
             {
@@ -64,7 +64,7 @@ export const projects: Project[] = [
                 stakeholders: [
                     {
                         name: "Myself",
-                        role: "UX Designer and Illustrator",
+                        role: "UX/UI Designer and Illustrator",
                         description: "As the main stakeholder, I defined my business goals for the portfolio website.",
                         goals: ["more qualified recruiter and client requests", "interview invitations", "showcase skills and thinking process",
                         "convey my softskills (Reliability, Learnability, Adaptability, Patience, Conscientiousness) through design decisions"]
@@ -287,8 +287,9 @@ export const projects: Project[] = [
                 prototypes: [
                     {
                         name: "Prototypes",
-                        description:"The project is exceptional since I directly tested my ideas in code. The first prototype is a functional website " +
-                            "developed with next.js, react and tailwind css. I used framer motion to create micro animations and smooth scroll effects to " +
+                        description:"During this project, I directly tested my ideas in code. The first prototype is a functional website " +
+                            "developed with Next.js, React and Tailwind CSS. Since my focus was the design decisions, I used AI tools to accelerate parts " +
+                            "of the build once the interaction design was finalized. I also used framer motion to create micro animations and smooth scroll effects to " +
                             "guide the user through the Portfolio page and evoke curiosity. " +
                             "",
                         links:[
@@ -314,8 +315,8 @@ export const projects: Project[] = [
             {
                 type: "deliver",
                 delivertitel: "Deliver",
-                content: "This stage is all about testing out developed ideas and prototypes from the prevoius step. " +
-                    "I sort out things that will not work and improve prototypes according to insights from Usability tests " +
+                content: "This stage was all about testing out developed ideas and prototypes from the prevoius step. " +
+                    "I sorted out things that will not work and improve prototypes according to insights from Usability tests " +
                     "in order to create a final version. ",
 
                 usability: [
@@ -324,7 +325,7 @@ export const projects: Project[] = [
                         description:"With my first prototype completed, I started working on a test plan that will guide my tests for usability. " +
                             "That includes the objectives of the usability test. What do I want to analyze and what outcomes do I hope for. Followed " +
                             "by a list of tasks and questions I will give to each participant. "
-                        +"Then I requited 4 participants and test my first design to see where users have problems and how they interact with it generally. " +
+                        +"Then I requited 4 participants (two UX Designers, one game developer and one manager) and test my first design to see where users have problems and how they interact with it generally. " +
                             "By sorting, mapping and understanding the users feedback and observations, I drew insights from the test results in an affinity map. ",
                         testobjectivestitel:"Test Objectives",
                         testobjectives: ["How do users navigate and read the website? Are there bothering aspects or difficulties in understanding?",
@@ -342,8 +343,8 @@ export const projects: Project[] = [
                         outcomestitel:"Outcomes",
                         outcomes: "The usability test results identified some confusing UI elements and functionality of the website. " +
                             "Also I could get feedback on the texts and words used. Apparently some technical or special terms caused " +
-                            "confusion for 3 out of 4 participants. The text paragraphs were perceived as too long at some points. The usability " +
-                            "test also had many positive outcomes matching with the original portfolio goals. ",
+                            "confusion for 3 out of 4 participants. The text paragraphs were perceived as too long at some points by two users. The usability " +
+                            "test also had many positive outcomes matching with the original project goals. ",
                         insightstitel:"Insights",
                         insights: ["Technical terms and special terms or software lead to misunderstandings",
                             "Important project details are overlooked and text paragraphs can be very long",
@@ -392,7 +393,7 @@ export const projects: Project[] = [
                     {
                         name: "Final Design and Website",
                         description:"The project is directly tested in code. The first prototype was a functional website " +
-                            "developed with next.js, react and tailwind css. I used framer motion to create micro animations and smooth scroll effects to " +
+                            "developed with Next.js, React and Tailwind Css. I used Framer motion to create micro animations and smooth scroll effects to " +
                             "guide the user through the Portfolio page and evoke curiosity through animated interactions. " +
                             "I wanted to create a website that shows my individual style, skills and represents my personal brand. " +
                             "" +
@@ -1182,6 +1183,33 @@ export const projects: Project[] = [
                         src: "/portfolio-mockup-print.png",
                         alt: "brand mockup poster"
                     },
+                ],
+
+                iteration: [
+                    {
+                        name: "Iteration",
+                        description:"Seeing the brands prototypes and socials, the necessity of another iteration was obvious. " +
+                            "The logo didn't work well for round particularly small items like the stickers, the café sign and the profile " +
+                            "picture for social media. The brand design needed another variation that is easily recognizable and easy to read " +
+                            "on small spaces.",
+                        revisions:["a new logo variation for round small items (profile picture, sticker)","a new variation for the café sign symbolizing " +
+                        "the brand clearly (from distance)"],
+                        images: [
+                            {
+                                src: "/Brand Iteration.svg",
+                                alt: "Brand Iteration PK"
+                            },
+                            {
+                                src: "/Brand Prototypes Iteration.svg",
+                                alt: "Brand Prototypes Iteration"
+                            },
+                            {
+                                src: "/Brand Socials Iteration.svg",
+                                alt: "Brand Socials Iteration"
+                            },
+                        ],
+
+                    }
                 ],
             },
 

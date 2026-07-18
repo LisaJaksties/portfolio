@@ -230,6 +230,43 @@ export function SectionRenderer({ section }: { section: Section }) {
                             />
                         ))}
                     </div>
+
+                    {section.iteration && (
+                        <div className="mx-auto">
+                            {section.iteration.map((iteration, index) => (
+                                <div key={index} className={`pt-20`}>
+                                    <h3 className="text-3xl md:text-5xl text-text mb-10 md:mb-20 "> {iteration.name}</h3>
+
+                                    <div className="md:max-w-5xl mx-auto">
+                                        <p className="text-md md:text-lg text-text/80 mb-4 md:mb-10 font-light text-justify">{iteration.description}</p>
+                                        {iteration.revisions && (
+                                            <ul className="text-left list-disc pl-10 space-y-3 font-light text-md md:text-lg text-text/80">
+                                                {iteration.revisions.map((revision, i) => (
+                                                    <li key={i}>{revision}</li>
+                                                ))}
+                                            </ul>
+                                        )}
+                                    </div>
+                                    <div
+                                        className="md:max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 mt-10 ">
+
+                                        {iteration.images?.map((img, i) => (
+                                            <Imageview key={i}
+                                                       src={img.src}
+                                                       alt={img.alt ?? ""}
+                                                       width={1024}
+                                                       height={600}
+                                                       className="max-h-[600px] mx-auto block object-cover"/>
+                                        ))}
+
+
+                                    </div>
+                                </div>
+
+                            ))}
+
+                        </div>
+                    )}
                 </section>
             );
 

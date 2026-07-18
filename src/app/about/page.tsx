@@ -30,12 +30,12 @@ export default function AboutPage(){
                     <div className="max-w-full">
 
                         <FadeIn delay={2} duration={1.5}>
-                            <p className="text-sm font-normal tracking-wide leading-loose pt-34">
+                            <p className="font-normal tracking-wide leading-loose pt-34">
                                 <span className="float-left text-6xl text-text font-semibold leading-none pr-4 pt-1">
                                     I
                                 </span>
-                                am a <span className="font-semibold"> UX designer</span> and
-                                <span className="font-semibold"> illustrator</span>
+                                am a <span className="text-lg font-semibold"> product designer</span> and
+                                <span className="text-lg font-semibold"> illustrator </span>
                                 with a bachelor degree in computer science
                                 and a strong passion for visual storytelling.
                                 I enjoy working across different areas of design
@@ -44,11 +44,11 @@ export default function AboutPage(){
                             </p>
                         </FadeIn>
 
-                        <FadeIn delay={1} duration={1.5}>
-                            <p className="text-xs tracking-[0.2em] uppercase text-text/50 mb-3 mt-8">
+                        <FadeIn delay={2} duration={1.5}>
+                            <p className="text-sm tracking-[0.2em] uppercase text-text/50 mb-3 mt-8">
                                 01 — Design Philosophy
                             </p>
-                            <p className="mt-2 text-sm font-normal tracking-wide leading-loose">
+                            <p className="mt-2 font-normal tracking-wide leading-loose">
                                 I design digital interfaces that capture attention and feel good to use.
                                 My style is shaped by the visuals and design details I notice in everyday life like
                                 interiors, packaging, typography, which I bring into how I approach interfaces and
@@ -66,19 +66,19 @@ export default function AboutPage(){
                         <div className="md:col-span-2">
                         <FadeIn delay={0.5} duration={1.5}>
 
-                                <p className="text-xs tracking-[0.2em] uppercase text-text/50 mb-3">
+                                <p className="text-sm tracking-[0.2em] uppercase text-text/50 mb-3">
                                     02 — How I Work
                                 </p>
-                                <p className="text-sm font-normal tracking-wide leading-loose">
+                                <p className="font-normal tracking-wide leading-loose">
                                     My interest in visual design started with a semester abroad, where I picked up
                                     fundamentals in graphic and visual communication design and worked on a design
                                     project as part of an international and interdisciplinary team.
                                     Since then, I´ve mostly taught myself,
-                                    learning Figma and brand design by building an actual brand from scratch,
-                                    and learning about good UX by building real projects.
+                                    learning Figma and brand design by building a unique german café brand,
+                                    and learning about good UX/UI by building real projects.
                                     Even when I´m working alone, I make a point of talking to other creatives
                                     about my design decisions. It´s often the fastest way for me
-                                    to catch problems or find a better solution I hadn´t considered.
+                                    to catch problems or find a better solution.
                                 </p>
 
                              </FadeIn>
@@ -104,13 +104,13 @@ export default function AboutPage(){
                     <div className="">
                     <FadeIn delay={0.5} duration={1.5}>
 
-                            <p className="text-xs tracking-[0.2em] uppercase text-text/50 mb-3">
+                            <p className="text-sm tracking-[0.2em] uppercase text-text/50 mb-3">
                                 03 — Cross-Cultural Design
                             </p>
-                            <p className="text-sm font-normal tracking-wide leading-loose">
+                            <p className="font-normal tracking-wide leading-loose">
                                 I´m interested in how culture influences usability, trust, and user behavior —
                                 explored both personally and in my bachelor thesis, where I studied how cultural
-                                context influences digital booking experiences.
+                                context influences digital booking experiences on hotel booking websites.
                             </p>
 
                         </FadeIn>
@@ -119,10 +119,10 @@ export default function AboutPage(){
                     <div className="">
                         <FadeIn delay={0.5} duration={1.5}>
 
-                            <p className="text-xs tracking-[0.2em] uppercase text-text/50 mb-3">
+                            <p className="text-sm tracking-[0.2em] uppercase text-text/50 mb-3">
                                 04 — Outside Design
                             </p>
-                            <p className="text-sm font-normal tracking-wide leading-loose">
+                            <p className="font-normal tracking-wide leading-loose">
                                 Creativity has always been a central part of my life.
                                 I like exploring creative disciplines like illustration
                                 and pottery, which influence my visual thinking and attention
