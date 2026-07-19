@@ -7,6 +7,7 @@ import Link from "next/link";
 import Imageview from "@/components/Imageview";
 import {Oooh_Baby} from "next/font/google";
 import { cormorant } from "@/fonts/cormorant";
+import Video from "@/components/Video";
 
 const ooohBaby = Oooh_Baby({
     subsets: ["latin"],
@@ -1033,7 +1034,7 @@ export function SectionRenderer({ section }: { section: Section }) {
                                 <div key={index} className={`pt-20`}>
                                     <h3 className="text-3xl md:text-5xl text-text mb-10 md:mb-20 "> {iteration.name}</h3>
 
-                                    <div className="md:max-w-5xl mx-auto">
+                                    <div className="md:max-w-5xl mx-auto mb-10">
                                         <p className="text-md md:text-lg text-text/80 mb-4 md:mb-10 font-light text-justify">{iteration.description}</p>
                                         {iteration.revisions && (
                                             <ul className="text-left list-disc pl-10 space-y-3 font-light text-md md:text-lg text-text/80">
@@ -1044,15 +1045,30 @@ export function SectionRenderer({ section }: { section: Section }) {
                                         )}
                                     </div>
                                     <div
-                                        className="md:max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 mt-10 ">
+                                        className="md:max-w-5xl mx-auto grid grid-cols-1 gap-3 md:gap-10 mb-10">
 
                                         {iteration.images?.map((img, i) => (
                                             <Imageview key={i}
-                                                   src={img.src}
-                                                   alt={img.alt ?? ""}
-                                                   width={1024}
-                                                   height={600}
-                                                   className="max-h-[600px] mx-auto block object-cover"/>
+                                                       src={img.src}
+                                                       alt={img.alt ?? ""}
+                                                       width={1024}
+                                                       height={600}
+                                                       className="max-h-[600px] mx-auto block object-cover"/>
+                                        ))}
+
+
+                                    </div>
+
+                                    <div
+                                        className="md:max-w-5xl mx-auto grid grid-cols-1 gap-3 md:gap-10 ">
+
+                                        {iteration.videos?.map((img, i) => (
+                                            <Video key={i}
+                                                       src={img.src}
+                                                       alt={img.alt ?? ""}
+                                                       width={1024}
+                                                       height={600}
+                                                       className="max-h-[600px] mx-auto block object-cover"/>
                                         ))}
 
 
@@ -1071,7 +1087,7 @@ export function SectionRenderer({ section }: { section: Section }) {
                                     <h3 className="text-3xl md:text-5xl text-text mb-10 md:mb-20 "> {finaldesign.name}</h3>
                                     <p className="md:max-w-5xl mx-auto text-md md:text-lg text-text/80 mb-10 font-light text-justify">{finaldesign.description}</p>
                                     <div
-                                        className="md:max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 ">
+                                        className="md:max-w-5xl mx-auto grid grid-cols-1 gap-3 md:gap-10 mb-10">
 
                                         {finaldesign.images?.map((img, i) => (
                                             <Imageview key={i}

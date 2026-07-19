@@ -343,6 +343,10 @@ export type Iteration = {
         src: string;
         alt?: string;
     }[];
+    videos?: {
+        src: string;
+        alt?: string;
+    }[];
 
 }
 

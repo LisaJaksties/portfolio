@@ -372,16 +372,27 @@ export const projects: Project[] = [
                 iteration: [
                     {
                         name: "Iteration",
-                        description:"example text",
-                        revisions:["example text","example text"],
+                        description:"Following the usability testing, I identified and addressed several key issues " +
+                            "to improve the overall user experience.",
+                        revisions:[
+                        "Added a back to top button on the homepage and a tooltip " +
+                        "clarifying the link between the project overview and project details, making navigation more intuitive.",
+                        "Restructured the About Me page with shorter paragraphs and clear subheadings, and expanded the content to " +
+                        "better convey my work style and design philosophy.",
+                        "Addressed hesitation around the contact form by adding transparent information on how messages " +
+                        "are processed.",
+                        "Resolved several interaction bugs. The content table now closes correctly when clicking outside of it " +
+                        "and the page no longer shifts when an image is opened in fullscreen."],
                         images: [
                             {
-                                src: "/clover.jpg",
-                                alt: "usability1"
+                                src: "/Iteration.png",
+                                alt: "Iteration portfolio"
                             },
+                        ],
+                        videos: [
                             {
-                                src: "/clover.jpg",
-                                alt: "usability2"
+                                src: "/hover video.mp4",
+                                alt: "Iteration portfolio 2 video"
                             },
                         ],
 
@@ -392,30 +403,18 @@ export const projects: Project[] = [
                 finaldesign: [
                     {
                         name: "Final Design and Website",
-                        description:"The project is directly tested in code. The first prototype was a functional website " +
-                            "developed with Next.js, React and Tailwind Css. I used Framer motion to create micro animations and smooth scroll effects to " +
-                            "guide the user through the Portfolio page and evoke curiosity through animated interactions. " +
-                            "I wanted to create a website that shows my individual style, skills and represents my personal brand. " +
-                            "" +
-                            "",
+                        description:"The usability tests helped me identify weaknesses of the portfolio page. " +
+                            "The final design is based on real user feedback and shows a more reliable, transparent and readable website. ",
                         link:"/https://lisachoiportfolio.vercel.app/",
                         images:[
                             {
-                                src: "/clover.jpg",
-                                alt: "prototype1"
+                                src: "/Portfolio desktop mockup.png",
+                                alt: "mockup desktop"
                             },
                             {
-                                src: "/clover.jpg",
-                                alt: "prototype2"
+                                src: "/Portfolio mobile mockup.png",
+                                alt: "mockup mobile"
                             },
-                            {
-                                src: "/clover.jpg",
-                                alt: "prototype3"
-                            },
-                            {
-                                src: "/clover.jpg",
-                                alt: "prototype4"
-                            }
                         ],
 
                     }
