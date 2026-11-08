@@ -150,7 +150,7 @@ export default function Hero() {
                 </div>
 
 
-                <div className="max-w-7xl text-text z-10">
+                <div className="md:max-w-7xl lg:max-w-full text-text z-10">
 
                     <SlideUp y={80} delay={0.2} duration={1.0}>
                     <h1 className={`${cormorant.className} text-center text-4xl md:text-8xl leading-none tracking-tight`}>

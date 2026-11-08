@@ -34,7 +34,7 @@ export default function AboutPage(){
                                 <span className="float-left text-6xl text-text font-semibold leading-none pr-4 pt-1">
                                     I
                                 </span>
-                                am a <span className="text-lg font-semibold"> product designer</span> and
+                                am a <span className="text-lg font-semibold"> UX/UI designer</span> and
                                 <span className="text-lg font-semibold"> illustrator </span>
                                 with a bachelor degree in computer science
                                 and a strong passion for visual storytelling.
@@ -51,8 +51,10 @@ export default function AboutPage(){
                             <p className="mt-2 font-normal tracking-wide leading-loose">
                                 I design digital interfaces that capture attention and feel good to use.
                                 My style is shaped by the visuals and design details I notice in everyday life like
-                                interiors, packaging, typography, which I bring into how I approach interfaces and
-                                illustration.
+                                interiors, packaging, typography, and elements from nature which I bring into how I
+                                approach interfaces and illustration.
+                                My approach focuses on visual sensibility, a distinctive color universe,
+                                cultural nuance and narrative intention, shaped by both European and Korean influences.
                             </p>
                         </FadeIn>
 
@@ -74,8 +76,10 @@ export default function AboutPage(){
                                     fundamentals in graphic and visual communication design and worked on a design
                                     project as part of an international and interdisciplinary team.
                                     Since then, I´ve mostly taught myself,
-                                    learning Figma and brand design by building a unique german café brand,
+                                    learning Figma, Illustrator and brand design by building a unique german café brand,
                                     and learning about good UX/UI by building real projects.
+                                    I always do research first and sketch out ideas on a pure sketchbook before starting
+                                    the digital visualization.
                                     Even when I´m working alone, I make a point of talking to other creatives
                                     about my design decisions. It´s often the fastest way for me
                                     to catch problems or find a better solution.
@@ -108,7 +112,7 @@ export default function AboutPage(){
                                 03 — Cross-Cultural Design
                             </p>
                             <p className="font-normal tracking-wide leading-loose">
-                                I´m interested in how culture influences usability, trust, and user behavior —
+                                I´m interested in how culture influences usability, trust, and user behavior. I
                                 explored both personally and in my bachelor thesis, where I studied how cultural
                                 context influences digital booking experiences on hotel booking websites.
                             </p>

@@ -144,7 +144,7 @@ export default function ArtPage(){
                                 alt={item.alt}
                                 width={1200}
                                 height={1200}
-                                className="aspect-square w-full object-cover "
+                                className="aspect-square w-full object-scale-down "
                             />
 
                             <FadeIn>
@@ -180,7 +180,7 @@ export default function ArtPage(){
                                 alt={item.alt}
                                 width={1200}
                                 height={1200}
-                                className="aspect-square w-full object-cover "
+                                className="aspect-square w-full object-scale-down "
                             />
 
                             <FadeIn>
