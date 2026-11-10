@@ -9,7 +9,7 @@ export default function ProjectsPage(){
     return (
         <main className="pt-20 pb-20">
 
-            <div className=" pb-30 md:pb-90 max-w-7xl text-start m-5  md:mx-auto">
+            <div className=" pb-30 md:pb-90 max-w-7xl lg:max-w-max text-start m-5  md:mx-auto">
                 <SlideUp y={60} delay={0.1} duration={1.2}>
                     <h1 className={`${cormorant.className}  text-text text-6xl md:text-[11vw] text-center md:text-start leading-20 md:leading-none `}>have a look <br/>at my recent </h1>
                 </SlideUp>

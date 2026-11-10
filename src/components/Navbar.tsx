@@ -73,6 +73,7 @@ export default function Navbar() {
                             alt="logo"
                             width={140}
                             height={40}
+                            loading="eager"
                             className="w-20 md:w-28"
                         />
 
@@ -124,7 +125,7 @@ export default function Navbar() {
                         className="fixed top-25 left-0 right-0 bottom-0 bg-background z-40"
                     >
                         <div
-                            className="flex flex-col justify-center items-center h-full gap-10 md:gap-12 text-4xl md:text-6xl text-text font-light">
+                            className="flex flex-col justify-center items-center h-full gap-10 md:gap-12 text-4xl md:text-6xl lg:text-7xl text-text font-light">
 
                             <div className="relative group hover:scale-110 transition-transform duration-300">
                                 <Link
@@ -138,7 +139,7 @@ export default function Navbar() {
                                 <motion.img
                                     src="/Frame%201.png"
                                     alt="flower"
-                                    className="pointer-events-none absolute right-full mr-6 top-1/2 -translate-y-1/2 w-10 h-10 opacity-0 group-active:opacity-100 group-hover:opacity-100"
+                                    className="pointer-events-none absolute right-full mr-6 top-1/2 -translate-y-1/2 w-10 h-10 lg:w-15 lg:h-15 opacity-0 group-active:opacity-100 group-hover:opacity-100"
                                     animate={{rotate: 360}}
                                     transition={{repeat: Infinity, duration: 4, ease: "linear"}}
                                 />
@@ -157,7 +158,7 @@ export default function Navbar() {
                                 <motion.img
                                     src="/Frame%201.png"
                                     alt="flower"
-                                    className="pointer-events-none absolute right-full mr-6 top-1/2 -translate-y-1/2 w-10 h-10 opacity-0 group-active:opacity-100 group-hover:opacity-100"
+                                    className="pointer-events-none absolute right-full mr-6 top-1/2 -translate-y-1/2 w-10 h-10 lg:w-15 lg:h-15 opacity-0 group-active:opacity-100 group-hover:opacity-100"
                                     animate={{rotate: 360}}
                                     transition={{repeat: Infinity, duration: 4, ease: "linear"}}
                                 />
@@ -175,7 +176,7 @@ export default function Navbar() {
                                 <motion.img
                                     src="/Frame%201.png"
                                     alt="flower"
-                                    className="pointer-events-none absolute right-full mr-6 top-1/2 -translate-y-1/2 w-10 h-10 opacity-0 group-active:opacity-100 group-hover:opacity-100"
+                                    className="pointer-events-none absolute right-full mr-6 top-1/2 -translate-y-1/2 w-10 h-10 lg:w-15 lg:h-15 opacity-0 group-active:opacity-100 group-hover:opacity-100"
                                     animate={{rotate: 360}}
                                     transition={{repeat: Infinity, duration: 4, ease: "linear"}}
                                 />
@@ -194,7 +195,7 @@ export default function Navbar() {
                                 <motion.img
                                     src="/Frame%201.png"
                                     alt="flower"
-                                    className="pointer-events-none absolute right-full mr-6 top-1/2 -translate-y-1/2 w-10 h-10 opacity-0 group-active:opacity-100 group-hover:opacity-100"
+                                    className="pointer-events-none absolute right-full mr-6 top-1/2 -translate-y-1/2 w-10 h-10 lg:w-15 lg:h-15 opacity-0 group-active:opacity-100 group-hover:opacity-100"
                                     animate={{rotate: 360}}
                                     transition={{repeat: Infinity, duration: 4, ease: "linear"}}
                                 />

@@ -11,12 +11,12 @@ export default function Catchphrase() {
 
             <FadeIn amount={0.5} duration={1.4}>
                 <SlideUp y={80} delay={0.2} duration={1.0}>
-                    <h1 className={`${cormorant.className} text-primary text-center text-4xl md:text-8xl tracking-tight`}>
+                    <h1 className={`${cormorant.className} text-primary text-center text-4xl md:text-8xl lg:text-9xl tracking-tight`}>
                         Creating culture aware digital experiences through usability, visual storytelling and thoughtful design
                     </h1>
                 </SlideUp>
                 <SlideUp y={80} delay={0.4} duration={1.0}>
-                    <h2 className={`text-secondarydark hidden md:block pt-20 text-center font-semibold md:text-5xl leading-none tracking-widest`}>
+                    <h2 className={`text-secondarydark hidden md:block pt-20 lg:pt-28 text-center font-semibold md:text-5xl lg:text-6xl leading-none tracking-widest`}>
                         UX/UI · Communication Design · Illustration
                     </h2>
                 </SlideUp>
@@ -36,11 +36,11 @@ export default function Catchphrase() {
                         alt="Flower"
                         width={40}
                         height={40}
-                        className="h-5 md:h-10 w-fit transition-all duration-300 ease-out group-hover:scale-110 group-hover:rotate-30"
+                        className="h-5 md:h-10 lg:h-15 w-fit transition-all duration-300 ease-out group-hover:scale-110 group-hover:rotate-30"
                     />
 
                     <p
-                        className="text-text text-sm md:text-lg font-light transition-all duration-300 ease-out group-hover:scale-105 group-hover:underline"
+                        className="text-text text-sm md:text-lg lg:text-xl font-light transition-all duration-300 ease-out group-hover:scale-105 group-hover:underline"
                     >
                         more about me
                     </p>

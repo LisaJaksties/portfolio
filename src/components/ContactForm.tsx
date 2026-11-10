@@ -50,14 +50,14 @@ export default function ContactForm() {
         <main>
             <form
                 onSubmit={handleSubmit}
-                className="max-w-xl mx-auto space-y-8"
+                className="max-w-xl lg:max-w-3xl mx-auto space-y-8"
             >
                 <div className="text-text flex flex-row gap-4 items-center mb-3">
-                    <p>Name </p> <p className="text-text/80 text-sm">(required)</p>
+                    <p className="lg:text-2xl">Name </p> <p className="text-text/80 text-sm lg:text-lg ">(required)</p>
                 </div>
                 <div className="text-text flex flex-row gap-4">
                     <div className="w-full">
-                        <p className="text-sm mb-2">First name</p>
+                        <p className="text-sm mb-2 lg:text-xl">First name</p>
                         <input
                             name="firstName"
                             className="w-full border border-text/70 p-2 rounded-none bg-white"
@@ -67,7 +67,7 @@ export default function ContactForm() {
                     </div>
 
                     <div className="text-text w-full">
-                        <p className="text-sm mb-2">Last name</p>
+                        <p className="text-sm mb-2 lg:text-xl">Last name</p>
 
                         <input
                             name="lastName"
@@ -80,8 +80,8 @@ export default function ContactForm() {
 
                 <div>
                     <div className="text-text flex flex-row gap-4 items-center mb-2">
-                        <p>E-mail</p>
-                        <p className="text-sm text-text/80">(required)</p>
+                        <p className="lg:text-xl">E-mail</p>
+                        <p className="text-sm lg:text-lg text-text/80">(required)</p>
                     </div>
                     <input
                         name="email"
@@ -95,8 +95,8 @@ export default function ContactForm() {
 
                 <div>
                     <div className="text-text flex flex-row gap-4 items-center mb-2">
-                        <p>Subject</p>
-                        <p className="text-sm text-text/80">(required)</p>
+                        <p className="lg:text-xl">Subject</p>
+                        <p className="text-sm text-text/80 lg:text-lg">(required)</p>
                     </div>
                     <input
                         name="subject"
@@ -109,8 +109,8 @@ export default function ContactForm() {
 
                 <div>
                     <div className="text-text flex flex-row gap-4 items-center mb-2">
-                        <p>Message</p>
-                        <p className="text-sm text-text/80">(required)</p>
+                        <p className="lg:text-xl">Message</p>
+                        <p className="text-sm text-text/80 lg:text-lg" >(required)</p>
                     </div>
                     <textarea
                         name="message"
@@ -123,10 +123,10 @@ export default function ContactForm() {
                 </div>
 
 
-                <div className="text-text text-center">
+                <div className="text-text text-center lg:mt-16">
                 <button
                     type="submit"
-                    className="place-items-center bg-accent rounded-3xl px-4 py-2 justify-center rounded
+                    className="place-items-center bg-accent rounded-3xl px-4 py-2 lg:px-8 lg:py-3 justify-center lg:text-xl
                     hover:bg-background hover:text-primary hover:border border-accent duration-300
                     hover:scale-108 md:hover:scale-110 hover:cursor-pointer transition ease-in-out"
                 >

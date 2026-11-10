@@ -34,7 +34,7 @@ export default function Home() {
               </div>
 
               <SlideUp y={60} delay={0.2} duration={1.2}>
-                  <h1 className={`${cormorant.className} font-medium text-center text-text text-7xl md:text-[13vw] md:leading-40 tracking-widest`}>
+                  <h1 className={`${cormorant.className} font-medium text-center text-text text-7xl md:text-[13vw] md:leading-40 lg:leading-52 tracking-widest`}>
                       Have a <br/> look at my <br/> works
                   </h1>
               </SlideUp>

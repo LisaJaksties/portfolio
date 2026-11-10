@@ -8,20 +8,20 @@ import { cormorant } from "@/fonts/cormorant";
 export default function MyArt() {
     return (
 
-        <section className="bg-accent flex flex-col items-center rounded-t-full mx-auto text-center px-4 md:px-12 pt-32 pb-32 md:pt-52 md:pb-40">
+        <section className="bg-accent flex flex-col items-center rounded-t-full mx-auto text-center px-4 md:px-12 pt-32 pb-32 md:pt-60 md:pb-40 lg:pt-96 ">
 
             <FadeIn amount={0.5} duration={1.0}>
                 <SlideUp y={80} delay={0.0} duration={1.0}>
-                    <h1 className={`${cormorant.className} text-text text-3xl leading-20 md:leading-40 tracking-tight md:text-[7vw]`}>
+                    <h1 className={`${cormorant.className} text-text text-3xl leading-20 md:leading-40 lg:leading-52 tracking-tight md:text-[7vw]`}>
                         I also make
                     </h1>
-                    <h1 className={`${cormorant.className} text-text text-5xl leading-20 md:leading-30 tracking-widest md:text-[10vw]`}>
+                    <h1 className={`${cormorant.className} text-text text-5xl leading-20 md:leading-30 lg:leading-52 tracking-widest md:text-[10vw]`}>
                         illustrations
                     </h1>
 
                     <Link
                         href="/art"
-                        className="group mx-auto flex flex-row items-center gap-3 w-fit pt-10"
+                        className="group mx-auto flex flex-row items-center gap-3 w-fit pt-10 lg:pt-15"
                     >
                         <Image
                             src="/Frame 1.png"
@@ -32,7 +32,7 @@ export default function MyArt() {
                         />
 
                         <p
-                            className="text-text text-sm md:text-lg font-light transition-all duration-300 ease-out group-hover:scale-105 group-hover:underline"
+                            className="text-text text-sm md:text-lg lg:text-xl font-light transition-all duration-300 ease-out group-hover:scale-105 group-hover:underline"
                         >
                             find out more
                         </p>
@@ -43,7 +43,7 @@ export default function MyArt() {
                         width={150}
                         height={150}
                         quality={100}
-                        className="w-24 md:w-48 mx-auto pt-10 "
+                        className="w-24 h-auto md:w-48 lg:w-60 mx-auto pt-10 lg:pt-20 "
                     />
                 </SlideUp>
             </FadeIn>

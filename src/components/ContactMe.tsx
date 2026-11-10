@@ -12,10 +12,10 @@ export default function ContactMe() {
 
             <FadeIn amount={0.5} duration={1.4}>
                 <SlideUp y={80} delay={0.2} duration={1.0}>
-                    <h1 className={`${cormorant.className} text-text text-8xl leading-24 md:leading-34 tracking-wider md:text-[10vw]`}>
+                    <h1 className={`${cormorant.className} text-text text-8xl leading-24 md:leading-34 lg:leading-44 tracking-wider md:text-[10vw]`}>
                        IF <br/> YOU
                     </h1>
-                    <h2 className={`${cormorant.className}  tracking-widest text-2xl`}>
+                    <h2 className={`${cormorant.className}  tracking-widest text-2xl lg:text-4xl`}>
                         WONDER
                     </h2>
 
@@ -28,11 +28,11 @@ export default function ContactMe() {
                             alt="Flower"
                             width={30}
                             height={30}
-                            className="h-5 w-5 md:h-8 md:w-8 transition-all duration-300 ease-out group-hover:scale-110 group-hover:rotate-30"
+                            className="h-5 w-5 md:h-10 md:w-10 transition-all duration-300 ease-out group-hover:scale-110 group-hover:rotate-30"
                         />
 
                         <p
-                            className="text-text text-sm md:text-md font-light transition-all duration-300 ease-out group-hover:scale-105 group-hover:underline"
+                            className="text-text text-sm md:text-md lg:text-xl font-light transition-all duration-300 ease-out group-hover:scale-105 group-hover:underline"
                         >
                             let`s stay in contact
                         </p>

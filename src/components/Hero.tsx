@@ -16,7 +16,7 @@ const ooohBaby = Oooh_Baby({
 export default function Hero() {
     return (
 
-        <section className="relative overflow-x-hidden z-0 md:max-w-7xl pt-32 pb-44 md:pt-44 md:pb-44 mx-auto text-center">
+        <section className="relative overflow-x-hidden z-0 md:max-w-7xl lg:max-w-max pt-32 pb-44 md:pt-44 md:pb-44 mx-auto text-center">
 
             <FadeIn amount={0.4} duration={1.0}>
                 {/*for mobile*/}

@@ -121,10 +121,10 @@ export default function ArtPage(){
     return (
         <main>
             {/* Titel section*/}
-            <section className="pt-20 z-0">
+            <section className="pt-20 lg:pt-36 z-0">
 
                 <FadeIn>
-                    <h1 className={`${cormorant.className} z-5 text-secondarydark text-center text-6xl md:text-[10vw] leading-none tracking-wide`}>
+                    <h1 className={`${cormorant.className} z-5 text-secondaryverydark text-center text-5xl md:text-7xl lg:text-8xl leading-none tracking-wide`}>
                         Illustrations
                     </h1>
                 </FadeIn>
@@ -132,7 +132,7 @@ export default function ArtPage(){
 
 
             {/* My illustrations section*/}
-            <section className="py-10 max-w-7xl px-6 md:px-0 mx-auto text-center">
+            <section className="py-10 lg:py-20 max-w-7xl lg:max-w-[90vw] px-6 md:px-0 mx-auto text-center">
 
                 <div className="grid grid-cols-1 md:grid-cols-4 md:space-y-10 gap-15 md:gap-8">
 
@@ -164,9 +164,9 @@ export default function ArtPage(){
 
             </section>
 
-            <section className="py-20 max-w-7xl mx-auto px-6 md:px-0 text-center">
+            <section className="py-20 max-w-7xl lg:max-w-[90vw] mx-auto px-6 md:px-0 text-center">
                 <FadeIn>
-                    <h2 className={`${cormorant.className} z-5 text-secondaryverydark text-center text-5xl md:text-7xl mb-5 md:mb-10 leading-none tracking-wide`}>
+                    <h2 className={`${cormorant.className} z-5 text-secondaryverydark text-center text-5xl md:text-7xl lg:text-8xl mb-5 md:mb-10 lg:mb-20 leading-none tracking-wide`}>
                         Editorial Design
                     </h2>
                 </FadeIn>
