@@ -22,11 +22,11 @@ export type Project = {
 export const projects: Project[] = [
     {
         slug: "portfolio-redesign",
-        title: "Portfolio",
+        title: "Portfolio for UX Designer",
         description: "A UX/UI and frontend portfolio project designed to present creative work through a clean and responsive user " +
             "experience. The website includes a complete UX case study and was developed using Next.js and Tailwind CSS.",
         image: "/Cover Portfolio.svg",
-        date: "2026-05-30",
+        date: "2026-11-01",
         links:[
             {
                 label: "View Portfolio Website",
@@ -454,7 +454,7 @@ export const projects: Project[] = [
             "in hotel booking platforms. The project compares booking experiences for German and Korean users through two culturally adapted " +
             "prototypes.",
         image: "/Cover Stay A.svg",
-        date: "2025-11-02",
+        date: "2026-02-28",
         links:[
             {
                 label: "View Korean Website Prototype",
@@ -998,7 +998,7 @@ export const projects: Project[] = [
         title: "Poette und Kauken",
         description: "Creating a unique german brand that combines handmade craftsmanship, slow coffee culture, and quiet creative moments.",
         image: "/Cover (1).svg",
-        date: "2026-04-16",
+        date: "2026-09-16",
         links:[
             {
                 label: "View Figma Design File",
